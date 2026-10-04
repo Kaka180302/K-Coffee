@@ -1,0 +1,162 @@
+
+/* --- MOBILE MENU CSS --- */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--on-surface);
+  cursor: pointer;
+  padding: 8px;
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  max-width: 300px;
+  height: 100vh;
+  background-color: var(--surface);
+  z-index: 1001;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.1);
+}
+
+.mobile-menu-drawer.open {
+  transform: translateX(0);
+}
+.mobile-menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--outline-variant);
+}
+
+.mobile-menu-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--on-surface);
+  padding: 4px;
+}
+
+.mobile-search {
+  padding: 20px;
+  border-bottom: 1px solid var(--outline-variant);
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.mobile-nav-link {
+  padding: 16px 20px;
+  color: var(--on-surface);
+  text-decoration: none;
+  border-left: 4px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.mobile-nav-link:hover, .mobile-nav-link.active {
+  background-color: var(--secondary-container);
+  color: var(--on-secondary-container);
+  border-left-color: var(--secondary);
+}
+
+@media (max-width: 900px) {
+  .header-inner {
+    justify-content: space-between;
+  }
+  .header-nav {
+    display: none;
+  }
+  .search-bar {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: block;
+  }
+  .header-actions {
+    gap: 8px;
+  }
+  /* Show header brand centered slightly */
+  .header-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* --- MOBILE FOOTER ACCORDION CSS --- */
+.footer-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.footer-title .accordion-icon {
+  display: none;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .footer-col {
+    border-bottom: 1px solid rgba(211, 195, 190, 0.3);
+    padding: 16px 0;
+  }
+  .footer-col:first-child {
+    border-bottom: none;
+    padding-bottom: 24px;
+  }
+  .footer-col.newsletter-col {
+    border-bottom: none;
+    padding-top: 24px;
+  }
+  .footer-col:not(:first-child):not(.newsletter-col) .footer-title {
+    margin-bottom: 0;
+  }
+  .footer-col:not(:first-child):not(.newsletter-col) .footer-title .accordion-icon {
+    display: block;
+  }
+  .footer-links {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, margin-top 0.3s ease;
+  }
+  .footer-col.open .footer-links {
+    max-height: 200px;
+    margin-top: 16px;
+  }
+  .footer-col.open .accordion-icon {
+    transform: rotate(180deg);
+  }
+}

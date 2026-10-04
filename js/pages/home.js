@@ -142,4 +142,60 @@ document.addEventListener("DOMContentLoaded", () => {
         showToast("Đăng ký thành công — hẹn gặp bạn trong hộp thư!");
         newsletterForm.reset();
     });
+
+    // Render best sellers
+    const grid = document.getElementById('best-sellers-grid');
+    if (grid && typeof products !== 'undefined') {
+        const bestSellers = [...products].sort((a, b) => (b.salesCount || 0) - (a.salesCount || 0)).slice(0, 4);
+        let html = '';
+        const formatCurrency = (amount) => new Intl.NumberFormat('vi-VN').format(amount) + 'đ';
+
+        bestSellers.forEach(p => {
+            let badgesHtml = '';
+            if (p.roast) {
+                let badgeClass = 'badge-light';
+                if (p.roastLevel === 'medium') badgeClass = 'badge-amber';
+                if (p.roastLevel === 'dark' || p.roastLevel === 'medium-dark') badgeClass = 'badge-dark';
+                badgesHtml += `<span class="badge ${badgeClass}">${p.roast}</span>`;
+            }
+            if (p.cuppingScore) {
+                badgesHtml += `<span class="badge badge-green"><span class="material-symbols-outlined" style="font-size: 14px;">military_tech</span> SCAA ${p.cuppingScore}</span>`;
+            }
+
+            let tagsHtml = '';
+            if (p.tastingNotes) {
+                p.tastingNotes.slice(0, 3).forEach(note => {
+                    tagsHtml += `<span class="badge badge-light">${note}</span>`;
+                });
+            }
+
+            html += `
+                <a class="glass-card product-card" href="product-detail.html?id=${p.id}">
+                    <div class="prod-img-wrap">
+                        <img class="prod-img" src="${p.image}" alt="${p.name}" />
+                        <div class="prod-badges">
+                            ${badgesHtml}
+                        </div>
+                        <button class="prod-fav" onclick="event.preventDefault()"><span class="material-symbols-outlined">favorite</span></button>
+                    </div>
+                    <div class="prod-location font-label-sm text-on-surface-variant">
+                        <span class="material-symbols-outlined prod-location-icon">location_on</span>
+                        ${p.origin}
+                    </div>
+                    <h3 class="font-title-lg prod-title" style="margin-bottom: 8px;">${p.name}</h3>
+                    <div class="prod-tags">
+                        ${tagsHtml}
+                    </div>
+                    <div class="prod-bottom">
+                        <div class="prod-price-box">
+                            <span class="font-label-sm prod-price-old">${formatCurrency(p.originalPrice)}</span>
+                            <span class="font-title-lg prod-price-new">${formatCurrency(p.price)} <span class="font-body-sm text-on-surface-variant" style="font-weight: normal;"></span></span>
+                        </div>
+                        <button class="prod-add-cart" onclick="event.preventDefault(); triggerCartToast('${p.name}')"><span class="material-symbols-outlined">shopping_cart</span></button>
+                    </div>
+                </a>
+            `;
+        });
+        grid.innerHTML = html;
+    }
 });

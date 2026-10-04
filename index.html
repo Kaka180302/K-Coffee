@@ -23,6 +23,10 @@
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      
       <div class="header-brand">
         <img alt="K-Coffee Brand Logo" class="header-logo-img" src="https://lh3.googleusercontent.com/aida/AEtjO1XQVRAXEYxrPGJlCVMAetaIVs0YK19DKoh7AfDmx-JjSIGUYYvlF1I_vaPcPc6gxmsWEdS3_AsWZmZq7PN0_sMJuplc1FecawLONf2b-yvTA1qeqrhH_2fTDnxQ69DeXBnWIEU6FYlY0oeNl1R7Ts7dYMc78QfVKr1bupR3KE3_E2RNHeGdkE1QbcU2pyuf0ELgIV1D-IAlZAicNOO4-VEZ9xUO11nr6WlxrtAO0Yf28DTDOuU0hC5jnsOO"/>
         <a class="header-logo-text" href="index.html">
@@ -58,6 +62,27 @@
     </div>
   </header>
 
+  <!-- MOBILE MENU DRAWER -->
+  <div class="mobile-menu-overlay"></div>
+  <div class="mobile-menu-drawer">
+    <div class="mobile-menu-header">
+      <div class="header-brand">
+        <span class="font-headline-sm header-logo-title">K-Coffee</span>
+      </div>
+      <button class="mobile-menu-close">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="mobile-search">
+      <input class="input-search font-body-sm" placeholder="Tìm hạt rang, vùng trồng..." type="text" style="width: 100%; border: 1px solid var(--outline); padding: 12px; border-radius: 20px;"/>
+    </div>
+    <nav class="mobile-nav">
+      <a class="font-title-md mobile-nav-link" href="index.html">Trang Chủ</a>
+      <a class="font-title-md mobile-nav-link" href="product.html">Sản Phẩm</a>
+      <a class="font-title-md mobile-nav-link" href="#">Câu Chuyện K-Coffee</a>
+      <a class="font-title-md mobile-nav-link" href="#">Liên Hệ</a>
+    </nav>
+  </div>
   <main>
     <!-- SECTION 1: HERO SLIDER SHOWCASE -->
     <section class="hero-section">
@@ -247,122 +272,8 @@
         </div>
       </div>
       
-      <div class="products-grid">
-        <!-- Product 1 -->
-        <a class="glass-card product-card" href="product-detail.html">
-          <div class="prod-img-wrap">
-            <img class="prod-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkOIWFLiMcK8lIAmepOdlhKEikCuZqOFii_fEt16SkgVKg8vZ5egb7Ad2TBtsSbXx0rEs1izRJ1SMuO3Xw2OyHTIKzLuiqLHye001IBMGXIF81qHHL161YeQTWlzqeEaQRXMzO3fujj79_kBWXlN4C4U0P0-_h4oWHVh0RuY99wGp6R-d0uRJWncbfUIArq8e7vdag46Se3S7X71j1PKifLzgWSl7X_fmCjCUIrk91UNvgPdRg21ZCPQ"/>
-            <div class="prod-badges">
-              <span class="badge badge-amber">Rang Vừa (Medium)</span>
-              <span class="badge badge-green"><span class="material-symbols-outlined" style="font-size: 14px;">military_tech</span> SCAA 86.5</span>
-            </div>
-            <button class="prod-fav"><span class="material-symbols-outlined">favorite</span></button>
-          </div>
-          <div class="prod-location font-label-sm text-on-surface-variant">
-            <span class="material-symbols-outlined prod-location-icon">location_on</span>
-            Cầu Đất, Lâm Đồng (1.600m)
-          </div>
-          <h3 class="font-title-lg prod-title">K-Specialty Arabica Cầu Đất</h3>
-          <div class="prod-tags">
-            <span class="badge badge-light">Hương Nhài</span>
-            <span class="badge badge-light">Mơ Vàng</span>
-            <span class="badge badge-light">Đường Mía</span>
-          </div>
-          <div class="prod-bottom">
-            <div class="prod-price-box">
-              <span class="font-label-sm prod-price-old">190.000đ</span>
-              <span class="font-title-lg prod-price-new">165.000đ <span class="font-body-sm text-on-surface-variant" style="font-weight: normal;">/ 250g</span></span>
-            </div>
-            <button class="prod-add-cart"><span class="material-symbols-outlined">shopping_cart</span></button>
-          </div>
-        </a>
-        
-        <!-- Product 2 -->
-        <a class="glass-card product-card" href="product-detail.html">
-          <div class="prod-img-wrap">
-            <img class="prod-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt58MHeUnCyRltez3KVPnBW3DBCc2RPqE61c3zZD1Olvm0b3UpYaLMo1zfNdYIpAPdb8_uuBx9NZV--Hkf4sXhuMz97YpZnCSus4T0tExf4ZQNKzGGLilr30kFzgwGO7yHDh2wkk_s_u68I7VMpqtCN3PWBhrf6IKZXvqfHe2BF0RxaZknqi1ct2Xii4xMU7H5Ki0oshZzrNM0DnAejJuzwONa0w6MwXckZEeRFTne72Ps-aez2Hz9yA"/>
-            <div class="prod-badges">
-              <span class="badge badge-dark">Rang Đậm (Dark)</span>
-              <span class="badge badge-green"><span class="material-symbols-outlined" style="font-size: 14px;">military_tech</span> SCAA 84.0</span>
-            </div>
-            <button class="prod-fav"><span class="material-symbols-outlined">favorite</span></button>
-          </div>
-          <div class="prod-location font-label-sm text-on-surface-variant">
-            <span class="material-symbols-outlined prod-location-icon">location_on</span>
-            Buôn Ma Thuột, Đắk Lắk
-          </div>
-          <h3 class="font-title-lg prod-title">K-Heritage Robusta Fine</h3>
-          <div class="prod-tags">
-            <span class="badge badge-light">Chocolate Đen</span>
-            <span class="badge badge-light">Hạt Phỉ Rang</span>
-            <span class="badge badge-light">Dày Body</span>
-          </div>
-          <div class="prod-bottom">
-            <div class="prod-price-box">
-              <span class="font-label-sm prod-price-old">145.000đ</span>
-              <span class="font-title-lg prod-price-new">120.000đ <span class="font-body-sm text-on-surface-variant" style="font-weight: normal;">/ 250g</span></span>
-            </div>
-            <button class="prod-add-cart"><span class="material-symbols-outlined">shopping_cart</span></button>
-          </div>
-        </a>
-        
-        <!-- Product 3 -->
-        <a class="glass-card product-card" href="product-detail.html">
-          <div class="prod-img-wrap">
-            <img class="prod-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTxj8v3ZMK5rMrg1MAjBxWRG4FRjf2tOw5duSzzIa7cQX_81A3XxFYWkWymjGzt6oHIvJOTlUrvyhHwI_utb0L-twXHyYKdQOj3x41hGvz-p9NkIDEnx9xFSs2Qg1pArpgGxgzkwSD1tYu-a9XPASOVYX7J9pLXTSOf51CBb1hU_Op0X6VugQqeo5jwUcALK5vwH-DIWQCdApNcE54XC4cFfs15S5QzywleWp2n4xC7ffKcZRy_hEKUA"/>
-            <div class="prod-badges">
-              <span class="badge badge-amber">Rang Vừa (Medium)</span>
-              <span class="badge badge-green"><span class="material-symbols-outlined" style="font-size: 14px;">military_tech</span> SCAA 85.5</span>
-            </div>
-            <button class="prod-fav"><span class="material-symbols-outlined">favorite</span></button>
-          </div>
-          <div class="prod-location font-label-sm text-on-surface-variant">
-            <span class="material-symbols-outlined prod-location-icon">location_on</span>
-            Phối trộn Cầu Đất &amp; Bảo Lộc
-          </div>
-          <h3 class="font-title-lg prod-title">Da Lat Sunset Blend 70/30</h3>
-          <div class="prod-tags">
-            <span class="badge badge-light">Caramel Mặn</span>
-            <span class="badge badge-light">Vỏ Cam</span>
-            <span class="badge badge-light">Cân Bằng</span>
-          </div>
-          <div class="prod-bottom">
-            <div class="prod-price-box">
-              <span class="font-label-sm prod-price-old">210.000đ</span>
-              <span class="font-title-lg prod-price-new">185.000đ <span class="font-body-sm text-on-surface-variant" style="font-weight: normal;">/ 500g</span></span>
-            </div>
-            <button class="prod-add-cart"><span class="material-symbols-outlined">shopping_cart</span></button>
-          </div>
-        </a>
-        
-        <!-- Product 4 -->
-        <a class="glass-card product-card" href="product-detail.html">
-          <div class="prod-img-wrap">
-            <img class="prod-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkN9NSmNma3sfeRMpYbuvZ1ILOcDiQaKxHP1Ft9bv51-5OIGT7AeJxgdeaYkQHeWIFXzwPkmQmtUUmiqFV_WPgicud3na_DvxvSdIL3zOyv0onaUGp-ffmwlzLPa9XOSs2b4AXGF3gvRqF14ZyAZY_KdbIsHum0uDoiLw9C9E8YqfBlrv6EZnqV_rlzpZOsUaLUeX8W8Ghvg2H86iwaTNFtDFtMsrI8yUgtftwP9zMECiwHpzDISj1FQ"/>
-            <div class="prod-badges">
-              <span class="badge badge-light">Ủ Lạnh Tươi (Cold Brew)</span>
-              <span class="badge badge-green"><span class="material-symbols-outlined" style="font-size: 14px;">military_tech</span> SCAA 87.0</span>
-            </div>
-            <button class="prod-fav"><span class="material-symbols-outlined">favorite</span></button>
-          </div>
-          <div class="prod-location font-label-sm text-on-surface-variant">
-            <span class="material-symbols-outlined prod-location-icon">location_on</span>
-            Tuyển chọn Honey Process
-          </div>
-          <h3 class="font-title-lg prod-title">Signature Cold Brew Pack</h3>
-          <div class="prod-tags">
-            <span class="badge badge-light">Táo Đỏ</span>
-            <span class="badge badge-light">Mật Ong Hoa Rừng</span>
-            <span class="badge badge-light">Hậu Vị Dài</span>
-          </div>
-          <div class="prod-bottom">
-            <div class="prod-price-box">
-              <span class="font-label-sm prod-price-old">180.000đ</span>
-              <span class="font-title-lg prod-price-new">149.000đ <span class="font-body-sm text-on-surface-variant" style="font-weight: normal;">/ 5 túi lọc</span></span>
-            </div>
-            <button class="prod-add-cart"><span class="material-symbols-outlined">shopping_cart</span></button>
-          </div>
-        </a>
+      <div class="products-grid" id="best-sellers-grid">
+        <!-- JS will populate best sellers here -->
       </div>
     </section>
 
@@ -542,7 +453,7 @@
         </div>
         
         <div class="footer-col">
-          <h4 class="font-title-md footer-title">Khám Phá</h4>
+          <h4 class="font-title-md footer-title">Khám Phá <span class="material-symbols-outlined accordion-icon">expand_more</span></h4>
           <nav class="footer-nav font-body-sm">
             <a href="product.html">Cà Phê Pha Phin Mộc</a>
             <a href="product.html">Arabica Cầu Đất Tuyển Chọn</a>
@@ -553,7 +464,7 @@
         </div>
         
         <div class="footer-col">
-          <h4 class="font-title-md footer-title">Chăm Sóc &amp; Hỗ Trợ</h4>
+          <h4 class="font-title-md footer-title">Chăm Sóc &amp; Hỗ Trợ <span class="material-symbols-outlined accordion-icon">expand_more</span></h4>
           <nav class="footer-nav font-body-sm">
             <a href="#">Chính Sách Giao Hàng</a>
             <a href="#">Quy Định Đổi Trả 7 Ngày</a>
@@ -563,7 +474,7 @@
           </nav>
         </div>
         
-        <div class="footer-col">
+        <div class="footer-col newsletter-col">
           <h4 class="font-title-md footer-title">Bản Tin Hương Vị</h4>
           <p class="font-body-sm text-on-surface-variant">Đăng ký nhận thông tin các mẻ rang giới hạn (Micro-lot) và nhận ngay ưu đãi giảm giá 10% cho đơn hàng đầu tiên của bạn.</p>
           <form class="newsletter-form" onsubmit="return false;">
@@ -581,6 +492,6 @@
     </div>
   </footer>
 
-  <script src="js/pages/home.js"></script>
-</body>
+  <script src="js/data.js"></script>
+  <script src="js/pages/home.js"></script></body>
 </html>

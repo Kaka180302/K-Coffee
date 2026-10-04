@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Component dùng chung cho menu mobile.
  * Các trang chỉ cần giữ đúng class .nav-toggle và .nav-links.
  */

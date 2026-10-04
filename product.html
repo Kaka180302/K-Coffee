@@ -21,6 +21,10 @@
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      
       <div class="header-brand">
         <img alt="K-Coffee Brand Logo" class="header-logo-img" src="https://lh3.googleusercontent.com/aida/AEtjO1XQVRAXEYxrPGJlCVMAetaIVs0YK19DKoh7AfDmx-JjSIGUYYvlF1I_vaPcPc6gxmsWEdS3_AsWZmZq7PN0_sMJuplc1FecawLONf2b-yvTA1qeqrhH_2fTDnxQ69DeXBnWIEU6FYlY0oeNl1R7Ts7dYMc78QfVKr1bupR3KE3_E2RNHeGdkE1QbcU2pyuf0ELgIV1D-IAlZAicNOO4-VEZ9xUO11nr6WlxrtAO0Yf28DTDOuU0hC5jnsOO"/>
         <a class="header-logo-text" href="index.html">
@@ -56,6 +60,27 @@
     </div>
   </header>
 
+  <!-- MOBILE MENU DRAWER -->
+  <div class="mobile-menu-overlay"></div>
+  <div class="mobile-menu-drawer">
+    <div class="mobile-menu-header">
+      <div class="header-brand">
+        <span class="font-headline-sm header-logo-title">K-Coffee</span>
+      </div>
+      <button class="mobile-menu-close">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="mobile-search">
+      <input class="input-search font-body-sm" placeholder="Tìm hạt rang, vùng trồng..." type="text" style="width: 100%; border: 1px solid var(--outline); padding: 12px; border-radius: 20px;"/>
+    </div>
+    <nav class="mobile-nav">
+      <a class="font-title-md mobile-nav-link" href="index.html">Trang Chủ</a>
+      <a class="font-title-md mobile-nav-link active" href="product.html">Sản Phẩm</a>
+      <a class="font-title-md mobile-nav-link" href="#">Câu Chuyện K-Coffee</a>
+      <a class="font-title-md mobile-nav-link" href="#">Liên Hệ</a>
+    </nav>
+  </div>
   <main class="product-page">
     <div class="product-banner-wrapper">
       <div class="ambient-orb-1"></div>
@@ -140,32 +165,9 @@
           
           <div class="filter-group">
             <span class="font-label-md filter-title uppercase tracking-wider">Danh Mục Hạt &amp; Pha Chế</span>
-            <div style="display: flex; flex-direction: column; gap: 6px;">
-              <label class="filter-radio-item">
-                <span class="label font-body-sm" style="font-weight: 500; display: flex; align-items: center;"><input type="radio" name="cat" checked/> Tất Cả Sản Phẩm</span>
-                <span class="count">36</span>
-              </label>
-              <label class="filter-radio-item">
-                <span class="label font-body-sm" style="display: flex; align-items: center;"><input type="radio" name="cat"/> Cà Phê Hạt / Bột Pha Phin</span>
-                <span class="count">14</span>
-              </label>
-              <label class="filter-radio-item">
-                <span class="label font-body-sm" style="display: flex; align-items: center;"><input type="radio" name="cat"/> Specialty Arabica Cầu Đất</span>
-                <span class="count">8</span>
-              </label>
-              <label class="filter-radio-item">
-                <span class="label font-body-sm" style="display: flex; align-items: center;"><input type="radio" name="cat"/> Fine Robusta Lên Men</span>
-                <span class="count">6</span>
-              </label>
-              <label class="filter-radio-item">
-                <span class="label font-body-sm" style="display: flex; align-items: center;"><input type="radio" name="cat"/> Túi Lọc Tiện Lợi (Drip Bag)</span>
-                <span class="count">5</span>
-              </label>
-              <label class="filter-radio-item">
-                <span class="label font-body-sm" style="display: flex; align-items: center;"><input type="radio" name="cat"/> Cà Phê Ủ Lạnh (Cold Brew)</span>
-                <span class="count">3</span>
-              </label>
-            </div>
+              <div style="display: flex; flex-direction: column; gap: 6px;" id="categoryList">
+                <!-- JS will render categories here -->
+              </div>
           </div>
           
           <div class="filter-group border-top">
@@ -180,22 +182,15 @@
           
           <div class="filter-group border-top">
             <span class="font-label-md filter-title uppercase tracking-wider">Phương Pháp Pha Chế</span>
-            <div class="method-tags font-label-sm">
-              <span class="method-tag active">Pha Phin Truyền Thống</span>
-              <span class="method-tag">Pour-Over / V60</span>
-              <span class="method-tag">Espresso Máy</span>
-              <span class="method-tag">Cold Brew</span>
-              <span class="method-tag">French Press</span>
+            <div class="method-tags font-label-sm" id="methodFilterContainer">
+              <!-- JS will render method tags here -->
             </div>
           </div>
           
           <div class="filter-group border-top">
             <span class="font-label-md filter-title uppercase tracking-wider">Vùng Trồng Đặc Sản</span>
-            <div class="checkbox-list font-body-sm">
-              <label class="checkbox-item"><input type="checkbox" checked/> Cầu Đất - Đà Lạt <span class="text-outline text-xs">(1,600m)</span></label>
-              <label class="checkbox-item"><input type="checkbox" checked/> Buôn Ma Thuột - Đắk Lắk <span class="text-outline text-xs">(Fine Robusta)</span></label>
-              <label class="checkbox-item"><input type="checkbox"/> Sơn La Tây Bắc <span class="text-outline text-xs">(Natural Process)</span></label>
-              <label class="checkbox-item"><input type="checkbox"/> Khe Sanh - Quảng Trị <span class="text-outline text-xs">(Liberica &amp; Catimor)</span></label>
+            <div class="checkbox-list font-body-sm" id="regionFilterContainer">
+              <!-- JS will render region checkboxes here -->
             </div>
           </div>
           
@@ -212,305 +207,21 @@
               </div>
             </div>
           </div>
-          
-          <button class="btn-filter-apply font-label-lg" type="button">Áp Dụng Bộ Lọc (9)</button>
         </aside>
         
         <!-- PRODUCT GRID -->
         <div style="display: flex; flex-direction: column; gap: var(--space-lg);">
-          <div class="product-grid">
-            
-            <!-- Card 1 -->
-            <a href="product-detail.html" class="product-item group">
-              <div>
-                <div class="prod-image-container">
-                  <span class="prod-badge-top-left bg-primary-container text-on-primary font-label-sm">Bán Chạy Nhất</span>
-                  <button class="prod-fav-btn"><span class="material-symbols-outlined text-[18px]">favorite</span></button>
-                  <img class="prod-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw590DWmA2jbOEJB07zUs8d1e3Bk8eKgKEUB7P0nLH72pVdEZtH419mE7DlQGnRkWlr0Pm5m5HUfadD--xgVkBHloH6jCpZDNwNKlRRfLMYLXWcHnMvW1YVIv6m6M-bpHfaAZf0sYBuiMcUhLiM0RyTQAlPalPTfYxbUzHPDuTlUv3CYALhV-qA5Qcx2JCklxjnSf0Upe7KbMlsVfDCvIokAzET15rb715oM8Pas9z3cg9S9yD_hv3kQ" alt="Product"/>
-                </div>
-                <div class="prod-meta font-label-sm">
-                  <span class="prod-origin"><span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> Cầu Đất, Đà Lạt</span>
-                  <span class="prod-roast bg-secondary-fixed text-on-secondary-fixed-variant" style="background-color: rgba(255, 220, 192, 0.5);">Rang Vừa (Medium)</span>
-                </div>
-                <h3 class="font-title-lg prod-name">Specialty Arabica Cầu Đất Typica</h3>
-                <div class="prod-tasting-notes font-label-sm">
-                  <span class="prod-tasting-note">Hương Hoa Cam</span>
-                  <span class="prod-tasting-note">Mật Ong Rừng</span>
-                  <span class="prod-tasting-note">Trái Quả Mọng</span>
-                </div>
-              </div>
-              <div class="prod-footer">
-                <div>
-                  <span class="font-label-sm prod-variant">Túi Zip van 1 chiều (250g)</span>
-                  <span class="font-title-lg prod-price">220.000đ</span>
-                </div>
-                <button class="prod-add-btn font-label-md">
-                  <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
-                  <span>Chọn Mua</span>
-                </button>
-              </div>
-            </a>
-            
-            <!-- Card 2 -->
-            <a href="product-detail.html" class="product-item group">
-              <div>
-                <div class="prod-image-container">
-                  <span class="prod-badge-top-left bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm">Mới Rang Tuần Này</span>
-                  <button class="prod-fav-btn"><span class="material-symbols-outlined text-[18px]">favorite</span></button>
-                  <img class="prod-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpNUNlLro0jSjzAGyM7nLbLgeHKuyg7pnqhx5DPukNcFKtwqF1yF0dU0Moa2ArCISu0hmzsFcgN4T8grkAd-ZbiRhQb0nV0EVeEx5xwm8s0j1ry_y_7l_H3wFsUq2cJidU9V7lvy0ruH_ytlst9Hk-Ql9yGZpdhQyKSpBcJw633irYh2JCRJ2hbr-O7_j20u_D-JkGpVQUWnU6noEq64Z9CQ0ei4nttKqDpiMVziU9yQOk4mP2gEMvOw" alt="Product"/>
-                </div>
-                <div class="prod-meta font-label-sm">
-                  <span class="prod-origin"><span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> Buôn Ma Thuột</span>
-                  <span class="prod-roast bg-primary-container text-on-primary">Rang Đậm Vừa</span>
-                </div>
-                <h3 class="font-title-lg prod-name">Fine Robusta Honey Lên Men Tự Nhiên</h3>
-                <div class="prod-tasting-notes font-label-sm">
-                  <span class="prod-tasting-note">Chocolate Đen</span>
-                  <span class="prod-tasting-note">Hạt Phỉ Rang</span>
-                  <span class="prod-tasting-note">Vị Khói Ngọt</span>
-                </div>
-              </div>
-              <div class="prod-footer">
-                <div>
-                  <span class="font-label-sm prod-variant">Đóng gói hạt mộc (500g)</span>
-                  <span class="font-title-lg prod-price">185.000đ</span>
-                </div>
-                <button class="prod-add-btn font-label-md">
-                  <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
-                  <span>Chọn Mua</span>
-                </button>
-              </div>
-            </a>
-            
-            <!-- Card 3 -->
-            <a href="product-detail.html" class="product-item group">
-              <div>
-                <div class="prod-image-container">
-                  <span class="prod-badge-top-left bg-primary-container text-on-primary font-label-sm">Pha Phin Cổ Điển</span>
-                  <button class="prod-fav-btn"><span class="material-symbols-outlined text-[18px]">favorite</span></button>
-                  <img class="prod-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3u8piRAd4XxVKRMZuu1ju_Esyl5s1-1YvK_eb5R1ICw1zFxNAjXUBcEKtpZrAej6mPlkI4i4Fx4W8LARFinzUGxmSQ0Xs5tiVGhSRjcsClzD2rGN6pANxt4IA5doANfsGFrXdnbqx7UwiLyRvwMOehfsm91iLK_pm_2uE22JqxFMEwmW6vSktmRQBF7N2kOBgPczllffdz5VN9dkJR6GfQi-FbrIxDYBoOiG7U6MFSD7d2YRu7xBdyw" alt="Product"/>
-                </div>
-                <div class="prod-meta font-label-sm">
-                  <span class="prod-origin"><span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> Blend Đắk Lắk &amp; Lâm Đồng</span>
-                  <span class="prod-roast bg-primary-container text-on-primary">Rang Đậm (Dark)</span>
-                </div>
-                <h3 class="font-title-lg prod-name">K-Coffee Heritage Phin Blend No.1</h3>
-                <div class="prod-tasting-notes font-label-sm">
-                  <span class="prod-tasting-note">Caramel Đậm</span>
-                  <span class="prod-tasting-note">Béo Bùi Hạnh Nhân</span>
-                  <span class="prod-tasting-note">Hậu Vị Sâu</span>
-                </div>
-              </div>
-              <div class="prod-footer">
-                <div>
-                  <span class="font-label-sm prod-variant">Bột xay phin sẵn (500g)</span>
-                  <span class="font-title-lg prod-price">145.000đ</span>
-                </div>
-                <button class="prod-add-btn font-label-md">
-                  <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
-                  <span>Chọn Mua</span>
-                </button>
-              </div>
-            </a>
-            
-            <!-- Card 4 -->
-            <a href="product-detail.html" class="product-item group">
-              <div>
-                <div class="prod-image-container">
-                  <span class="prod-badge-top-left bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm">Tiện Lợi Văn Phòng</span>
-                  <button class="prod-fav-btn"><span class="material-symbols-outlined text-[18px]">favorite</span></button>
-                  <img class="prod-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJs4sQthw7iZYPfPnNfHCST5qDFj9cr809J6k55yNWaULH85vdKpmcvt3I2xByY_jJx3hJoC1czLamFQlKMkjhsT94fHanLtxN1wbQQJbF5zmWGBVP0-eS0EAjTTudnIZjeIUb3yBh2G_y3EvzZHSA4idT_6JUxnVWyexIFNhpBgEqZZxxBRD047DMh_BI2Aun3TJiDtG_v8zSuTs7hoKJLJABgwR5NTiPXoG4PIIVaPoYF9MhRfYseg" alt="Product"/>
-                </div>
-                <div class="prod-meta font-label-sm">
-                  <span class="prod-origin"><span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> Cầu Đất Specialty</span>
-                  <span class="prod-roast bg-secondary-fixed text-on-secondary-fixed-variant" style="background-color: rgba(255, 220, 192, 0.5);">Rang Vừa Sáng</span>
-                </div>
-                <h3 class="font-title-lg prod-name">Hộp Túi Lọc Drip Bag Arabica Tuyển</h3>
-                <div class="prod-tasting-notes font-label-sm">
-                  <span class="prod-tasting-note">Hương Đào Mọng</span>
-                  <span class="prod-tasting-note">Trà Đen Cam Thảo</span>
-                  <span class="prod-tasting-note">Chua Thanh Dịu</span>
-                </div>
-              </div>
-              <div class="prod-footer">
-                <div>
-                  <span class="font-label-sm prod-variant">Hộp 10 gói x 15g tiện dụng</span>
-                  <span class="font-title-lg prod-price">160.000đ</span>
-                </div>
-                <button class="prod-add-btn font-label-md">
-                  <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
-                  <span>Chọn Mua</span>
-                </button>
-              </div>
-            </a>
-            
-            <!-- Card 5 -->
-            <a href="product-detail.html" class="product-item group">
-              <div>
-                <div class="prod-image-container">
-                  <span class="prod-badge-top-left font-label-sm" style="background: var(--tertiary-fixed); color: var(--on-tertiary-fixed);">Micro-lot 2025</span>
-                  <button class="prod-fav-btn"><span class="material-symbols-outlined text-[18px]">favorite</span></button>
-                  <img class="prod-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfYKsyG1MUKw0AKRCDfUbUA68Acm6ij3r_cDSVZfTQEQLTePxMJBxb8Vxt-zxhLVnUSZ2P-DqH_SxHqplj9HGAgv0ZwZB9jCtvjMRj11qhgFsIf8XtlLQe6WYRPT3zHIF8ihYOij0tvTfqISkdnE3MB0skJP_iE-evc-Pesu9fkjJFTEg3fjMRV0zEAjx8o_ZZuR61WSKRgJsfd7tZIURfKz6PNEtk5F8bcj7T-UfvhvOWDNygPtmNYQ" alt="Product"/>
-                </div>
-                <div class="prod-meta font-label-sm">
-                  <span class="prod-origin"><span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> Mường Ảng, Sơn La</span>
-                  <span class="prod-roast bg-surface-container-high text-on-surface-variant">Rang Sáng (Light)</span>
-                </div>
-                <h3 class="font-title-lg prod-name">Sơn La Catimor Natural Anaerobic</h3>
-                <div class="prod-tasting-notes font-label-sm">
-                  <span class="prod-tasting-note">Rượu Vang Đỏ</span>
-                  <span class="prod-tasting-note">Mận Mộc Châu</span>
-                  <span class="prod-tasting-note">Hương Quế</span>
-                </div>
-              </div>
-              <div class="prod-footer">
-                <div>
-                  <span class="font-label-sm prod-variant">Mẻ rang giới hạn (200g)</span>
-                  <span class="font-title-lg prod-price">290.000đ</span>
-                </div>
-                <button class="prod-add-btn font-label-md">
-                  <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
-                  <span>Chọn Mua</span>
-                </button>
-              </div>
-            </a>
-            
-            <!-- Card 6 -->
-            <a href="product-detail.html" class="product-item group">
-              <div>
-                <div class="prod-image-container">
-                  <span class="prod-badge-top-left bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm">Cold Brew Tuyệt Vời</span>
-                  <button class="prod-fav-btn"><span class="material-symbols-outlined text-[18px]">favorite</span></button>
-                  <img class="prod-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEMKMARjbBE0GkOO74AA1XRQb9KHrn4M_sSzREsW7WGzeUMI_GraPCRrrFsZwAsQ0ZGVHVO5fD_NMmhfnbDWmZME2EEtgYy-fMTChWfDUmHPo22NsgnLk-0iCVT080dFX3XKBsD3TEVUxjCeZMy9m52A352X385rM8UUUtm8IzkKwrdUolFvhJDBFIII3bmjGvUkBVM0m5uYgSt-jE0HNPpeC7f102vj7pjh3E-Ssg7K34g_sW68aqCA" alt="Product"/>
-                </div>
-                <div class="prod-meta font-label-sm">
-                  <span class="prod-origin"><span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> Blend 70 Arabica 30 Robusta</span>
-                  <span class="prod-roast bg-secondary-fixed text-on-secondary-fixed-variant" style="background-color: rgba(255, 220, 192, 0.5);">Rang Vừa (Medium)</span>
-                </div>
-                <h3 class="font-title-lg prod-name">Túi Ngâm Lạnh Cold Brew Slow Pour</h3>
-                <div class="prod-tasting-notes font-label-sm">
-                  <span class="prod-tasting-note">Vỏ Cam Vàng</span>
-                  <span class="prod-tasting-note">Vani &amp; Hạt Cacao</span>
-                  <span class="prod-tasting-note">Ngọt Dịu Mượt Mà</span>
-                </div>
-              </div>
-              <div class="prod-footer">
-                <div>
-                  <span class="font-label-sm prod-variant">Set 5 túi ngâm (250g)</span>
-                  <span class="font-title-lg prod-price">195.000đ</span>
-                </div>
-                <button class="prod-add-btn font-label-md">
-                  <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
-                  <span>Chọn Mua</span>
-                </button>
-              </div>
-            </a>
-            
-            <!-- Card 7 -->
-            <a href="product-detail.html" class="product-item group">
-              <div>
-                <div class="prod-image-container">
-                  <span class="prod-badge-top-left bg-primary-container text-on-primary font-label-sm">Giống Hiếm</span>
-                  <button class="prod-fav-btn"><span class="material-symbols-outlined text-[18px]">favorite</span></button>
-                  <img class="prod-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGjk9wDwWtZ-Wx9PtLsobohqbaMWRBCLnTTMLdI3et0lmOUvpyxpcAfzdnLe02BADWVeoWNkI2gB3HU-KuPKWQsAxbd3LjF3inwkFmin6aJOT8R-Nkv0j6v8ZxeNl9jpdrkZPFrYy7NqXXVWgEkfASe2Fhfa6OYoJL0kQmwTO4mlXWfUlpVSMMudLfTfymdRYYJ40G9Rjr1GlSufUnma025Uza00_MoO51ao0nE-R_leoF_UvDe1_7SQ" alt="Product"/>
-                </div>
-                <div class="prod-meta font-label-sm">
-                  <span class="prod-origin"><span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> Trạm Hành - Cầu Đất</span>
-                  <span class="prod-roast bg-surface-container-high text-on-surface-variant">Rang Sáng (Light)</span>
-                </div>
-                <h3 class="font-title-lg prod-name">Yellow Bourbon Washed Cầu Đất</h3>
-                <div class="prod-tasting-notes font-label-sm">
-                  <span class="prod-tasting-note">Hoa Nhài Tươi</span>
-                  <span class="prod-tasting-note">Đường Mía Thô</span>
-                  <span class="prod-tasting-note">Chanh Vàng Meyer</span>
-                </div>
-              </div>
-              <div class="prod-footer">
-                <div>
-                  <span class="font-label-sm prod-variant">Túi Zip mộc (250g)</span>
-                  <span class="font-title-lg prod-price">310.000đ</span>
-                </div>
-                <button class="prod-add-btn font-label-md">
-                  <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
-                  <span>Chọn Mua</span>
-                </button>
-              </div>
-            </a>
-            
-            <!-- Card 8 -->
-            <a href="product-detail.html" class="product-item group">
-              <div>
-                <div class="prod-image-container">
-                  <span class="prod-badge-top-left bg-surface-container-highest text-on-surface font-label-sm">Vị Trái Cây Độc Bản</span>
-                  <button class="prod-fav-btn"><span class="material-symbols-outlined text-[18px]">favorite</span></button>
-                  <img class="prod-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMB_c0uq7BIUYelOVRargnvuyY5AkC_saEDGlFnY3QBhK-dPctVNWcSuzWUXMPQl2KVzNqXaZjSw5aJrHMdBEojaoSAcnnbQ83sNANgQPHKsIPO3O85VT0yNIq9bolqCiAU1_S5HhHec3HMiAAmRFUic9oVdMOgDeCQnBWeBAmzebl44a22uBtvdPe1DnvOVpJAHVmBuNVVa9PjtEcfCOhCC70wMVCB-I27QTtdmg_F9ruoe29_YxYpw" alt="Product"/>
-                </div>
-                <div class="prod-meta font-label-sm">
-                  <span class="prod-origin"><span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> Hướng Hóa, Quảng Trị</span>
-                  <span class="prod-roast bg-secondary-fixed text-on-secondary-fixed-variant" style="background-color: rgba(255, 220, 192, 0.5);">Rang Vừa Đậm</span>
-                </div>
-                <h3 class="font-title-lg prod-name">Liberica Quảng Trị (Cà Phê Mít)</h3>
-                <div class="prod-tasting-notes font-label-sm">
-                  <span class="prod-tasting-note">Trái Mít Chín</span>
-                  <span class="prod-tasting-note">Mứt Mơ Ngọt Dịu</span>
-                  <span class="prod-tasting-note">Hương Gỗ Quý</span>
-                </div>
-              </div>
-              <div class="prod-footer">
-                <div>
-                  <span class="font-label-sm prod-variant">Mẻ rang mộc (250g)</span>
-                  <span class="font-title-lg prod-price">245.000đ</span>
-                </div>
-                <button class="prod-add-btn font-label-md">
-                  <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
-                  <span>Chọn Mua</span>
-                </button>
-              </div>
-            </a>
-            
-            <!-- Card 9 -->
-            <a href="product-detail.html" class="product-item group">
-              <div>
-                <div class="prod-image-container">
-                  <span class="prod-badge-top-left bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm">Combo Quà Tặng</span>
-                  <button class="prod-fav-btn"><span class="material-symbols-outlined text-[18px]">favorite</span></button>
-                  <img class="prod-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmLSimesumCMvGmOv3bV8JVXYqx5xg8ACnbzdvRG0SWNQn94S22opzbMsuwtlyssf71T8ABi4tCo3nWJQVLp8ScoMQUCYfmsnuLN5TOHEXF7u8nHICMwzT8CDnh5KAPpIrmvTYwsDCiuONKngS5yGTE6GxwVjg7yYG9cxY4AUkTu2mfviWv2aMzbcLGqXkubvL3yXQBdkB_FhEgRDOFZWKRUKfXGamiGoEkup7MzyTXWa4t3HqMpqVCw" alt="Product"/>
-                </div>
-                <div class="prod-meta font-label-sm">
-                  <span class="prod-origin"><span class="material-symbols-outlined" style="font-size: 14px;">local_cafe</span> Bộ Dụng Cụ Barista</span>
-                  <span class="prod-roast bg-tertiary-fixed text-on-tertiary-fixed">Phụ Kiện Cao Cấp</span>
-                </div>
-                <h3 class="font-title-lg prod-name">Set Phin Nhôm Mạ Vàng Cát &amp; Cà Phê Mộc</h3>
-                <div class="prod-tasting-notes font-label-sm">
-                  <span class="prod-tasting-note">Nhôm Chuẩn Food-grade</span>
-                  <span class="prod-tasting-note">Lỗ Chiết Chuẩn 0.3mm</span>
-                </div>
-              </div>
-              <div class="prod-footer">
-                <div>
-                  <span class="font-label-sm prod-variant">Bộ hộp quà sang trọng</span>
-                  <span class="font-title-lg prod-price">390.000đ</span>
-                </div>
-                <button class="prod-add-btn font-label-md">
-                  <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
-                  <span>Chọn Mua</span>
-                </button>
-              </div>
-            </a>
-            
+          <div class="product-grid" id="productGrid">
+            <!-- JS will render products here -->
           </div>
           
           <!-- Pagination -->
           <div class="pagination-wrapper">
-            <span class="font-body-sm text-on-surface-variant">
-              Trang <span class="font-bold text-primary">1</span> trong tổng số 3 trang
+            <span class="font-body-sm text-on-surface-variant" id="paginationInfo">
+              Trang <span class="font-bold text-primary">1</span> trong tổng số 1 trang
             </span>
-            <div class="pagination-controls">
-              <button class="page-btn disabled"><span class="material-symbols-outlined">chevron_left</span></button>
-              <button class="page-btn active font-label-md">1</button>
-              <button class="page-btn normal font-label-md">2</button>
-              <button class="page-btn normal font-label-md">3</button>
-              <button class="page-btn next"><span class="material-symbols-outlined">chevron_right</span></button>
+            <div class="pagination-controls" id="paginationControls">
+              <!-- JS will render pagination controls here -->
             </div>
             <div style="display: flex; align-items: center; gap: 4px;" class="font-label-sm text-on-surface-variant hidden-mobile">
               <span class="material-symbols-outlined text-secondary" style="font-size: 16px;">verified</span>
@@ -540,7 +251,7 @@
         </div>
         
         <div class="footer-col">
-          <h4 class="font-title-md footer-title">Khám Phá</h4>
+          <h4 class="font-title-md footer-title">Khám Phá <span class="material-symbols-outlined accordion-icon">expand_more</span></h4>
           <nav class="footer-nav font-body-sm">
             <a href="product.html">Cà Phê Pha Phin Mộc</a>
             <a href="product.html">Arabica Cầu Đất Tuyển Chọn</a>
@@ -551,7 +262,7 @@
         </div>
         
         <div class="footer-col">
-          <h4 class="font-title-md footer-title">Chăm Sóc &amp; Hỗ Trợ</h4>
+          <h4 class="font-title-md footer-title">Chăm Sóc &amp; Hỗ Trợ <span class="material-symbols-outlined accordion-icon">expand_more</span></h4>
           <nav class="footer-nav font-body-sm">
             <a href="#">Chính Sách Giao Hàng</a>
             <a href="#">Quy Định Đổi Trả 7 Ngày</a>
@@ -561,7 +272,7 @@
           </nav>
         </div>
         
-        <div class="footer-col">
+        <div class="footer-col newsletter-col">
           <h4 class="font-title-md footer-title">Bản Tin Hương Vị</h4>
           <p class="font-body-sm text-on-surface-variant">Đăng ký nhận thông tin các mẻ rang giới hạn (Micro-lot) và nhận ngay ưu đãi giảm giá 10% cho đơn hàng đầu tiên của bạn.</p>
           <form class="newsletter-form" onsubmit="return false;">
@@ -607,5 +318,8 @@
       });
     }
   </script>
+  <script src="js/data.js"></script>
+  <script src="js/pages/product.js"></script>
 </body>
 </html>
+

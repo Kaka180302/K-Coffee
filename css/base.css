@@ -1,4 +1,4 @@
-/* base.css */
+﻿/* base.css */
 :root {
   /* Colors */
   --error: #ba1a1a;
@@ -129,10 +129,14 @@ body {
 .text-on-surface { color: var(--on-surface); }
 .text-on-surface-variant { color: var(--on-surface-variant); }
 .text-secondary-fixed { color: var(--secondary-fixed); }
+.text-on-secondary-fixed-variant { color: var(--on-secondary-fixed-variant); }
 .text-inverse-on-surface { color: var(--inverse-on-surface); }
 .text-on-primary { color: var(--on-primary); }
+.text-on-primary-container { color: var(--on-primary-container); }
 
 .bg-primary { background-color: var(--primary); }
+.bg-primary-container { background-color: var(--primary-container); }
 .bg-secondary { background-color: var(--secondary); }
+.bg-secondary-fixed { background-color: var(--secondary-fixed); }
 .bg-surface-container-low { background-color: var(--surface-container-low); }
 .bg-surface-container { background-color: var(--surface-container); }
