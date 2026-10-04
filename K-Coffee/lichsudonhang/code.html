@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>K-Coffee | Cà Phê Thủ Công Đặc Sản</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ba1a1a", "on-tertiary-fixed": "#0f1f12", "on-error": "#ffffff", "surface-tint": "#74584e", "tertiary-container": "#112013", "background": "#fcf9f3", "secondary-fixed": "#ffdcc0", "on-secondary-fixed-variant": "#673d0f", "secondary-fixed-dim": "#f9ba81", "on-error-container": "#93000a", "on-primary-fixed": "#2a170f", "surface-bright": "#fcf9f3", "outline-variant": "#d3c3be", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "surface-dim": "#dcdad4", "on-surface-variant": "#504440", "primary-fixed": "#ffdbce", "on-secondary-fixed": "#2e1600", "surface-container-highest": "#e5e2dc", "tertiary": "#000301", "surface-variant": "#e5e2dc", "inverse-surface": "#31312d", "secondary": "#835425", "inverse-on-surface": "#f3f0ea", "on-background": "#1c1c18", "on-tertiary-fixed-variant": "#3a4b3c", "primary": "#090100", "inverse-primary": "#e3bfb2", "on-primary-fixed-variant": "#5a4137", "outline": "#827470", "on-secondary-container": "#7a4b1d", "surface-container-low": "#f6f3ed", "surface": "#fcf9f3", "surface-container": "#f0eee8", "on-primary-container": "#9e7e73", "on-surface": "#1c1c18", "primary-container": "#2c1810", "secondary-container": "#ffbf87", "tertiary-fixed": "#d4e8d3", "tertiary-fixed-dim": "#b9ccb8", "primary-fixed-dim": "#e3bfb2", "surface-container-lowest": "#ffffff", "surface-container-high": "#ebe8e2", "on-tertiary-container": "#778978", "error-container": "#ffdad6", "on-primary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "gutter-mobile": "1rem", "margin-mobile": "1.25rem", "space-sm": "0.5rem", "space-md": "1rem", "space-lg": "1.5rem", "margin": "3rem", "space-xs": "0.25rem", "gutter": "1.5rem" }, "fontFamily": { "headline-lg-mobile": [ "Playfair Display" ], "headline-sm": [ "Playfair Display" ], "display-hero-mobile": [ "Playfair Display" ], "label-sm": [ "Plus Jakarta Sans" ], "body-md": [ "Plus Jakarta Sans" ], "label-md": [ "Plus Jakarta Sans" ], "title-md": [ "Plus Jakarta Sans" ], "label-lg": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-md": [ "Playfair Display" ], "headline-lg": [ "Playfair Display" ], "body-lg": [ "Plus Jakarta Sans" ], "display-hero": [ "Playfair Display" ], "title-lg": [ "Plus Jakarta Sans" ] }, "fontSize": { "headline-lg-mobile": [ "28px", { "lineHeight": "36px", "fontWeight": "600" } ], "headline-sm": [ "22px", { "lineHeight": "28px", "fontWeight": "500" } ], "display-hero-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" } ], "body-md": [ "15px", { "lineHeight": "24px", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "title-md": [ "16px", { "lineHeight": "24px", "fontWeight": "600" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "body-sm": [ "13px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-md": [ "28px", { "lineHeight": "36px", "fontWeight": "500" } ], "headline-lg": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "body-lg": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "title-lg": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-white/75 backdrop-blur-md shadow-[0_8px_32px_-4px_rgba(44,24,16,0.06)]"><div class="h-20 w-full max-w-[1320px] mx-auto px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md shrink-0"><img alt="K-Coffee Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XQVRAXEYxrPGJlCVMAetaIVs0YK19DKoh7AfDmx-JjSIGUYYvlF1I_vaPcPc6gxmsWEdS3_AsWZmZq7PN0_sMJuplc1FecawLONf2b-yvTA1qeqrhH_2fTDnxQ69DeXBnWIEU6FYlY0oeNl1R7Ts7dYMc78QfVKr1bupR3KE3_E2RNHeGdkE1QbcU2pyuf0ELgIV1D-IAlZAicNOO4-VEZ9xUO11nr6WlxrtAO0Yf28DTDOuU0hC5jnsOO"/><a class="flex flex-col" data-path="trang-chu" href="#"><span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none">K-Coffee</span><span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mt-1">Artisanal Roastery</span></a></div><nav class="hidden xl:flex items-center gap-space-xs p-1 bg-surface-container/60 rounded-full backdrop-blur-sm" data-active-classes="bg-primary-container text-on-primary font-bold shadow-sm"><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="trang-chu" href="#">Trang Chủ</a><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="san-pham" href="#">Sản Phẩm</a><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="cau-chuyen-k-coffee" href="#">Câu Chuyện K-Coffee</a><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="huong-dan-pha-che" href="#">Hướng Dẫn Pha Chế</a><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="lien-he" href="#">Liên Hệ</a></nav><div class="flex items-center gap-space-sm shrink-0"><div class="relative hidden lg:flex items-center"><input class="w-52 xl:w-64 pl-9 pr-4 py-2 bg-surface-container-lowest/80 rounded-full font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/30 transition-all shadow-[0_2px_8px_-2px_rgba(44,24,16,0.04)]" placeholder="Tìm hạt rang, vùng trồng..." type="text"/><span class="material-symbols-outlined absolute left-3 text-outline text-[18px] select-none">search</span></div><a class="relative p-2 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all flex items-center justify-center" data-path="danh-sach-yeu-thich" href="#"><span class="material-symbols-outlined text-[22px]">favorite</span><span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-secondary text-on-secondary font-label-sm text-[10px] flex items-center justify-center leading-none shadow-sm">2</span></a><a class="relative p-2 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all flex items-center justify-center" data-path="gio-hang" href="#"><span class="material-symbols-outlined text-[22px]">local_mall</span><span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-primary-container text-on-primary font-label-sm text-[10px] flex items-center justify-center leading-none shadow-sm">3</span></a><div class="flex items-center pl-space-xs"><a class="block p-0.5 rounded-full ring-2 ring-outline-variant hover:ring-secondary transition-all" data-path="tai-khoan" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaQZqlSpHODKZRqmLBp0g0IPt0Y3mp3iuk9fnFKxt0Ya7fkIgqSVd8vv1GHWofPgoh9qG92dQ4n-sFzycYtUiySlujJIjL93JcWTSyFEXqp8swLs9vWsDcBpovQy3QCTjwEbiOyd7SbBKvc0I9X6ZvnlB--RRIo9wvkzsj11nplYTwVqTxQpF49FP3GSWNjUlGD9-c-Oz8yqumRv1JQFca5S2fdzNRAcqNtbwvF5LlN-BO10edWiOgCg"/></a></div></div></div></header><main class="w-full pt-20 flex-1 bg-background"><div class="flex flex-col w-full">
+<!-- Top Subtle Background Atmosphere -->
+<div class="relative w-full max-w-[1320px] mx-auto px-margin-mobile md:px-margin pt-space-md pb-space-xl">
+<!-- Ambient Warm Orbs -->
+<div class="absolute -top-12 left-1/4 w-96 h-96 rounded-full bg-secondary-fixed/40 blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-48 right-10 w-80 h-80 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none -z-10"></div>
+<!-- 1. Breadcrumb -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md mb-space-md">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">home</span>
+<span>Trang chủ</span>
+</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Tài khoản thành viên</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="text-primary font-bold">Lịch sử đơn hàng</span>
+</nav>
+<!-- 2. Header & Controls -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg mb-space-xl">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-secondary-fixed/50 text-on-secondary-fixed-variant font-label-sm text-label-sm uppercase tracking-wider mb-space-xs shadow-sm">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span>
+<span>Roastery Tracking Dispatch</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+          Lịch Sử Mẻ Rang &amp; Đơn Hàng
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+          Theo dõi sát sao hành trình từ lúc hạt vừa ra lò rang mộc, thời gian nhả khí degas tự nhiên, cho đến khi trao tận tay ngưỡng cửa nhà bạn.
+        </p>
+</div>
+<!-- Quick Metrics Pill -->
+<div class="flex items-center gap-space-md p-space-sm rounded-2xl bg-surface-container-lowest/80 backdrop-blur-md shadow-sm">
+<div class="flex items-center gap-space-xs px-space-sm py-1">
+<span class="material-symbols-outlined text-secondary text-[24px]">coffee</span>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Tổng hạt đã rang</div>
+<div class="font-title-md text-title-md text-primary">3.25 kg</div>
+</div>
+</div>
+<div class="w-px h-8 bg-surface-container-highest"></div>
+<div class="flex items-center gap-space-xs px-space-sm py-1">
+<span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Độ tươi trung bình</div>
+<div class="font-title-md text-title-md text-primary">&lt; 48 giờ</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Filter Tabs & Search Bar -->
+<div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-md mb-space-xl p-space-xs rounded-2xl bg-surface-container-low/70 backdrop-blur-md shadow-sm">
+<!-- Status Tabs -->
+<div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar p-1">
+<button class="px-space-md py-2 rounded-full font-label-md text-label-md bg-primary-container text-on-primary font-semibold shadow-sm transition-all whitespace-nowrap">
+          Tất cả đơn (5)
+        </button>
+<button class="px-space-md py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all whitespace-nowrap">
+          Đang rang &amp; Đóng gói (1)
+        </button>
+<button class="px-space-md py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all whitespace-nowrap flex items-center gap-1.5">
+<span>Đang giao hỏa tốc</span>
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span>(1)</span>
+</button>
+<button class="px-space-md py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all whitespace-nowrap">
+          Đã giao thành công (3)
+        </button>
+<button class="px-space-md py-2 rounded-full font-label-md text-label-md text-outline hover:text-on-surface-variant transition-all whitespace-nowrap">
+          Đã hủy (0)
+        </button>
+</div>
+<!-- Search Input -->
+<div class="relative min-w-[260px] md:w-72 px-1">
+<input class="w-full pl-10 pr-4 py-2 rounded-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/40 shadow-sm transition-all" placeholder="Mã đơn KC-..., tên hạt cà phê..." type="text"/>
+<span class="material-symbols-outlined absolute left-4 top-2.5 text-outline text-[18px]">search</span>
+</div>
+</div>
+<!-- MAIN GRID: Orders Feed & Customer Roastery Sidebar -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- LEFT COLUMN: Orders List (8 Cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- ================= ORDER 1: ACTIVE DISPATCH (HERO CARD) ================= -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest/80 backdrop-blur-md shadow-md p-space-md md:p-space-lg transition-all hover:shadow-lg">
+<!-- Top Accent Light Bar -->
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-secondary-fixed via-secondary to-primary-container"></div>
+<!-- Order Header Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-space-md">
+<div class="flex items-center gap-2">
+<span class="font-title-lg text-title-lg text-primary tracking-tight font-bold">#KC-89421</span>
+<button class="text-outline hover:text-secondary transition-colors" title="Sao chép mã đơn">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+<span class="hidden sm:inline-block text-outline">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ngày đặt: 18/10/2025 (10:15)</span>
+</div>
+<!-- Herbal / Forest Moss Active Status Badge -->
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md font-semibold shadow-sm">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-on-tertiary-fixed opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-on-tertiary-fixed"></span>
+</span>
+<span>Đang trên đường giao hỏa tốc</span>
+</div>
+</div>
+<!-- VISUAL ORDER TRACKER (4 STEPS) -->
+<div class="my-space-md p-space-md rounded-xl bg-surface-container-low/60 backdrop-blur-sm">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-3">
+<span class="font-semibold text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">local_shipping</span>
+                Dự kiến nhận hạt tươi: <strong class="text-secondary font-bold">Hôm nay, trước 17:30</strong>
+</span>
+<span class="text-outline">Đơn vị: K-Express Roastery Fleet</span>
+</div>
+<div class="relative flex items-center justify-between w-full pt-2 pb-1">
+<!-- Background Progress Track -->
+<div class="absolute top-1/2 left-0 right-0 -translate-y-1/2 h-1 bg-surface-container-highest z-0"></div>
+<!-- Completed Track Fill (around 70%) -->
+<div class="absolute top-1/2 left-0 w-[72%] -translate-y-1/2 h-1 bg-secondary z-0"></div>
+<!-- Step 1: Placed -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-primary mt-2 text-center">Đặt hàng</span>
+<span class="font-label-sm text-[10px] text-outline">18/10 10:15</span>
+</div>
+<!-- Step 2: Roasted & Degas -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-primary mt-2 text-center">Rang &amp; Degas</span>
+<span class="font-label-sm text-[10px] text-outline">18/10 13:40</span>
+</div>
+<!-- Step 3: Active Out for Delivery -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-md ring-4 ring-secondary/20">
+<span class="material-symbols-outlined text-[16px] animate-pulse">moped</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-secondary mt-2 text-center">Đang giao hàng</span>
+<span class="font-label-sm text-[10px] text-secondary font-medium">18/10 15:20</span>
+</div>
+<!-- Step 4: Delivered -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">home_pin</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline mt-2 text-center">Nhận hạt tươi</span>
+<span class="font-label-sm text-[10px] text-outline">Dự kiến 17:30</span>
+</div>
+</div>
+</div>
+<!-- Product Line Items -->
+<div class="space-y-space-md py-space-sm">
+<!-- Item 1 -->
+<div class="flex items-center gap-space-md p-space-sm rounded-xl bg-surface-container-lowest/60 hover:bg-surface-container-lowest transition-colors">
+<img class="w-16 h-20 sm:w-20 sm:h-24 rounded-lg object-cover bg-surface-container shrink-0 shadow-sm" data-alt="Specialty Arabica Cau Dat honey process coffee bag resting on polished espresso wood bar, soft warm ambient window sunlight, artisan kraft packaging with minimalist typography, warm minimalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCTVY6xC2VZB5XX9TdGRrXBvab6NQBMnDgUAjXaDjvGvoX-LgdaKAvTQI0KExqVNfUjd4ASyyzp-9rEohfLck-5nqfOYzWiWWUl2amyDl3PegIRP8wWt1VuWjqTC9EHSR6jOK9D7qmrzYEXKnu1ychILd8YmHRUz0t1HEmzpxDb1XhQKu6FJKVkZr0I7CHsys6Ura_fOAVQIfDtK4Nbkn18IQEJlAfD8tf4Qn9BDGMOI9-cOGQ9wsuCA"/>
+<div class="flex-1 min-w-0">
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-secondary-fixed/50 text-on-secondary-fixed-variant">
+                    Medium Roast
+                  </span>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed">
+                    Cầu Đất • 1.650m
+                  </span>
+</div>
+<h4 class="font-title-md text-title-md text-primary font-bold truncate">
+                  K-Specialty Arabica Cầu Đất Honey Process
+                </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Quy cách: 250g • Mức xay: Phin truyền thống • Mẻ rang #R-1810
+                </p>
+<div class="flex items-center gap-space-sm mt-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hương vị: Mật hoa, Quả anh đào, Hậu vị hạnh nhân ngọt</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Số lượng: x2</div>
+<div class="font-title-md text-title-md text-primary font-bold mt-1">370.000₫</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-space-md p-space-sm rounded-xl bg-surface-container-lowest/60 hover:bg-surface-container-lowest transition-colors">
+<img class="w-16 h-20 sm:w-20 sm:h-24 rounded-lg object-cover bg-surface-container shrink-0 shadow-sm" data-alt="Matte charcoal anodized aluminum Vietnamese traditional coffee phin brewer on light travertine stone with fine coffee powder nearby, warm morning sun, artisanal cafe styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbbMav4zUWQHncJvzUZMiVWJOtqn1_JnkF11iffdpf-gHlCWcbMnppGyUHR7sVQq3udF9LjTx-ibR_2wJG3azSlKsFlQz_dTBlbxTasOoT1xBPoMnIRA-K1ATHSK8s99UAJGa5Ewa47b3UfzQAa00KJOEoXVeNQ6pKHHRMuSxEEPdqcACTJiRnimbqn76fMNNIMc9kfAbTS1ghtbWZ_Iq0RABb2h3fr1kabBZgohuEPrMQLmbUDmY-hw"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-highest text-on-surface-variant">
+                    Dụng Cụ Barista
+                  </span>
+</div>
+<h4 class="font-title-md text-title-md text-primary font-bold truncate">
+                  Phin Nhôm Mạ Anode Matte Craft Collection
+                </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Màu sắc: Nâu Espresso mờ • Lỗ phin gia công vi mô 0.4mm
+                </p>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Bảo hành 12 tháng</span>
+</div>
+<div class="text-right shrink-0">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Số lượng: x1</div>
+<div class="font-title-md text-title-md text-primary font-bold mt-1">120.000₫</div>
+</div>
+</div>
+</div>
+<!-- Summary & Quick Actions -->
+<div class="mt-space-md pt-space-md flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md bg-surface-container-low/40 -mx-space-md md:-mx-space-lg -mb-space-md md:-mb-space-lg p-space-md md:p-space-lg rounded-b-2xl">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span>Thanh toán: <strong class="text-on-surface">Ví MoMo (Đã thanh toán)</strong></span>
+<span class="text-outline">•</span>
+<span class="text-secondary font-semibold">Miễn phí vận chuyển</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-body-md text-body-md text-on-surface-variant">Tổng giá trị đơn:</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">490.000₫</span>
+</div>
+</div>
+<!-- Action Buttons Group -->
+<div class="flex flex-wrap items-center gap-space-xs w-full md:w-auto">
+<button class="px-space-md py-2.5 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg font-semibold hover:bg-primary transition-all shadow-md flex items-center justify-center gap-1.5 flex-1 md:flex-initial">
+<span class="material-symbols-outlined text-[18px]">near_me</span>
+<span>Theo dõi hành trình giao</span>
+</button>
+<button class="p-2.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors shadow-sm flex items-center justify-center" title="Xem hóa đơn điện tử VAT">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+</button>
+<button class="p-2.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-secondary hover:bg-surface-container-high transition-colors shadow-sm flex items-center justify-center" title="Liên hệ Barista hỗ trợ qua Zalo">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ================= ORDER 2: COMPLETED ================= -->
+<div class="rounded-2xl bg-surface-container-lowest/80 backdrop-blur-md shadow-sm p-space-md md:p-space-lg transition-all hover:shadow-md">
+<!-- Order Header Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm">
+<div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-space-md">
+<span class="font-title-lg text-title-lg text-primary font-bold">#KC-87210</span>
+<span class="hidden sm:inline-block text-outline">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ngày đặt: 02/10/2025</span>
+<span class="hidden sm:inline-block text-outline">•</span>
+<span class="font-body-sm text-body-sm text-secondary">Giao ngày: 04/10/2025</span>
+</div>
+<!-- Delivered Badge (Warm Espresso Minimal) -->
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+<span>Đã giao thành công</span>
+</div>
+</div>
+<!-- Product Compact Preview -->
+<div class="divide-y divide-surface-container py-space-xs">
+<!-- Product 1 -->
+<div class="flex items-center gap-space-md py-space-sm">
+<img class="w-14 h-16 rounded-lg object-cover bg-surface-container shrink-0 shadow-sm" data-alt="Single bag of Fine Robusta Buon Ma Thuot natural anaerobic fermented coffee beans against textured warm plaster wall with roasting scoop and glossy whole beans" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUFYMKOVVdFkp3hJk_eZ4rjB-FBxBcooRzzq-hgcqCgSJImCuLfGC1f5XD7aOEBgbuICFSLSwPeHTZXwAOls9P5z02Fc8xndop4lmq3BuQRCXGKew34FcvESImHB2ZNf_7LGcRMs3vAPridQ7BshJ4ee67hJlUsWNHjSEm7p9anxiixfAk2y8PvXfSHd0GbzgaqqZVo69zVWWyFkKkr3EszFney7mzeV_jBqOF4QgJLkacANWRp_biIw"/>
+<div class="flex-1 min-w-0">
+<h4 class="font-title-md text-title-md text-primary font-bold truncate">
+                  Fine Robusta Buôn Ma Thuột Lên Men Tự Nhiên
+                </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  500g • Hạt nguyên bản (Whole Bean) • Rang đậm vừa (Dark Roast)
+                </p>
+<div class="text-label-sm font-label-sm text-outline mt-0.5">Mẻ rang ngày 01/10/2025 • Đã đạt đỉnh degas lý tưởng</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">x1</span>
+<div class="font-title-md text-title-md text-primary font-semibold">220.000₫</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="flex items-center gap-space-md py-space-sm">
+<img class="w-14 h-16 rounded-lg object-cover bg-surface-container shrink-0 shadow-sm" data-alt="Artisanal craft paper box containing single-serve pour over coffee drip bags from Cau Dat Da Lat on wooden coffee table with a steaming ceramic mug" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFZ0E4OAC_vwFVvpuExgjL4hYKsE9wMV-mVYNIzxuX9_Jr3Zic2CtMjw5ck3_zRd6JuenPIlIUkoelJylOAZlUphglFOic4ktgMiAevSfBhYcULiq5m5EzE0CahMfnSXMZ1YM2KpTlYBITbur9ceRzOWbFxBA6dKLy7mxjn36Qi_SBfp9F-rBUSUDShJwtNxi_DfL6McI_XxOM6VMnUTNCYTpAVZ6N4jLr6PSpmcJFybQ3XUhPh2i2Pw"/>
+<div class="flex-1 min-w-0">
+<h4 class="font-title-md text-title-md text-primary font-bold truncate">
+                  Hộp Cà Phê Túi Lọc Drip Bag Cầu Đất Tuyển Chọn
+                </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Hộp 10 gói x 15g tiện lợi pha văn phòng
+                </p>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">x1</span>
+<div class="font-title-md text-title-md text-primary font-semibold">85.000₫</div>
+</div>
+</div>
+</div>
+<!-- Bottom Row: Price & Actions -->
+<div class="mt-space-sm pt-space-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tổng thanh toán: </span>
+<strong class="font-title-lg text-title-lg text-primary ml-1">305.000₫</strong>
+<span class="font-label-sm text-label-sm text-outline ml-2">(Thanh toán khi nhận hàng - COD)</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<!-- Re-order button -->
+<button class="px-space-md py-2 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-semibold hover:bg-secondary-fixed-dim transition-colors flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">replay</span>
+<span>Mua lại mẻ này</span>
+</button>
+<!-- Review sensory button -->
+<button class="px-space-md py-2 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md font-medium hover:bg-surface-container-highest transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">rate_review</span>
+<span>Đánh giá hương vị</span>
+</button>
+<!-- Tasting notes PDF -->
+<button class="p-2 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" title="Tải Tasting Notes PDF của mẻ rang này">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ================= ORDER 3: COMPLETED ================= -->
+<div class="rounded-2xl bg-surface-container-lowest/80 backdrop-blur-md shadow-sm p-space-md md:p-space-lg transition-all hover:shadow-md">
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm">
+<div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-space-md">
+<span class="font-title-lg text-title-lg text-primary font-bold">#KC-84192</span>
+<span class="hidden sm:inline-block text-outline">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ngày đặt: 15/09/2025</span>
+<span class="hidden sm:inline-block text-outline">•</span>
+<span class="font-body-sm text-body-sm text-secondary">Giao ngày: 17/09/2025</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+<span>Đã giao thành công</span>
+</div>
+</div>
+<!-- Product Item -->
+<div class="divide-y divide-surface-container py-space-xs">
+<div class="flex items-center gap-space-md py-space-sm">
+<img class="w-14 h-16 rounded-lg object-cover bg-surface-container shrink-0 shadow-sm" data-alt="Artisan coffee beans bag of Da Lat Sunset Blend next to a wooden gooseneck kettle on a calm minimalist kitchen counter with warm natural backlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAno6rGySpB9Dihl6y6KRJ5WbksROcLLqSXEDtzDRaJUt38d-6VPjpyt68zdWpVRdrNO74eA75VhNXWEkRtfMc7GjCGMZs4yc4Sive7diewZEAuC6t54WpzRKoiZCiMYHWF6QWjGf6Qph3p6p1MJpNYIDUTrhEqnUn48W0XxFzADG6E9f4DBsX3ydnmvG02RzbuC7k2BVZq08IzCBXPBFPp6YDW0FlevKjVcU8lCpKRxEN99Ddmeji2ng"/>
+<div class="flex-1 min-w-0">
+<h4 class="font-title-md text-title-md text-primary font-bold truncate">
+                  Da Lat Sunset Blend 70/30 (Arabica &amp; Robusta Mộc)
+                </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  500g • Kèm Ấm rót cổ ngỗng tay cầm gỗ mộc 600ml
+                </p>
+<div class="flex items-center gap-1 mt-1 text-secondary">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant ml-1 font-normal">Bạn đã đánh giá 5 sao ("Hương thơm socola đen ngậy rõ")</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Combo</span>
+<div class="font-title-md text-title-md text-primary font-semibold">565.000₫</div>
+</div>
+</div>
+</div>
+<!-- Bottom Row -->
+<div class="mt-space-sm pt-space-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tổng thanh toán: </span>
+<strong class="font-title-lg text-title-lg text-primary ml-1">565.000₫</strong>
+<span class="font-label-sm text-label-sm text-outline ml-2">(Chuyển khoản VietQR)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-2 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-semibold hover:bg-secondary-fixed-dim transition-colors flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">replay</span>
+<span>Mua lại đơn này</span>
+</button>
+<button class="px-3 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-colors" title="Xem hóa đơn chi tiết">
+                Chi tiết
+              </button>
+</div>
+</div>
+</div>
+<!-- Pagination Controls -->
+<div class="flex items-center justify-between pt-space-md pb-space-sm">
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+            Hiển thị <strong>3</strong> trong tổng số <strong>5</strong> đơn hàng
+          </div>
+<div class="flex items-center gap-1">
+<button class="p-2 rounded-full bg-surface-container-low text-outline cursor-not-allowed">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold shadow-sm">
+              1
+            </button>
+<button class="w-8 h-8 rounded-full text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors">
+              2
+            </button>
+<button class="p-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: User Membership & Roastery Concierge Sidebar (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- 1. VIP Roastery Membership Card (Glassmorphism & Gold Accent) -->
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary-container via-primary to-primary-container text-on-primary p-space-lg shadow-lg">
+<!-- Decorative Background Grain / Rings -->
+<div class="absolute -right-10 -bottom-10 w-44 h-44 rounded-full bg-secondary/30 blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed">K-Coffee Connoisseur</span>
+<h3 class="font-headline-sm text-headline-sm text-on-primary mt-1 font-bold">Hạng Hạt Vàng</h3>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest/10 backdrop-blur-md flex items-center justify-center border border-white/20">
+<span class="material-symbols-outlined text-secondary-fixed text-[22px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+</div>
+<div class="my-space-md p-space-sm rounded-xl bg-surface-container-lowest/10 backdrop-blur-sm border border-white/10">
+<div class="flex items-center justify-between text-surface-dim font-label-sm text-label-sm mb-1">
+<span>Điểm thưởng tích lũy:</span>
+<span class="text-secondary-fixed font-bold">1.450 K-Points</span>
+</div>
+<!-- Progress Bar to Next Reward -->
+<div class="w-full bg-white/20 h-2 rounded-full overflow-hidden mt-1">
+<div class="bg-secondary-fixed h-full rounded-full w-[82%]"></div>
+</div>
+<p class="font-body-sm text-[12px] text-surface-dim mt-2 leading-snug">
+              Bạn chỉ cần thêm <strong>50 K-Points</strong> nữa để đổi miễn phí 01 Túi hạt Cầu Đất Honey 250g hoặc Phin Anode cao cấp.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-surface-dim font-label-sm text-label-sm">
+<span>Mã hội viên: #KCF-9942</span>
+<a class="text-secondary-fixed hover:underline flex items-center gap-0.5" href="#">
+<span>Đổi quà tặng</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- 2. Default Shipping Address Card -->
+<div class="rounded-2xl bg-surface-container-lowest/80 backdrop-blur-md shadow-sm p-space-md transition-all hover:shadow-md">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm border-b border-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">location_on</span>
+<h4 class="font-title-md text-title-md text-primary font-bold">Địa Chỉ Nhận Hạt Mặc Định</h4>
+</div>
+<a class="font-label-sm text-label-sm text-secondary hover:underline font-semibold" href="#">Thay đổi</a>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-primary font-semibold">Nguyễn Văn A</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed/40 text-on-secondary-fixed-variant font-label-sm text-[10px] font-bold">Nhà riêng</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">0912 345 678</p>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed pt-1">
+              Số 28 Phố Tràng Thi, Phường Hàng Trống, Quận Hoàn Kiếm, Thành phố Hà Nội
+            </p>
+</div>
+<div class="mt-space-md p-space-xs rounded-xl bg-surface-container-low flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0 ml-1">notifications_active</span>
+<span>Luôn gọi trước khi giao, bảo quản tránh ánh nắng trực tiếp.</span>
+</div>
+</div>
+<!-- 3. Freshness & Degas Roastery Guide Widget -->
+<div class="rounded-2xl bg-surface-container-low/70 backdrop-blur-md shadow-sm p-space-md">
+<div class="flex items-center gap-2 mb-space-xs text-primary">
+<span class="material-symbols-outlined text-secondary text-[20px]">tips_and_updates</span>
+<h4 class="font-title-md text-title-md font-bold">Sổ Tay Degas Hạt Mộc</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Hạt cà phê sau khi rang cần từ 3 - 7 ngày để nhả khí CO2 tự nhiên. Đây là thời điểm vàng để pha chế espresso hoặc pour-over với tầng hương hoa quả rõ nét nhất.
+          </p>
+<div class="mt-space-sm space-y-2">
+<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-lowest font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[16px]">lock</span>
+<span>Đóng chặt van 1 chiều túi zip sau khi lấy hạt</span>
+</div>
+<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-lowest font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[16px]">thermostat</span>
+<span>Bảo quản nhiệt độ 20°C - 25°C, nơi khô ráo</span>
+</div>
+</div>
+</div>
+<!-- 4. Quick Concierge / Barista Hotline -->
+<div class="rounded-2xl bg-surface-container-lowest/80 backdrop-blur-md shadow-sm p-space-md flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-on-secondary-fixed-variant shrink-0">
+<span class="material-symbols-outlined text-[24px]">support_agent</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Hotline Nghệ Nhân Rang</div>
+<div class="font-title-md text-title-md text-primary font-bold">1900 6886 (Nhánh 2)</div>
+<div class="font-label-sm text-[11px] text-outline">Hỗ trợ tinh chỉnh cỡ xay &amp; nhiệt độ nước</div>
+</div>
+</div>
+<a class="p-2.5 rounded-full bg-primary-container text-on-primary hover:bg-primary transition-all shadow-sm shrink-0" href="tel:19006886">
+<span class="material-symbols-outlined text-[20px]">call</span>
+</a>
+</div>
+</div>
+</div>
+<!-- 5. Bottom Roastery Reassurance Strip -->
+<div class="mt-space-xl p-space-lg rounded-2xl bg-surface-container-low/60 backdrop-blur-sm border-t border-surface-container flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-[36px] text-secondary">verified_user</span>
+<div>
+<h4 class="font-title-md text-title-md text-primary font-bold">Cam Kết Độ Tươi &amp; Đổi Mới Miễn Phí</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Nếu hạt cà phê khi mở niêm phong không đạt độ thơm đặc trưng hoặc bao bì xì van, K-Coffee cam kết gửi ngay một mẻ rang mới trong 24 giờ.
+          </p>
+</div>
+</div>
+<a class="px-space-lg py-2.5 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg font-semibold hover:bg-primary transition-all shadow-md shrink-0 flex items-center gap-2" href="#">
+<span>Tiếp tục khám phá hạt mộc</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for tab buttons
+  document.querySelectorAll('[aria-label="Breadcrumb"]').forEach(el => {
+    // breadcrumb micro-state
+  });
+</script></main><footer class="w-full bg-surface-container text-on-surface pt-space-xl pb-space-lg shadow-[0_-4px_24px_rgba(44,24,16,0.02)]"><div class="w-full max-w-[1320px] mx-auto px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter mb-space-xl"><div class="lg:col-span-4 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><span class="font-headline-md text-headline-md text-primary">K-Coffee</span><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant">Thủ Công Nguyên Bản</span></div><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed max-w-sm">K-Coffee cam kết tuyển chọn 100% hạt cà phê Robusta Buôn Ma Thuột và Arabica Cầu Đất nguyên chất mộc. Mỗi mẻ rang là một bản hòa ca tôn vinh nông hộ Việt Nam và niềm đam mê chiết xuất hoàn hảo.</p><div class="flex items-center gap-space-sm text-on-surface-variant"><a class="p-2 rounded-full bg-surface-container-lowest/80 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors shadow-sm" href="#"><span class="material-symbols-outlined text-[20px]">globe</span></a><a class="p-2 rounded-full bg-surface-container-lowest/80 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors shadow-sm" href="#"><span class="material-symbols-outlined text-[20px]">mail</span></a><a class="p-2 rounded-full bg-surface-container-lowest/80 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors shadow-sm" href="#"><span class="material-symbols-outlined text-[20px]">share</span></a></div></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><h4 class="font-title-md text-title-md text-primary">Khám Phá</h4><nav class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><a class="hover:text-on-surface transition-colors" data-path="san-pham" href="#">Cà Phê Pha Phin Mộc</a><a class="hover:text-on-surface transition-colors" data-path="san-pham" href="#">Arabica Cầu Đất Tuyển Chọn</a><a class="hover:text-on-surface transition-colors" data-path="san-pham" href="#">Robusta Fine Lên Men</a><a class="hover:text-on-surface transition-colors" data-path="san-pham" href="#">Dụng Cụ Pour-Over &amp; Drip</a><a class="hover:text-on-surface transition-colors" data-path="huong-dan-pha-che" href="#">Công Thức Barista Tại Nhà</a></nav></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><h4 class="font-title-md text-title-md text-primary">Chăm Sóc &amp; Hỗ Trợ</h4><nav class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><a class="hover:text-on-surface transition-colors" data-path="chinh-sach-giao-hang" href="#">Chính Sách Giao Hàng</a><a class="hover:text-on-surface transition-colors" data-path="doi-tra" href="#">Quy Định Đổi Trả 7 Ngày</a><a class="hover:text-on-surface transition-colors" data-path="cau-chuyen-k-coffee" href="#">Về Chúng Tôi (Story)</a><a class="hover:text-on-surface transition-colors" data-path="lien-he" href="#">Trải Nghiệm Tại Tasting Bar</a><a class="hover:text-on-surface transition-colors" href="#">Câu Hỏi Thường Gặp (FAQ)</a></nav></div><div class="lg:col-span-4 flex flex-col gap-space-md"><h4 class="font-title-md text-title-md text-primary">Bản Tin Hương Vị</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Đăng ký nhận thông tin các mẻ rang giới hạn (Micro-lot) và nhận ngay ưu đãi giảm giá 10% cho đơn hàng đầu tiên của bạn.</p><form class="flex items-stretch gap-space-xs" onsubmit="return false;"><input class="flex-1 px-4 py-2.5 rounded-full bg-surface-container-lowest font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/30 transition-all shadow-inner" placeholder="Nhập email của bạn..." type="email"/><button class="px-space-md py-2.5 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary transition-all shadow-md" type="button">Đăng Ký</button></form><span class="font-label-sm text-label-sm text-on-surface-variant">* Ưu đãi áp dụng tự động trong mã giảm giá giỏ hàng.</span></div></div><div class="pt-space-md border-t border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant"><span>© 2025 K-Coffee Roastery &amp; Tasting Room. Bảo lưu mọi quyền.</span><span>Hạt Rang Mộc Cầu Đất &amp; Buôn Ma Thuột • Tinh Tuyển Thủ Công</span></div></div></footer></body></html>

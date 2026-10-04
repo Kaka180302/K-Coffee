@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>K-Coffee | Cà Phê Thủ Công Đặc Sản</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ba1a1a", "on-tertiary-fixed": "#0f1f12", "on-error": "#ffffff", "surface-tint": "#74584e", "tertiary-container": "#112013", "background": "#fcf9f3", "secondary-fixed": "#ffdcc0", "on-secondary-fixed-variant": "#673d0f", "secondary-fixed-dim": "#f9ba81", "on-error-container": "#93000a", "on-primary-fixed": "#2a170f", "surface-bright": "#fcf9f3", "outline-variant": "#d3c3be", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "surface-dim": "#dcdad4", "on-surface-variant": "#504440", "primary-fixed": "#ffdbce", "on-secondary-fixed": "#2e1600", "surface-container-highest": "#e5e2dc", "tertiary": "#000301", "surface-variant": "#e5e2dc", "inverse-surface": "#31312d", "secondary": "#835425", "inverse-on-surface": "#f3f0ea", "on-background": "#1c1c18", "on-tertiary-fixed-variant": "#3a4b3c", "primary": "#090100", "inverse-primary": "#e3bfb2", "on-primary-fixed-variant": "#5a4137", "outline": "#827470", "on-secondary-container": "#7a4b1d", "surface-container-low": "#f6f3ed", "surface": "#fcf9f3", "surface-container": "#f0eee8", "on-primary-container": "#9e7e73", "on-surface": "#1c1c18", "primary-container": "#2c1810", "secondary-container": "#ffbf87", "tertiary-fixed": "#d4e8d3", "tertiary-fixed-dim": "#b9ccb8", "primary-fixed-dim": "#e3bfb2", "surface-container-lowest": "#ffffff", "surface-container-high": "#ebe8e2", "on-tertiary-container": "#778978", "error-container": "#ffdad6", "on-primary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "gutter-mobile": "1rem", "margin-mobile": "1.25rem", "space-sm": "0.5rem", "space-md": "1rem", "space-lg": "1.5rem", "margin": "3rem", "space-xs": "0.25rem", "gutter": "1.5rem" }, "fontFamily": { "headline-lg-mobile": [ "Playfair Display" ], "headline-sm": [ "Playfair Display" ], "display-hero-mobile": [ "Playfair Display" ], "label-sm": [ "Plus Jakarta Sans" ], "body-md": [ "Plus Jakarta Sans" ], "label-md": [ "Plus Jakarta Sans" ], "title-md": [ "Plus Jakarta Sans" ], "label-lg": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-md": [ "Playfair Display" ], "headline-lg": [ "Playfair Display" ], "body-lg": [ "Plus Jakarta Sans" ], "display-hero": [ "Playfair Display" ], "title-lg": [ "Plus Jakarta Sans" ] }, "fontSize": { "headline-lg-mobile": [ "28px", { "lineHeight": "36px", "fontWeight": "600" } ], "headline-sm": [ "22px", { "lineHeight": "28px", "fontWeight": "500" } ], "display-hero-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" } ], "body-md": [ "15px", { "lineHeight": "24px", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "title-md": [ "16px", { "lineHeight": "24px", "fontWeight": "600" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "body-sm": [ "13px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-md": [ "28px", { "lineHeight": "36px", "fontWeight": "500" } ], "headline-lg": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "body-lg": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "title-lg": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-white/75 backdrop-blur-md shadow-[0_8px_32px_-4px_rgba(44,24,16,0.06)]"><div class="h-20 w-full max-w-[1320px] mx-auto px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md shrink-0"><img alt="K-Coffee Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XQVRAXEYxrPGJlCVMAetaIVs0YK19DKoh7AfDmx-JjSIGUYYvlF1I_vaPcPc6gxmsWEdS3_AsWZmZq7PN0_sMJuplc1FecawLONf2b-yvTA1qeqrhH_2fTDnxQ69DeXBnWIEU6FYlY0oeNl1R7Ts7dYMc78QfVKr1bupR3KE3_E2RNHeGdkE1QbcU2pyuf0ELgIV1D-IAlZAicNOO4-VEZ9xUO11nr6WlxrtAO0Yf28DTDOuU0hC5jnsOO"/><a class="flex flex-col" data-path="trang-chu" href="#"><span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none">K-Coffee</span><span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mt-1">Artisanal Roastery</span></a></div><nav class="hidden xl:flex items-center gap-space-xs p-1 bg-surface-container/60 rounded-full backdrop-blur-sm" data-active-classes="bg-primary-container text-on-primary font-bold shadow-sm"><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="trang-chu" href="#">Trang Chủ</a><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="san-pham" href="#">Sản Phẩm</a><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="cau-chuyen-k-coffee" href="#">Câu Chuyện K-Coffee</a><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="huong-dan-pha-che" href="#">Hướng Dẫn Pha Chế</a><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="lien-he" href="#">Liên Hệ</a></nav><div class="flex items-center gap-space-sm shrink-0"><div class="relative hidden lg:flex items-center"><input class="w-52 xl:w-64 pl-9 pr-4 py-2 bg-surface-container-lowest/80 rounded-full font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/30 transition-all shadow-[0_2px_8px_-2px_rgba(44,24,16,0.04)]" placeholder="Tìm hạt rang, vùng trồng..." type="text"/><span class="material-symbols-outlined absolute left-3 text-outline text-[18px] select-none">search</span></div><a class="relative p-2 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all flex items-center justify-center" data-path="danh-sach-yeu-thich" href="#"><span class="material-symbols-outlined text-[22px]">favorite</span><span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-secondary text-on-secondary font-label-sm text-[10px] flex items-center justify-center leading-none shadow-sm">2</span></a><a class="relative p-2 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all flex items-center justify-center" data-path="gio-hang" href="#"><span class="material-symbols-outlined text-[22px]">local_mall</span><span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-primary-container text-on-primary font-label-sm text-[10px] flex items-center justify-center leading-none shadow-sm">3</span></a><div class="flex items-center pl-space-xs"><a class="block p-0.5 rounded-full ring-2 ring-outline-variant hover:ring-secondary transition-all" data-path="tai-khoan" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaQZqlSpHODKZRqmLBp0g0IPt0Y3mp3iuk9fnFKxt0Ya7fkIgqSVd8vv1GHWofPgoh9qG92dQ4n-sFzycYtUiySlujJIjL93JcWTSyFEXqp8swLs9vWsDcBpovQy3QCTjwEbiOyd7SbBKvc0I9X6ZvnlB--RRIo9wvkzsj11nplYTwVqTxQpF49FP3GSWNjUlGD9-c-Oz8yqumRv1JQFca5S2fdzNRAcqNtbwvF5LlN-BO10edWiOgCg"/></a></div></div></div></header><main class="w-full pt-20 flex-1 bg-background"><div class="flex flex-col w-full pb-space-xl">
+<!-- Subtle decorative ambient glows (Warm Roastery Palette) -->
+<div class="relative w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin">
+<!-- Breadcrumb & Top Indicator Bar -->
+<section class="py-space-md flex flex-col md:flex-row md:items-center md:justify-between gap-space-sm">
+<nav class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md flex-wrap">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">home</span> Trang Chủ
+        </a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Giỏ Hàng &amp; Đặt Hàng</a>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="text-primary font-bold">Thanh Toán &amp; Giao Nhận</span>
+</nav>
+<div class="inline-flex items-center gap-2 self-start md:self-auto px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+<span>Cà phê rang mộc tươi trong 24-48 giờ</span>
+</div>
+</section>
+<!-- Stepper Navigation (Cart -> Shipping Info -> Payment & Complete) -->
+<section class="mb-space-lg">
+<div class="w-full bg-surface-container-lowest/80 backdrop-blur-md rounded-2xl p-space-md shadow-sm">
+<div class="grid grid-cols-3 gap-2 md:gap-space-md items-center">
+<!-- Step 1: Hoàn thành -->
+<div class="flex items-center gap-2 md:gap-space-sm group cursor-pointer">
+<div class="w-8 h-8 md:w-9 md:h-9 rounded-full bg-tertiary-fixed text-tertiary font-title-md flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-tertiary block font-bold uppercase tracking-wider">Bước 1</span>
+<p class="font-title-md text-title-md text-on-surface truncate hidden sm:block">Giỏ Hàng</p>
+</div>
+</div>
+<!-- Step 2: Đang thực hiện -->
+<div class="flex items-center gap-2 md:gap-space-sm">
+<div class="w-8 h-8 md:w-9 md:h-9 rounded-full bg-primary-container text-on-primary font-title-md flex items-center justify-center shrink-0 shadow-md">
+<span class="text-[14px]">2</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-secondary block font-bold uppercase tracking-wider">Bước 2 (Hiện tại)</span>
+<p class="font-title-md text-title-md text-primary font-bold truncate">Giao Nhận &amp; Thanh Toán</p>
+</div>
+</div>
+<!-- Step 3: Kế tiếp -->
+<div class="flex items-center gap-2 md:gap-space-sm opacity-60">
+<div class="w-8 h-8 md:w-9 md:h-9 rounded-full bg-surface-container-high text-on-surface-variant font-title-md flex items-center justify-center shrink-0">
+<span class="text-[14px]">3</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-outline block uppercase tracking-wider">Bước 3</span>
+<p class="font-title-md text-title-md text-on-surface-variant truncate hidden sm:block">Hoàn Tất Đơn Hàng</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Two-Column Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- LEFT COLUMN: Forms, Delivery, & Payment (65%) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- CARD 1: Thông tin người nhận & Địa chỉ giao hàng -->
+<div class="bg-surface-container-lowest/80 backdrop-blur-xl rounded-3xl p-space-md md:p-space-lg shadow-[0_8px_32px_-4px_rgba(44,24,16,0.06)]">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-sm gap-2">
+<div class="flex items-center gap-space-sm">
+<div class="p-2.5 rounded-2xl bg-secondary-fixed text-on-secondary-fixed-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">local_shipping</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Thông Tin Người Nhận</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Địa chỉ nhận cà phê rang mới gửi trực tiếp từ xưởng rang K-Coffee</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant self-start sm:self-auto">Giao Tận Cửa</span>
+</div>
+<!-- Loyalty Account Banner -->
+<div class="mt-space-md p-space-sm md:p-space-md rounded-2xl bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0 mt-0.5">workspace_premium</span>
+<div class="flex-1 min-w-0">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<p class="font-label-lg text-label-lg text-primary">
+                  Khách hàng thân thiết: <span class="font-bold">Nguyễn Văn An</span> <span class="text-on-surface-variant font-normal">(0912 345 678)</span>
+</p>
+<button class="text-secondary font-label-md text-label-md hover:underline text-left sm:text-right" type="button">Đổi tài khoản</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Bạn đã tích luỹ <span class="font-bold text-secondary">2.450 K-Points</span>. Đơn hàng này sẽ tự động cộng thêm <span class="font-bold text-primary">+535 điểm</span>.
+              </p>
+</div>
+</div>
+<!-- Shipping Form Fields -->
+<form class="mt-space-lg flex flex-col gap-space-md" onsubmit="return false;">
+<!-- Row 1: Name and Phone -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-primary font-bold">Họ và Tên Người Nhận <span class="text-error">*</span></label>
+<div class="relative">
+<input class="w-full px-4 py-3 bg-surface-container-lowest rounded-xl font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/40 shadow-sm" placeholder="Ví dụ: Trần Minh Hoàng" type="text" value="Nguyễn Văn An"/>
+<span class="material-symbols-outlined absolute right-3.5 top-3.5 text-outline text-[18px]">person</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-primary font-bold">Số Điện Thoại Nhận Hàng <span class="text-error">*</span></label>
+<div class="relative">
+<input class="w-full px-4 py-3 bg-surface-container-lowest rounded-xl font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/40 shadow-sm" placeholder="090x xxx xxx" type="tel" value="0912 345 678"/>
+<span class="material-symbols-outlined absolute right-3.5 top-3.5 text-outline text-[18px]">phone</span>
+</div>
+</div>
+</div>
+<!-- Row 2: Email -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-primary font-bold">Địa Chỉ Email (Nhận mã hành trình rang &amp; e-Invoice) <span class="text-error">*</span></label>
+<div class="relative">
+<input class="w-full px-4 py-3 bg-surface-container-lowest rounded-xl font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/40 shadow-sm" placeholder="email@domain.com" type="email" value="an.nguyen@craftroastery.vn"/>
+<span class="material-symbols-outlined absolute right-3.5 top-3.5 text-outline text-[18px]">mail</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">K-Coffee sẽ gửi hồ sơ cupping và tracking đơn vận chuyển qua email này.</span>
+</div>
+<!-- Row 3: Vietnam Administrative Units -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-primary font-bold">Tỉnh / Thành Phố <span class="text-error">*</span></label>
+<div class="relative">
+<select class="w-full appearance-none px-4 py-3 bg-surface-container-lowest rounded-xl font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary/40 shadow-sm pr-9 cursor-pointer">
+<option selected="">Hà Nội</option>
+<option>TP. Hồ Chí Minh</option>
+<option>Đà Nẵng</option>
+<option>Lâm Đồng (Đà Lạt)</option>
+<option>Đắk Lắk</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-outline pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-primary font-bold">Quận / Huyện <span class="text-error">*</span></label>
+<div class="relative">
+<select class="w-full appearance-none px-4 py-3 bg-surface-container-lowest rounded-xl font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary/40 shadow-sm pr-9 cursor-pointer">
+<option selected="">Quận Hoàn Kiếm</option>
+<option>Quận Ba Đình</option>
+<option>Quận Tây Hồ</option>
+<option>Quận Đống Đa</option>
+<option>Quận Cầu Giấy</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-outline pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-primary font-bold">Phường / Xã <span class="text-error">*</span></label>
+<div class="relative">
+<select class="w-full appearance-none px-4 py-3 bg-surface-container-lowest rounded-xl font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary/40 shadow-sm pr-9 cursor-pointer">
+<option selected="">Phường Hàng Trống</option>
+<option>Phường Tràng Tiền</option>
+<option>Phường Lý Thái Tổ</option>
+<option>Phường Cửa Đông</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-outline pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Row 4: Detailed Address -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-primary font-bold">Địa Chỉ Cụ Thể (Số nhà, toà nhà, ngõ/ngách) <span class="text-error">*</span></label>
+<div class="relative">
+<input class="w-full px-4 py-3 bg-surface-container-lowest rounded-xl font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/40 shadow-sm" placeholder="Ví dụ: Tầng 4, Toà nhà Green, số 12..." type="text" value="Số 48 Phố Nhà Thờ, Toà nhà Heritage, Tầng 3"/>
+<span class="material-symbols-outlined absolute right-3.5 top-3.5 text-outline text-[18px]">location_on</span>
+</div>
+</div>
+<!-- Row 5: Barista Delivery Note -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-primary font-bold">Ghi Chú Đơn Hàng &amp; Lưu Ý Bảo Quản Hạt</label>
+<span class="font-label-sm text-label-sm text-outline">Không bắt buộc</span>
+</div>
+<textarea class="w-full px-4 py-3 bg-surface-container-lowest rounded-xl font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/40 shadow-sm resize-none" placeholder="Ví dụ: Giao giờ hành chính, gọi trước 15 phút. Túi hạt cà phê mộc nhạy cảm nhiệt, xin vui lòng tránh để phơi nắng trực tiếp." rows="3"></textarea>
+</div>
+<!-- Checkbox toggles -->
+<div class="flex flex-col sm:flex-row sm:items-center gap-space-md pt-space-xs">
+<label class="flex items-center gap-2.5 cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-secondary/30 accent-secondary cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Lưu địa chỉ này vào sổ cá nhân cho các đợt order định kỳ</span>
+</label>
+<label class="flex items-center gap-2.5 cursor-pointer select-none">
+<input class="w-4 h-4 rounded text-secondary focus:ring-secondary/30 accent-secondary cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Giao làm quà tặng người khác</span>
+</label>
+</div>
+</form>
+</div>
+<!-- CARD 2: Phương thức giao hạt tươi Roastery -->
+<div class="bg-surface-container-lowest/80 backdrop-blur-xl rounded-3xl p-space-md md:p-space-lg shadow-[0_8px_32px_-4px_rgba(44,24,16,0.06)]">
+<div class="flex items-center gap-space-sm mb-space-md">
+<div class="p-2.5 rounded-2xl bg-secondary-fixed text-on-secondary-fixed-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">electric_moped</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Phương Thức Giao Hạt Tươi</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Đảm bảo độ tươi bung tỏa hương hoa quả và caramel nguyên bản</p>
+</div>
+</div>
+<!-- Shipping Options Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Option 1: Hỏa tốc -->
+<label class="relative flex flex-col p-space-md rounded-2xl bg-surface-container-lowest border-2 border-secondary/80 shadow-md cursor-pointer transition-all hover:bg-surface-container-low/60">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-2.5">
+<input checked="" class="w-4 h-4 accent-secondary cursor-pointer mt-0.5" name="shipping_method" type="radio" value="express"/>
+<div>
+<span class="font-title-md text-title-md text-primary font-bold">K-Express Hỏa Tốc (4H)</span>
+<span class="block font-body-sm text-body-sm text-secondary font-medium">Nhận ngay chiều nay (trước 18:00)</span>
+</div>
+</div>
+<span class="font-title-md text-title-md text-primary font-bold">0đ</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<span class="inline-flex items-center gap-1 text-[11px] font-label-sm font-semibold px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[13px]">bolt</span> Tối ưu hạt mới rang
+                </span>
+<span class="font-body-sm text-body-sm line-through text-outline">35.000đ</span>
+</div>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant">Miễn phí kích hoạt cho giỏ hàng trên 350.000đ tại nội thành Hà Nội &amp; TP.HCM.</p>
+</label>
+<!-- Option 2: Tiêu chuẩn -->
+<label class="relative flex flex-col p-space-md rounded-2xl bg-surface-container-low border border-transparent shadow-sm cursor-pointer transition-all hover:bg-surface-container-high/60">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-2.5">
+<input class="w-4 h-4 accent-secondary cursor-pointer mt-0.5" name="shipping_method" type="radio" value="standard"/>
+<div>
+<span class="font-title-md text-title-md text-primary font-bold">Giao Tiêu Chuẩn Toàn Quốc</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Thời gian dự kiến: 2 - 3 ngày</span>
+</div>
+</div>
+<span class="font-title-md text-title-md text-primary font-bold">0đ</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<span class="inline-flex items-center gap-1 text-[11px] font-label-sm font-semibold px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px]">public</span> Mọi tỉnh thành
+                </span>
+<span class="font-body-sm text-body-sm line-through text-outline">25.000đ</span>
+</div>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant">Giao tận tay qua ViettelPost / GHN có bảo hiểm gói hàng dễ vỡ.</p>
+</label>
+</div>
+<!-- Freshness and Valve Guarantee Box -->
+<div class="mt-space-md p-space-sm md:p-space-md rounded-2xl bg-surface-container/70 flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest text-secondary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">air</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong class="text-on-surface font-semibold">Bảo vệ cấu trúc hạt mộc:</strong> Tất cả sản phẩm được đóng trong túi màng nhôm đa lớp chuẩn thực phẩm, trang bị van degassing 1 chiều công nghệ Thụy Sỹ nhằm thoát khí CO2 tự nhiên mà không để không khí lọt vào.
+            </p>
+</div>
+</div>
+<!-- CARD 3: Phương thức thanh toán an toàn -->
+<div class="bg-surface-container-lowest/80 backdrop-blur-xl rounded-3xl p-space-md md:p-space-lg shadow-[0_8px_32px_-4px_rgba(44,24,16,0.06)]">
+<div class="flex items-center gap-space-sm mb-space-md">
+<div class="p-2.5 rounded-2xl bg-secondary-fixed text-on-secondary-fixed-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">account_balance_wallet</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Phương Thức Thanh Toán</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Linh hoạt, an toàn &amp; mã hóa đa tầng theo chuẩn ngân hàng</p>
+</div>
+</div>
+<!-- Payment Options Accordion/Cards -->
+<div class="flex flex-col gap-space-sm" id="paymentMethodsGroup">
+<!-- Method 1: VietQR Napas (Active Default) -->
+<label class="p-space-md rounded-2xl bg-surface-container-low border-2 border-secondary shadow-sm cursor-pointer flex flex-col gap-space-sm transition-all hover:bg-surface-container-low/90">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<input checked="" class="w-4 h-4 accent-secondary cursor-pointer" name="payment_method" type="radio" value="vietqr"/>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[24px]">qr_code_scanner</span>
+<span class="font-title-md text-title-md text-primary font-bold">Chuyển Khoản QR Siêu Tốc (VietQR / Napas247)</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-bold">
+                  Khuyên Dùng • Xử Lý Ngay
+                </span>
+</div>
+<!-- QR details preview inside active state -->
+<div class="ml-7 pt-2 flex flex-col sm:flex-row items-center gap-space-md bg-surface-container-lowest/90 p-space-sm rounded-xl">
+<!-- Visual SVG Mock QR Code -->
+<div class="w-24 h-24 bg-surface-container-lowest p-1.5 rounded-xl shadow-inner flex items-center justify-center shrink-0">
+<svg class="w-full h-full text-primary" fill="currentColor" viewbox="0 0 100 100">
+<path d="M0,0 h35 v35 h-35 z M8,8 h19 v19 h-19 z M65,0 h35 v35 h-35 z M73,8 h19 v19 h-19 z M0,65 h35 v35 h-35 z M8,73 h19 v19 h-19 z M45,10 h10 v10 h-10 z M10,45 h10 v10 h-10 z M45,45 h10 v10 h-10 z M55,35 h10 v10 h-10 z M35,55 h10 v10 h-10 z M65,65 h10 v10 h-10 z M85,45 h15 v10 h-15 z M45,75 h10 v15 h-10 z M65,85 h20 v10 h-20 z M85,75 h10 v10 h-10 z"></path>
+<rect fill="#835425" height="16" rx="3" width="16" x="42" y="42"></rect>
+</svg>
+</div>
+<div class="flex flex-col gap-1 min-w-0">
+<p class="font-body-sm text-body-sm text-on-surface">
+                    Mã QR động chứa sẵn chính xác số tiền <strong class="text-primary font-bold">535.500đ</strong> và mã đơn đặt hàng. Bạn chỉ cần mở bất kỳ ứng dụng ngân hàng nào (Vietcombank, Techcombank, MB, VPBank...) để quét trong 5 giây.
+                  </p>
+<span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">flash_on</span> Hệ thống tự động xác nhận đơn mà không cần gửi uỷ nhiệm chi.
+                  </span>
+</div>
+</div>
+</label>
+<!-- Method 2: MoMo / ZaloPay -->
+<label class="p-space-md rounded-2xl bg-surface-container-lowest border border-transparent shadow-sm cursor-pointer flex items-center justify-between transition-all hover:bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<input class="w-4 h-4 accent-secondary cursor-pointer" name="payment_method" type="radio" value="e_wallet"/>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[24px]">wallet</span>
+<div>
+<span class="font-title-md text-title-md text-primary font-semibold">Ví Điện Tử (MoMo / ZaloPay / ShopeePay)</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Hỗ trợ liên kết tài khoản và hoàn tiền ưu đãi ví</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1.5 opacity-80">
+<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-[#A50064] text-white">MoMo</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-[#0068FF] text-white">ZaloPay</span>
+</div>
+</label>
+<!-- Method 3: Credit/Debit Cards -->
+<label class="p-space-md rounded-2xl bg-surface-container-lowest border border-transparent shadow-sm cursor-pointer flex items-center justify-between transition-all hover:bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<input class="w-4 h-4 accent-secondary cursor-pointer" name="payment_method" type="radio" value="credit_card"/>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[24px]">credit_card</span>
+<div>
+<span class="font-title-md text-title-md text-primary font-semibold">Thẻ Quốc Tế (Visa / Mastercard / JCB / Apple Pay)</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Bảo mật mã hoá SSL 256-bit &amp; xác thực 3D-Secure OTP</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1.5 opacity-80">
+<span class="font-label-sm text-label-sm font-bold tracking-wider text-outline">VISA / MC</span>
+</div>
+</label>
+<!-- Method 4: COD -->
+<label class="p-space-md rounded-2xl bg-surface-container-lowest border border-transparent shadow-sm cursor-pointer flex items-center justify-between transition-all hover:bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<input class="w-4 h-4 accent-secondary cursor-pointer" name="payment_method" type="radio" value="cod"/>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[24px]">payments</span>
+<div>
+<span class="font-title-md text-title-md text-primary font-semibold">Thanh Toán Khi Nhận Hàng (COD)</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant">Kiểm tra niêm phong túi cà phê trước khi gửi tiền shipper</span>
+</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Phí COD: 0đ</span>
+</label>
+</div>
+<!-- Expandable Electronic VAT Invoice Option -->
+<div class="mt-space-md pt-space-md border-t border-outline-variant/30 flex flex-col gap-space-sm">
+<label class="flex items-center gap-2.5 cursor-pointer select-none" id="vatCheckboxLabel">
+<input class="w-4 h-4 rounded text-secondary focus:ring-secondary/30 accent-secondary cursor-pointer" id="vatToggle" type="checkbox"/>
+<span class="font-title-md text-title-md text-primary font-semibold">Yêu cầu xuất hoá đơn giá trị gia tăng điện tử (e-VAT)</span>
+</label>
+<!-- Hidden/collapsible VAT form -->
+<div class="hidden flex-col gap-space-sm p-space-sm md:p-space-md bg-surface-container-low rounded-2xl" id="vatFormFields">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<input class="w-full px-3.5 py-2.5 bg-surface-container-lowest rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary/40 shadow-sm" placeholder="Tên Công Ty / Doanh Nghiệp" type="text"/>
+<input class="w-full px-3.5 py-2.5 bg-surface-container-lowest rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary/40 shadow-sm" placeholder="Mã Số Thuế (MST)" type="text"/>
+</div>
+<input class="w-full px-3.5 py-2.5 bg-surface-container-lowest rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary/40 shadow-sm" placeholder="Địa chỉ đăng ký kinh doanh theo giấy phép" type="text"/>
+<input class="w-full px-3.5 py-2.5 bg-surface-container-lowest rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary/40 shadow-sm" placeholder="Email nhận file hoá đơn XML &amp; PDF" type="email"/>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Sticky Order Summary & Affirmation (35%) -->
+<div class="lg:col-span-4 lg:sticky lg:top-24 flex flex-col gap-space-md">
+<!-- Order Summary Card -->
+<div class="bg-surface-container-lowest/90 backdrop-blur-2xl rounded-3xl p-space-md md:p-space-lg shadow-[0_16px_40px_-6px_rgba(44,24,16,0.08)] flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/30">
+<h3 class="font-headline-sm text-headline-sm text-primary">Đơn Hàng Của Bạn</h3>
+<span class="font-label-md text-label-md px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-bold">3 Món</span>
+</div>
+<!-- Product Item List (Mini Cart Review) -->
+<div class="flex flex-col gap-space-md max-h-[340px] overflow-y-auto pr-1">
+<!-- Item 1: Arabica Cau Dat -->
+<div class="flex items-center gap-space-sm group">
+<div class="w-16 h-20 rounded-xl overflow-hidden bg-surface-container-low shrink-0 relative shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A premium 250g coffee bag of K-Coffee Specialty Arabica Cau Dat Honey Process, roasted whole beans, styled in warm minimalist studio lighting with amber cream tones and earthy coffee hues." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARAWWl2tAz0SVqj3ndZBuTNhpspagWhodh9Uf3ZLtUxOehWPBwDEkTJsiqm-30JpAlYUHP0Sa_c0cYCiEkdW6y67VihPSxc0gsh2jFc5MvqjGwQ9JuOHlpkMDrwDV4g4w0qAkEVsFwVWhLuwv9AYl6od5Sg5q9aIlkpNwudMn_BVNrXNjDe_Qrv5xfCmvJ5cCUBhzH8x0Ck8XyRJN1PRW8tqhAvFBTYb0Q5sYRC5rirKFh5R3n2_VREg"/>
+<span class="absolute bottom-1 right-1 bg-primary-container text-on-primary font-label-sm text-[10px] px-1.5 py-0.2 rounded-md font-bold">x2</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h4 class="font-title-md text-title-md text-primary font-bold truncate">Arabica Cầu Đất Honey</h4>
+<span class="font-title-md text-title-md text-primary font-bold shrink-0">370.000đ</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">250g • Xay Pha Phin Mộc</p>
+<span class="inline-block mt-1 font-label-sm text-[11px] text-secondary bg-surface-container-high px-2 py-0.5 rounded-full">Rang Light-Medium</span>
+</div>
+</div>
+<!-- Item 2: Fine Robusta BMT -->
+<div class="flex items-center gap-space-sm group">
+<div class="w-16 h-20 rounded-xl overflow-hidden bg-surface-container-low shrink-0 relative shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A 500g craft coffee pouch of K-Coffee Heritage Fine Robusta Buon Ma Thuot with degassing valve, natural dark wood tones and warm cream studio background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOYeb83N_1Wgj5LTxSF_yif_-mM0BEXVc7VGQCzWB4fgvoaXIA-sC1lJeBwQJplZaqsbaIknJQwzKM5eOl123qho3EtOYZn6mHjHDbjcHRo7rhHecF5-sNX_xlq4XyrzzZEIkzqXRRXDBrarK0D1cqnMJX6CoZWBspDWVku-b7lJhFbx4k6sOr5jsnHeCzOCYKLHSEtdjsgyF5ZQ3lrVe5_2BlAD84T0GbabPrYxTo4-md2Q1kbwsNDg"/>
+<span class="absolute bottom-1 right-1 bg-primary-container text-on-primary font-label-sm text-[10px] px-1.5 py-0.2 rounded-md font-bold">x1</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h4 class="font-title-md text-title-md text-primary font-bold truncate">Fine Robusta Buôn Ma Thuột</h4>
+<span class="font-title-md text-title-md text-primary font-bold shrink-0">140.000đ</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">500g • Nguyên hạt Whole Bean</p>
+<span class="inline-block mt-1 font-label-sm text-[11px] text-secondary bg-surface-container-high px-2 py-0.5 rounded-full">Rang Medium-Dark</span>
+</div>
+</div>
+<!-- Item 3: Drip Bag Coffee -->
+<div class="flex items-center gap-space-sm group">
+<div class="w-16 h-20 rounded-xl overflow-hidden bg-surface-container-low shrink-0 relative shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="An artisanal box of 10 individual drip bag coffees by K-Coffee with Japanese filter paper design on an espresso oak counter, warm cozy aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5m0j7Ej7EEQt2_Uh_02NSY78SvIOTf8eyfmwKBsyuUkSGQF8Rdc9tI7Ne0l-i5VmVFrwLRdbuIhNiJNgnZJ85q-5-GghfEbQq2tIK7d8TvhvOXIblgWpvPl-1ow7f7x4lWEl4uPD1Go6-cyjK253v8Dq_WHPCpOhNkEmUofE7aWOxvnOHecMABofOwvBPHSWwXWqa7wzZ-tbIJFK9rx5QXHE0b6yG1AlJxent80J3sUZxupFkmz0sMw"/>
+<span class="absolute bottom-1 right-1 bg-primary-container text-on-primary font-label-sm text-[10px] px-1.5 py-0.2 rounded-md font-bold">x1</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h4 class="font-title-md text-title-md text-primary font-bold truncate">Hộp Cà Phê Túi Lọc Drip Bag</h4>
+<span class="font-title-md text-title-md text-primary font-bold shrink-0">85.000đ</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Hộp 10 túi tiện lợi văn phòng</p>
+<span class="inline-block mt-1 font-label-sm text-[11px] text-secondary bg-surface-container-high px-2 py-0.5 rounded-full">Arabica Phối Trộn</span>
+</div>
+</div>
+</div>
+<!-- Coupon applied tag -->
+<div class="p-space-sm rounded-2xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">sell</span>
+<div>
+<span class="font-label-md text-label-md text-primary font-bold tracking-wider">KCOFFEE10</span>
+<p class="font-label-sm text-[11px] text-on-surface-variant">Giảm 10% đơn đặt hàng mộc</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-secondary font-bold">-59.500đ</span>
+<button class="text-on-surface-variant hover:text-error transition-colors p-1" title="Xóa mã giảm giá" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+<!-- Financial Breakdown Table -->
+<div class="pt-space-xs flex flex-col gap-2 font-body-sm text-body-sm">
+<div class="flex justify-between text-on-surface-variant">
+<span>Tạm tính (3 sản phẩm)</span>
+<span class="font-medium text-on-surface">595.000đ</span>
+</div>
+<div class="flex justify-between text-secondary font-medium">
+<span>Ưu đãi thành viên (KCOFFEE10)</span>
+<span>-59.500đ</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span class="flex items-center gap-1">
+                Phí vận chuyển Roastery 
+                <span class="material-symbols-outlined text-[14px] text-outline cursor-help" title="Đã miễn phí cho đơn hàng từ 350.000đ">info</span>
+</span>
+<span class="text-tertiary font-bold">Miễn phí (0đ)</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Thuế GTGT (VAT 8%)</span>
+<span class="font-medium text-on-surface">Đã bao gồm</span>
+</div>
+<!-- Grand Total -->
+<div class="pt-space-sm mt-1 border-t border-outline-variant/30 flex items-baseline justify-between">
+<div>
+<span class="font-title-lg text-title-lg text-primary font-bold block">Tổng Thanh Toán</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">+535 K-Points tích lũy</span>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-headline-md text-primary font-bold tracking-tight">535.500đ</span>
+</div>
+</div>
+</div>
+<!-- Checkout Action Button -->
+<button class="w-full py-4 px-6 rounded-full bg-primary-container text-on-primary font-title-md text-title-md font-bold tracking-wide shadow-xl hover:bg-primary transition-all duration-300 flex items-center justify-center gap-2 group hover:-translate-y-0.5 active:translate-y-0" type="button">
+<span>Xác Nhận Đặt Hàng &amp; Thanh Toán</span>
+<span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<p class="font-label-sm text-label-sm text-center text-outline">
+            Bằng việc bấm xác nhận, bạn đồng ý với <a class="text-secondary underline hover:text-primary" href="#">Điều khoản dịch vụ</a> và <a class="text-secondary underline hover:text-primary" href="#">Chính sách tươi nguyên bản</a> của K-Coffee.
+          </p>
+<!-- Security Badges & Trust Metrics -->
+<div class="pt-space-xs border-t border-outline-variant/30 grid grid-cols-3 gap-2 text-center">
+<div class="flex flex-col items-center gap-1 p-2 rounded-xl bg-surface-container/60">
+<span class="material-symbols-outlined text-secondary text-[20px]">lock</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant leading-tight">Mã Hoá 256-bit PCI-DSS</span>
+</div>
+<div class="flex flex-col items-center gap-1 p-2 rounded-xl bg-surface-container/60">
+<span class="material-symbols-outlined text-secondary text-[20px]">eco</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant leading-tight">100% Cà Phê Mộc Sạch</span>
+</div>
+<div class="flex flex-col items-center gap-1 p-2 rounded-xl bg-surface-container/60">
+<span class="material-symbols-outlined text-secondary text-[20px]">autorenew</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant leading-tight">Đổi Trả 7 Ngày Tận Nơi</span>
+</div>
+</div>
+</div>
+<!-- Roaster Direct Guarantee Card -->
+<div class="bg-surface-container-low/70 backdrop-blur-md rounded-2xl p-space-md border border-white/60 shadow-sm flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">coffee</span>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary font-bold">Cam Kết Ngày Rang &amp; Degas</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Tất cả các gói cà phê đều ghi rõ mẻ rang và tên Head Roaster trên nhãn. Bạn có thể sử dụng ngay sau khi nhận hàng để đạt đỉnh cao hương vị.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Simple Vanilla Script for Form Micro-interactions -->
+<script>
+  (function() {
+    // VAT Invoice form toggle
+    const vatToggle = document.getElementById('vatToggle');
+    const vatForm = document.getElementById('vatFormFields');
+    if (vatToggle && vatForm) {
+      vatToggle.addEventListener('change', function() {
+        if (this.checked) {
+          vatForm.classList.remove('hidden');
+          vatForm.classList.add('flex');
+        } else {
+          vatForm.classList.add('hidden');
+          vatForm.classList.remove('flex');
+        }
+      });
+    }
+
+    // Payment method selection styling micro-interaction
+    const paymentRadios = document.querySelectorAll('input[name="payment_method"]');
+    paymentRadios.forEach(radio => {
+      radio.addEventListener('change', function() {
+        const parentLabels = document.querySelectorAll('#paymentMethodsGroup label');
+        parentLabels.forEach(lbl => {
+          lbl.classList.remove('border-secondary', 'border-2', 'bg-surface-container-low');
+          lbl.classList.add('border-transparent', 'border', 'bg-surface-container-lowest');
+        });
+
+        const currentLabel = this.closest('label');
+        if (currentLabel) {
+          currentLabel.classList.remove('border-transparent', 'border', 'bg-surface-container-lowest');
+          currentLabel.classList.add('border-secondary', 'border-2', 'bg-surface-container-low');
+        }
+      });
+    });
+  })();
+</script></main><footer class="w-full bg-surface-container text-on-surface pt-space-xl pb-space-lg shadow-[0_-4px_24px_rgba(44,24,16,0.02)]"><div class="w-full max-w-[1320px] mx-auto px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter mb-space-xl"><div class="lg:col-span-4 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><span class="font-headline-md text-headline-md text-primary">K-Coffee</span><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant">Thủ Công Nguyên Bản</span></div><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed max-w-sm">K-Coffee cam kết tuyển chọn 100% hạt cà phê Robusta Buôn Ma Thuột và Arabica Cầu Đất nguyên chất mộc. Mỗi mẻ rang là một bản hòa ca tôn vinh nông hộ Việt Nam và niềm đam mê chiết xuất hoàn hảo.</p><div class="flex items-center gap-space-sm text-on-surface-variant"><a class="p-2 rounded-full bg-surface-container-lowest/80 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors shadow-sm" href="#"><span class="material-symbols-outlined text-[20px]">globe</span></a><a class="p-2 rounded-full bg-surface-container-lowest/80 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors shadow-sm" href="#"><span class="material-symbols-outlined text-[20px]">mail</span></a><a class="p-2 rounded-full bg-surface-container-lowest/80 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors shadow-sm" href="#"><span class="material-symbols-outlined text-[20px]">share</span></a></div></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><h4 class="font-title-md text-title-md text-primary">Khám Phá</h4><nav class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><a class="hover:text-on-surface transition-colors" data-path="san-pham" href="#">Cà Phê Pha Phin Mộc</a><a class="hover:text-on-surface transition-colors" data-path="san-pham" href="#">Arabica Cầu Đất Tuyển Chọn</a><a class="hover:text-on-surface transition-colors" data-path="san-pham" href="#">Robusta Fine Lên Men</a><a class="hover:text-on-surface transition-colors" data-path="san-pham" href="#">Dụng Cụ Pour-Over &amp; Drip</a><a class="hover:text-on-surface transition-colors" data-path="huong-dan-pha-che" href="#">Công Thức Barista Tại Nhà</a></nav></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><h4 class="font-title-md text-title-md text-primary">Chăm Sóc &amp; Hỗ Trợ</h4><nav class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><a class="hover:text-on-surface transition-colors" data-path="chinh-sach-giao-hang" href="#">Chính Sách Giao Hàng</a><a class="hover:text-on-surface transition-colors" data-path="doi-tra" href="#">Quy Định Đổi Trả 7 Ngày</a><a class="hover:text-on-surface transition-colors" data-path="cau-chuyen-k-coffee" href="#">Về Chúng Tôi (Story)</a><a class="hover:text-on-surface transition-colors" data-path="lien-he" href="#">Trải Nghiệm Tại Tasting Bar</a><a class="hover:text-on-surface transition-colors" href="#">Câu Hỏi Thường Gặp (FAQ)</a></nav></div><div class="lg:col-span-4 flex flex-col gap-space-md"><h4 class="font-title-md text-title-md text-primary">Bản Tin Hương Vị</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Đăng ký nhận thông tin các mẻ rang giới hạn (Micro-lot) và nhận ngay ưu đãi giảm giá 10% cho đơn hàng đầu tiên của bạn.</p><form class="flex items-stretch gap-space-xs" onsubmit="return false;"><input class="flex-1 px-4 py-2.5 rounded-full bg-surface-container-lowest font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-secondary/30 transition-all shadow-inner" placeholder="Nhập email của bạn..." type="email"/><button class="px-space-md py-2.5 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary transition-all shadow-md" type="button">Đăng Ký</button></form><span class="font-label-sm text-label-sm text-on-surface-variant">* Ưu đãi áp dụng tự động trong mã giảm giá giỏ hàng.</span></div></div><div class="pt-space-md border-t border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant"><span>© 2025 K-Coffee Roastery &amp; Tasting Room. Bảo lưu mọi quyền.</span><span>Hạt Rang Mộc Cầu Đất &amp; Buôn Ma Thuột • Tinh Tuyển Thủ Công</span></div></div></footer></body></html>

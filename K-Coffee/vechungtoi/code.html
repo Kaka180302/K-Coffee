@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>K-Coffee Roastery</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-container": "#9e7e73", "inverse-on-surface": "#f3f0ea", "on-primary-fixed-variant": "#5a4137", "tertiary-fixed": "#d4e8d3", "on-secondary-fixed": "#2e1600", "primary": "#090100", "surface-container": "#f0eee8", "primary-container": "#2c1810", "on-primary": "#ffffff", "on-secondary-container": "#7a4b1d", "inverse-primary": "#e3bfb2", "secondary-fixed-dim": "#f9ba81", "outline": "#827470", "on-tertiary-fixed": "#0f1f12", "surface-container-high": "#ebe8e2", "error-container": "#ffdad6", "on-tertiary-fixed-variant": "#3a4b3c", "error": "#ba1a1a", "surface-variant": "#e5e2dc", "secondary": "#835425", "on-error": "#ffffff", "on-background": "#1c1c18", "on-surface-variant": "#504440", "inverse-surface": "#31312d", "primary-fixed": "#ffdbce", "secondary-fixed": "#ffdcc0", "surface-bright": "#fcf9f3", "surface-container-low": "#f6f3ed", "tertiary-container": "#112013", "surface-container-highest": "#e5e2dc", "surface-container-lowest": "#ffffff", "surface-dim": "#dcdad4", "on-tertiary": "#ffffff", "primary-fixed-dim": "#e3bfb2", "surface-tint": "#74584e", "surface": "#fcf9f3", "tertiary": "#000301", "secondary-container": "#ffbf87", "on-tertiary-container": "#778978", "background": "#fcf9f3", "outline-variant": "#d3c3be", "on-surface": "#1c1c18", "on-secondary-fixed-variant": "#673d0f", "tertiary-fixed-dim": "#b9ccb8", "on-error-container": "#93000a", "on-secondary": "#ffffff", "on-primary-fixed": "#2a170f" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "space-xl": "2.5rem", "space-md": "1rem", "space-sm": "0.5rem", "gutter-mobile": "1rem", "space-xs": "0.25rem", "margin": "3rem", "margin-mobile": "1.25rem", "space-lg": "1.5rem" }, "fontFamily": { "headline-sm": ["Playfair Display"], "headline-lg": ["Playfair Display"], "body-md": ["Plus Jakarta Sans"], "display-hero-mobile": ["Playfair Display"], "label-lg": ["Plus Jakarta Sans"], "title-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-md": ["Playfair Display"], "display-hero": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "label-sm": ["Plus Jakarta Sans"] }, "fontSize": { "headline-sm": ["22px", {"lineHeight": "28px", "fontWeight": "500"}], "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "600"}], "body-md": ["15px", {"lineHeight": "24px", "fontWeight": "400"}], "display-hero-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}], "title-lg": ["18px", {"lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "body-sm": ["13px", {"lineHeight": "20px", "fontWeight": "400"}], "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}], "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}], "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}], "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "500"}], "display-hero": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600"}], "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}], "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500"}] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(44,24,16,0.04)]"><div class="h-20 w-full px-margin-mobile md:px-margin max-w-[1320px] mx-auto flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-sm"><img alt="Brand logo. - Primary color: #2c1810
+- Font: playfairDisplay
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XZdI4k9ML-k8daAMXztpQ53IihzgXYxGzPNWQVsDjtzyyZ6njrk5mVAQa32wGc8aUqQG3MsYUrJU6JqXO1jPFcCR39Mia3xMmkqtGx8s9pTxlMnEk9NmfTTw5ZPKZ2D5pi9bhHAk0-9x58VgprDduQKMtVuRVU9emicNMYQt2DmU0jmPMyIoYGFVYHNSGLUeEA9IJuevPM2sOjKEHsUaoPlEiUaVNkUsrIsqtjIf7w8Ij5pnDOHBFYCzHb"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-semibold">K-Coffee Roastery</span></div><nav class="hidden xl:flex items-center gap-space-sm" data-active-classes="bg-primary-container text-on-primary rounded-full px-space-md py-space-xs shadow-[0_8px_32px_-4px_rgba(44,24,16,0.08)]"><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all" data-path="trang-chu" href="#">Trang Chủ</a><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all" data-path="san-pham" href="#">Sản Phẩm</a><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all" data-path="cau-chuyen-k-coffee" href="#">Câu Chuyện K-Coffee</a><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all" data-path="huong-dan-pha-che" href="#">Hướng Dẫn Pha Chế</a><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all" data-path="lien-he" href="#">Liên Hệ</a></nav><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center bg-surface-container-low px-space-md py-space-xs rounded-full shadow-[0_2px_8px_-2px_rgba(44,24,16,0.03)]"><span class="material-symbols-outlined text-on-surface-variant text-[20px] mr-space-xs">search</span><input class="bg-transparent border-none text-on-surface font-body-sm text-body-sm focus:outline-none w-48 placeholder:text-on-surface-variant/70" placeholder="Tìm kiếm hạt cà phê, xuất xứ..." type="text"/></div><div class="flex items-center gap-space-xs"><button aria-label="Danh sách yêu thích" class="relative p-space-xs rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all flex items-center justify-center"><span class="material-symbols-outlined text-[22px]">favorite</span><span class="absolute top-0 right-0 w-2 h-2 bg-secondary rounded-full"></span></button><button aria-label="Giỏ hàng" class="relative p-space-xs rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all flex items-center justify-center"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute -top-1 -right-1 bg-primary-container text-on-primary font-label-sm text-label-sm w-4 h-4 rounded-full flex items-center justify-center">3</span></button></div><div class="pl-space-xs flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_2px_8px_-2px_rgba(44,24,16,0.06)]" src="https://lh3.googleusercontent.com/aida/AEtjO1XJaoK-I9QkkFz-zFrrzvjuWbz0Q4LciRtwoG_G_i4hSwoCsLrcq8BUmieOfLBKINOIV3NxOixb1z3oc2YsPEhREoDTAmDxL9KhWGc90QS041sWiu3DPZloi4HZcyQsZWvJ0yuIWd-Cr1h8AScIGkZ07eZiACHR-DYGOHOFi1yRKKV4MjmswvatQLQW7EBmEOEOfEMIl3fANV2l42yldAElnY4vMQBJ6pRGINrSSxt0FZ76059glI8Jh-zn"/></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-20rem)]"><div class="flex flex-col w-full">
+<!-- Top Breadcrumb & Ambient Aura Layer -->
+<section class="relative w-full overflow-hidden">
+<!-- Ambient Warm Gradients -->
+<div class="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-gradient-to-b from-secondary-fixed/30 via-tertiary-fixed/15 to-transparent blur-3xl opacity-70 -z-10"></div>
+<div class="pointer-events-none absolute top-40 -left-20 w-80 h-80 rounded-full bg-secondary-container/20 blur-2xl -z-10"></div>
+<div class="w-full max-w-[1320px] mx-auto px-margin-mobile md:px-margin pt-space-lg pb-space-sm">
+<!-- Breadcrumb Nav -->
+<nav class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">home</span>
+<span>Trang Chủ</span>
+</a>
+<span class="text-outline-variant font-normal">/</span>
+<span class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Về Chúng Tôi</span>
+<span class="text-outline-variant font-normal">/</span>
+<span class="text-secondary font-semibold">Câu Chuyện K-Coffee Heritage</span>
+</nav>
+</div>
+</section>
+<!-- Editorial Hero Section -->
+<section class="w-full max-w-[1320px] mx-auto px-margin-mobile md:px-margin pt-space-md pb-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Story Manifesto Left -->
+<div class="lg:col-span-7 flex flex-col items-start pr-0 lg:pr-space-md">
+<!-- Heritage Tag -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-high/70 backdrop-blur-md shadow-[0_2px_12px_rgba(44,24,16,0.04)] mb-space-md">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold">Di sản cà phê mộc Việt Nam • Từ năm 2015</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-primary tracking-tight mb-space-md">
+          Tôn Vinh Hạt Cà Phê Mộc Nguyên Bản Từ <span class="italic font-normal text-secondary underline decoration-secondary-container decoration-wavy decoration-1 underline-offset-8">Đất Mẹ</span> Tây Nguyên
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed mb-space-lg">
+          Chúng tôi không tạo ra một thứ đồ uống tiện dụng đại trà; chúng tôi đánh thức bản sắc và tầng hương trầm tích ngàn năm của thổ nhưỡng Việt Nam qua từng mẻ rang thủ công mộc mạc, tôn trọng nhịp điệu sinh sôi của tự nhiên.
+        </p>
+<!-- Quote Callout Glass Pill -->
+<div class="w-full p-space-md rounded-xl bg-surface-container-low/80 backdrop-blur-md shadow-sm mb-space-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[26px] mt-0.5">format_quote</span>
+<div>
+<p class="font-headline-sm text-headline-sm italic text-primary-container leading-snug">
+              "Cà phê nguyên bản không cần tô vẽ. Đất đỏ bazan, sương mù Cầu Đất và mồ hôi người bản địa đã là những nốt hương tuyệt tác nhất."
+            </p>
+<p class="font-label-md text-label-md text-on-surface-variant mt-1.5">— Nhật ký Xưởng rang K-Coffee, 2015</p>
+</div>
+</div>
+<!-- CTA Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-md">
+<a class="inline-flex items-center gap-space-xs px-space-lg py-3 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg shadow-md hover:bg-secondary transition-all transform hover:-translate-y-0.5" href="#k-heritage-timeline">
+<span>Khám phá 10 năm di sản</span>
+<span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+</a>
+<a class="inline-flex items-center gap-space-xs px-space-lg py-3 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-primary font-label-lg text-label-lg shadow-sm hover:bg-surface-container-high transition-all" href="#tasting-experience">
+<span class="material-symbols-outlined text-[18px] text-secondary">storefront</span>
+<span>Ghé Thăm Tasting Bar</span>
+</a>
+</div>
+</div>
+<!-- Right Editorial Mosaic -->
+<div class="lg:col-span-5 relative mt-space-lg lg:mt-0">
+<!-- Accent Frame -->
+<div class="relative w-full rounded-2xl overflow-hidden shadow-xl bg-surface-container">
+<img class="w-full h-[460px] object-cover" data-alt="Photographic editorial view of a Vietnamese coffee farmer with weathered hands gently cupping bright scarlet ripe Arabica cherries under gentle misty sunlight on Cau Dat highland slope, warm cinematic earth tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlAyDIoS7aZ_vzeXAYTXzcajoyK8eAxsQYeLmhYWzZLdbtjw0v9J_TvO5kEtqaE6uNvVe6986_H0bJ1JuYmmYl3w7W1MmdfbxDkF7rXFIoI7ZyD6SjAgBYKOLjtHnFPe-uCqgAnByyENnTgK9GNtKQ4nLPlpdSmbSObPn6GLnCSs2lyqLdE0xb7uJUIp2Qp9G-5d2c71khyInK15h5oA73ugvfzsRQRx27rDemcqQYsbObtJAJoo9OOA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 right-0 p-space-md text-on-primary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed bg-primary/60 px-space-sm py-0.5 rounded-full inline-block mb-1 backdrop-blur-sm">Cầu Đất • Lâm Đồng</span>
+<p class="font-title-lg text-title-lg font-headline-sm">Thu hoạch thủ công tại độ cao 1.650m</p>
+<p class="font-body-sm text-body-sm text-inverse-on-surface/90 line-clamp-1">Từng trái chín mọng đỏ sẫm được tỉ mỉ hái lựa từng nhánh cây.</p>
+</div>
+</div>
+<!-- Overlapping Secondary Visual Float -->
+<div class="absolute -bottom-8 -left-8 w-44 h-44 rounded-xl overflow-hidden shadow-2xl hidden md:block">
+<img class="w-full h-full object-cover" data-alt="Close-up macro shot of specialty light-to-medium roasted single-origin coffee beans tumbling from a cast iron cooling tray in a micro roastery, gentle steam and rich hazelnut tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2NVDkx0cXSfKmS7IszspzD-XwcJKNiEHrhvdOnTuMb1AOlZO2A9BGspmXi877eldEpyRAjkm_aCcWQ4wA-VYS_9Oze0RNj33EMRBvshJfu1xQYKL4de4ruKN4xJDRn1HmLZcYPdGVGV5w_ma9_80U1667Cowwsiuyg5iCg3dbMC0U0S1v14-1p1tBjOwN3X4BSRBvfAr2LYi8SxuWru9KesOWeOIt6l_pokPxqW-xD1LhffmMzRtxCg"/>
+</div>
+<!-- Terroir Badge Pill -->
+<div class="absolute -top-4 -right-4 px-space-md py-space-xs rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-lg flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">filter_vintage</span>
+<span class="font-label-md text-label-md text-primary font-semibold">100% Cà phê mộc tự nhiên</span>
+</div>
+</div>
+</div>
+<!-- Quick Glass Stat Badges -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter mt-space-xl">
+<!-- Stat 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-low/70 backdrop-blur-md shadow-sm flex flex-col justify-between hover:bg-surface-container-lowest/90 transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-display-hero text-headline-lg text-secondary font-headline-lg">10+</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[24px]">history_edu</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-primary font-semibold">Năm Theo Đuổi Cà Phê Mộc</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kiên định không thỏa hiệp từ 2015</p>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low/70 backdrop-blur-md shadow-sm flex flex-col justify-between hover:bg-surface-container-lowest/90 transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-display-hero text-headline-lg text-secondary font-headline-lg">1.650m</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[24px]">landscape</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-primary font-semibold">Độ Cao Lý Tưởng Cầu Đất</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Biên độ nhiệt ngày đêm độc bản</p>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-low/70 backdrop-blur-md shadow-sm flex flex-col justify-between hover:bg-surface-container-lowest/90 transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-display-hero text-headline-lg text-secondary font-headline-lg">98%</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[24px]">psychiatry</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-primary font-semibold">Hái Lựa Trái Chín Đỏ</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Lượng đường tự nhiên trọn vẹn</p>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="p-space-md rounded-xl bg-surface-container-low/70 backdrop-blur-md shadow-sm flex flex-col justify-between hover:bg-surface-container-lowest/90 transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-display-hero text-headline-lg text-secondary font-headline-lg">03</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[24px]">pin_drop</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-primary font-semibold">Vùng Trồng Đặc Sản Đối Tác</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Đà Lạt • Buôn Ma Thuột • Sơn La</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Origin Map & Direct Terroir Highlights -->
+<section class="w-full bg-surface-container-low py-space-xl my-space-md">
+<div class="w-full max-w-[1320px] mx-auto px-margin-mobile md:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg">
+<div>
+<div class="inline-flex items-center gap-space-xs text-secondary font-label-md text-label-md uppercase tracking-wider mb-space-xs font-semibold">
+<span class="material-symbols-outlined text-[16px]">nature_people</span>
+<span>Thổ Nhưỡng &amp; Vùng Nguyên Liệu Đối Tác</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Dấu Ấn Terroir Trên Bản Đồ Việt Nam</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-space-sm md:mt-0">
+          Mỗi ngọn đồi, loại đất và vi khí hậu đều khắc ghi câu chuyện hương vị riêng biệt lên từng mầm hạt.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Region 1: Cầu Đất -->
+<div class="rounded-xl overflow-hidden bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Misty morning tea and coffee plantation rolling hills in Cau Dat Da Lat Vietnam at dawn with cool pine breezes and warm amber rays piercing morning clouds." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQI5E-_2OD1ygkoUSOCRfMNXm4GXf3Y3VJhJbAUDBvpx8yokNefdR_gVR4H-X_xIfk9jVXRTGw8kOngbCvdGR_-HjlHc2ToRHixrx8FaSrS3QagjSk0__EYuI9m1y9xgB1i8-VF5WpNbQKQVelD6NLchChwlM8dguaqOnNKkrdxFTRbOZ0HbG-uSsLaIoNu4-zpCaodexB-03jPxIJF3LGRQZaO8u3FZqL3csWm2YGbqt-GiRNHjhNAA"/>
+<div class="absolute top-space-sm left-space-sm px-space-sm py-1 rounded-full bg-primary/70 backdrop-blur-md text-on-primary font-label-sm text-label-sm">
+              1.650m • Arabica Bourbon &amp; Catimor
+            </div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs text-secondary font-label-md text-label-md mb-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Cầu Đất, Đà Lạt</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Hương Hoa Cam &amp; Trà Đen</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Nơi sương mù dày đặc và biên độ nhiệt ngày đêm chênh lệch 12°C làm chậm quá trình tích đường, mang lại vị chua thanh sáng quý phái tựa cam bergamot và dư vị ngọt mật thanh khiết.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Độ cao: 1.500m - 1.650m</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-secondary font-semibold">Chế biến Ướt (Washed)</span>
+</div>
+</div>
+</div>
+<!-- Region 2: Cư M'gar Buôn Ma Thuột -->
+<div class="rounded-xl overflow-hidden bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Lush basalt red earth coffee estate in Buon Ma Thuot with rich shade trees, deep foliage and golden sunshine filtering through green leaves." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5YoFXJk2WBDuuUpNK7uj21jVwREokGDECccTM_c7z98sMJDCo6lLtPkLRoQfTAJFIhb3ONhg65dWJwlme2mAYzGpfUzoQBIg-zlaYWLTVduA27wgOtrTvrXJEmhs4tYb1hpThK1Our5SY0CTwU_8FFKHxjnDB296Obr0yb7hNq3BcI5XDZ953bkzJ4Pn0WkgushJhlMqixIyKnrzh8Rx1mKAl3m8wrcgyqiurdOr-AyrkLA67yfBgng"/>
+<div class="absolute top-space-sm left-space-sm px-space-sm py-1 rounded-full bg-primary/70 backdrop-blur-md text-on-primary font-label-sm text-label-sm">
+              750m • Fine Robusta Sợi Nhuyễn
+            </div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs text-secondary font-label-md text-label-md mb-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Cư M'gar, Đắk Lắk</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Cacao Đậm &amp; Hạt Phỉ Nướng</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Tầng đất đỏ bazan cổ màu mỡ sản sinh dòng Fine Robusta được lên men kỵ khí tự nhiên, đập tan định kiến về Robusta gắt đắng bằng thể chất sánh như kem và hương thơm chocolate đen nồng nàn.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Độ cao: 650m - 800m</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-secondary font-semibold">Mật Ong Kỵ Khí (Anaerobic)</span>
+</div>
+</div>
+</div>
+<!-- Region 3: Chiềng Ban Sơn La -->
+<div class="rounded-xl overflow-hidden bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Northwestern Vietnamese high mountain valley in Son La surrounded by limestone peaks with terrace farming and vibrant emerald green coffee bushes under crystal blue sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNs7gtWNNBARO9zv4TWbA9DeLK5i14qWb_J1vySb4pcoSDI2ycnVHvaUOVJZvSBFMV-7-CfTLJ5oSAQ5pbN5H4xseef82d1ZQUHoVHxPyN02LciqcwQMm1GkEOFBPLFPJrE0xYkLz_3wmS0br_I7ijevXcSZ15Rg5qhMXHP1JQ8BwnspBTJbZfqftBjaChqJTpGaIv-lEPk4WHMzgrkq93CzsPXJLDBQ0ULgvu0W5pfsql6evVtonDzg"/>
+<div class="absolute top-space-sm left-space-sm px-space-sm py-1 rounded-full bg-primary/70 backdrop-blur-md text-on-primary font-label-sm text-label-sm">
+              1.100m • Arabica Tây Bắc
+            </div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs text-secondary font-label-md text-label-md mb-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Chiềng Ban, Sơn La</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Quả Mọng Rừng &amp; Mật Rừng</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Thung lũng đá vôi Tây Bắc với mùa đông lạnh tê buốt tạo nên giống Arabica có hậu vị ngọt đọng sâu như mật mía, thoảng hương thảo mộc và trái cây chín miền sơn cước.
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Độ cao: 900m - 1.200m</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-secondary font-semibold">Tự Nhiên (Natural Sun-dried)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Triết Lý Cốt Lõi (Our 3 Pillars of Philosophy) -->
+<section class="w-full max-w-[1320px] mx-auto px-margin-mobile md:px-margin py-space-xl">
+<div class="text-center max-w-3xl mx-auto mb-space-xl">
+<div class="inline-flex items-center gap-space-xs text-secondary font-label-md text-label-md uppercase tracking-wider mb-space-xs font-semibold">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+<span>Cam Kết Không Thỏa Hiệp</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight mb-space-sm">Ba Trụ Cột Triết Lý K-Coffee</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Chúng tôi lựa chọn con đường chậm rãi, tỉ mỉ và bền vững giữa một thị trường chuộng tốc độ và hương liệu công nghiệp.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Pillar 1 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest/80 backdrop-blur-md shadow-sm hover:shadow-md transition-all flex flex-col relative overflow-hidden group">
+<div class="absolute -right-6 -bottom-6 text-surface-container-high/40 text-[120px] select-none font-bold">01</div>
+<div class="w-14 h-14 rounded-2xl bg-surface-container-high flex items-center justify-center text-secondary mb-space-md">
+<span class="material-symbols-outlined text-[28px]">eco</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold tracking-wider mb-1">Trụ cột I</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm">100% Cà Phê Mộc Tuyệt Đối</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+          Không tẩm ướp bơ nhân tạo, bột bắp, đậu nành rang cháy hay phẩm hương nhân tạo. Mỗi tách cà phê là tiếng nói trung thực và tinh nguyên nhất của thổ nhưỡng và quy trình sơ chế.
+        </p>
+<ul class="mt-auto space-y-2 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Không hương liệu nhân tạo</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Hương thơm tự thân hạt giống</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>An toàn tối đa cho sức khỏe</span>
+</li>
+</ul>
+</div>
+<!-- Pillar 2 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest/80 backdrop-blur-md shadow-sm hover:shadow-md transition-all flex flex-col relative overflow-hidden group">
+<div class="absolute -right-6 -bottom-6 text-surface-container-high/40 text-[120px] select-none font-bold">02</div>
+<div class="w-14 h-14 rounded-2xl bg-surface-container-high flex items-center justify-center text-secondary mb-space-md">
+<span class="material-symbols-outlined text-[28px]">volunteer_activism</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold tracking-wider mb-1">Trụ cột II</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm">Đạo Nông Dân &amp; Canh Tác Bền Vững</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+          Thu mua theo mô hình Direct Trade với mức giá cao hơn thị trường tự do 35%. Chúng tôi sát cánh hỗ trợ kỹ thuật sơ chế, chuyển đổi canh tác dưới tán rừng bóng râm tự nhiên.
+        </p>
+<ul class="mt-auto space-y-2 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Giá mua công bằng (Fair Pricing)</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Bảo tồn độ che phủ rừng Tây Nguyên</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Đồng hành cùng 45+ nông hộ dân tộc</span>
+</li>
+</ul>
+</div>
+<!-- Pillar 3 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest/80 backdrop-blur-md shadow-sm hover:shadow-md transition-all flex flex-col relative overflow-hidden group">
+<div class="absolute -right-6 -bottom-6 text-surface-container-high/40 text-[120px] select-none font-bold">03</div>
+<div class="w-14 h-14 rounded-2xl bg-surface-container-high flex items-center justify-center text-secondary mb-space-md">
+<span class="material-symbols-outlined text-[28px]">local_fire_department</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold tracking-wider mb-1">Trụ cột III</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm">Nghệ Thuật Rang Mẻ Nhỏ (Micro-Roast)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+          Mỗi mẻ rang chỉ giới hạn 5kg trên máy rang lồng đúc khí nóng đối lưu. Từng đường cong nhiệt RoR được giám sát từng giây nhằm khai phóng dải hương hoa quả phong phú nhất.
+        </p>
+<ul class="mt-auto space-y-2 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Mẻ nhỏ 5kg kiểm soát tối ưu</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Lưu trữ hồ sơ nhiệt độ số hóa RoR</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Đóng gói trong vòng 48h sau rang</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Section: Sensory Flavor Wheel / Sensory Infographic -->
+<section class="w-full bg-surface-container-high/50 py-space-xl">
+<div class="w-full max-w-[1320px] mx-auto px-margin-mobile md:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Text intro -->
+<div class="lg:col-span-5">
+<div class="inline-flex items-center gap-space-xs text-secondary font-label-md text-label-md uppercase tracking-wider mb-space-xs font-semibold">
+<span class="material-symbols-outlined text-[16px]">science</span>
+<span>Hương Vị Tự Nhiên Không Can Thiệp</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-space-sm">Phổ Cảm Quan Phong Phú Của Cà Phê Mộc</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+            Khi cà phê không bị che phủ bởi hương liệu cháy, bạn sẽ bất ngờ trước bản hòa ca hương vị sống động: từ nốt chua thanh như quả mơ rừng, hương hoa nhài trắng muốt đến ngọt bùi của mật mía và hạnh nhân rang.
+          </p>
+<div class="space-y-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 shadow-xs flex items-center justify-between">
+<span class="font-title-md text-title-md text-primary">Tầng Hương Hoa Quả (Fruity &amp; Floral)</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Arabica Cầu Đất</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 shadow-xs flex items-center justify-between">
+<span class="font-title-md text-title-md text-primary">Tầng Hương Hạt &amp; Cacao (Nutty &amp; Cocoa)</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Fine Robusta Đắk Lắk</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 shadow-xs flex items-center justify-between">
+<span class="font-title-md text-title-md text-primary">Tầng Ngọt Trầm Tích (Sweet Molasses)</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Anaerobic Process</span>
+</div>
+</div>
+</div>
+<!-- SVG Sensory Radar Chart & Tasting Breakdown -->
+<div class="lg:col-span-7 p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row items-center gap-space-lg">
+<div class="w-full md:w-1/2 flex flex-col items-center">
+<!-- Inline SVG Sensory Radar Chart -->
+<svg class="w-64 h-64 text-secondary" viewbox="0 0 240 240">
+<!-- Concentric Polygons -->
+<polygon fill="none" points="120,30 205,80 205,170 120,220 35,170 35,80" stroke="currentColor" stroke-opacity="0.15" stroke-width="1"></polygon>
+<polygon fill="none" points="120,60 178,95 178,155 120,190 62,155 62,95" stroke="currentColor" stroke-opacity="0.25" stroke-width="1"></polygon>
+<polygon fill="none" points="120,90 149,108 149,138 120,155 91,138 91,108" stroke="currentColor" stroke-dasharray="3 3" stroke-opacity="0.2" stroke-width="1"></polygon>
+<!-- Axes -->
+<line stroke="currentColor" stroke-opacity="0.2" stroke-width="1" x1="120" x2="120" y1="120" y2="30"></line>
+<line stroke="currentColor" stroke-opacity="0.2" stroke-width="1" x1="120" x2="205" y1="120" y2="80"></line>
+<line stroke="currentColor" stroke-opacity="0.2" stroke-width="1" x1="120" x2="205" y1="120" y2="170"></line>
+<line stroke="currentColor" stroke-opacity="0.2" stroke-width="1" x1="120" x2="120" y1="120" y2="220"></line>
+<line stroke="currentColor" stroke-opacity="0.2" stroke-width="1" x1="120" x2="35" y1="120" y2="170"></line>
+<line stroke="currentColor" stroke-opacity="0.2" stroke-width="1" x1="120" x2="35" y1="120" y2="80"></line>
+<!-- Value Area -->
+<polygon fill="currentColor" fill-opacity="0.2" points="120,45 190,90 180,160 120,205 50,150 48,95" stroke="currentColor" stroke-width="2.5"></polygon>
+<!-- Points -->
+<circle cx="120" cy="45" fill="#2c1810" r="4"></circle>
+<circle cx="190" cy="90" fill="#2c1810" r="4"></circle>
+<circle cx="180" cy="160" fill="#2c1810" r="4"></circle>
+<circle cx="120" cy="205" fill="#2c1810" r="4"></circle>
+<circle cx="50" cy="150" fill="#2c1810" r="4"></circle>
+<circle cx="48" cy="95" fill="#2c1810" r="4"></circle>
+<!-- Labels -->
+<text fill="#504440" font-family="Plus Jakarta Sans" font-size="10" font-weight="600" text-anchor="middle" x="120" y="20">Độ Thơm (Aroma)</text>
+<text fill="#504440" font-family="Plus Jakarta Sans" font-size="10" font-weight="600" text-anchor="start" x="215" y="80">Độ Chua Sáng</text>
+<text fill="#504440" font-family="Plus Jakarta Sans" font-size="10" font-weight="600" text-anchor="start" x="215" y="175">Ngọt Hậu (Sweetness)</text>
+<text fill="#504440" font-family="Plus Jakarta Sans" font-size="10" font-weight="600" text-anchor="middle" x="120" y="235">Độ Dày (Body)</text>
+<text fill="#504440" font-family="Plus Jakarta Sans" font-size="10" font-weight="600" text-anchor="end" x="25" y="175">Cân Bằng</text>
+<text fill="#504440" font-family="Plus Jakarta Sans" font-size="10" font-weight="600" text-anchor="end" x="25" y="80">Sạch Vị (Clean Cup)</text>
+</svg>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-2 text-center">Biểu đồ Cupping Điểm SCAA Chuẩn K-Coffee</span>
+</div>
+<div class="w-full md:w-1/2 flex flex-col justify-center space-y-space-sm">
+<h4 class="font-title-lg text-title-lg text-primary">Tiêu Chuẩn Cupping 84+</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Tất cả các mẻ hạt xuất xưởng đều được thử nếm độc lập qua ba bước: ngửi hương khô (fragrance), ngửi hương ướt (aroma) và nếm qua thìa cupping chuyên dụng.
+            </p>
+<div class="p-space-sm rounded-lg bg-surface-container-high/60 flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+<div>
+<p class="font-label-md text-label-md text-primary font-semibold">Q-Grader Certified</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Chứng nhận bởi Viện Chất lượng Cà phê Quốc tế (CQI)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Heritage Timeline 2015 - 2025 -->
+<section class="w-full max-w-[1320px] mx-auto px-margin-mobile md:px-margin py-space-xl" id="k-heritage-timeline">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<div class="inline-flex items-center gap-space-xs text-secondary font-label-md text-label-md uppercase tracking-wider mb-space-xs font-semibold">
+<span class="material-symbols-outlined text-[18px]">timeline</span>
+<span>Hành Trình 10 Năm</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight mb-space-sm">Dòng Chảy Lịch Sử K-Coffee</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Từ một chiếc máy rang 2kg đơn sơ đến hành trình khẳng định vị thế cà phê đặc sản Việt Nam trên bản đồ thế giới.
+      </p>
+</div>
+<!-- Timeline Mosaic -->
+<div class="relative">
+<!-- Central Line (Desktop) -->
+<div class="hidden md:block absolute left-1/2 top-4 bottom-4 w-0.5 bg-outline-variant -translate-x-1/2"></div>
+<div class="space-y-space-lg">
+<!-- Milestone 2015 -->
+<div class="relative flex flex-col md:flex-row items-center gap-gutter">
+<div class="w-full md:w-1/2 md:text-right pr-0 md:pr-space-md order-2 md:order-1">
+<span class="font-headline-sm text-headline-sm text-secondary font-semibold">Năm 2015</span>
+<h3 class="font-title-lg text-title-lg text-primary font-headline-sm my-1">Hạt Mầm Đầu Tiên Tại Cầu Đất</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md ml-auto">
+              Khởi đầu từ một xưởng rang 2kg mộc mạc tại chân đèo Cầu Đất. Giữa thời điểm thị trường tràn ngập cà phê bắp rang tẩm bơ, K-Coffee kiên định rang mộc nguyên chất 100%.
+            </p>
+</div>
+<!-- Center Node -->
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center z-10 shadow-md order-1 md:order-2">
+<span class="material-symbols-outlined text-[16px]">yard</span>
+</div>
+<div class="w-full md:w-1/2 pl-0 md:pl-space-md order-3">
+<div class="h-44 w-full max-w-md rounded-xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Vintage black and white atmosphere of a rustic early 2015 artisan coffee roasting workshop in Da Lat with an iron 2kg manual drum roaster and stacked jute burlap sacks of green coffee beans." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGM3uVLynQndjDlyBroymqxn-zLU4ch2mlBgFVc6D3qTEqwk-yLa1jxaIy6CEHgwNgCyyODtmhKDa4kHLn-Kl49tAoqSCKoQ_mIoTiIKz_FVghgUJ3LHcYotUJd0L78mwOFXGQNvU5F6X03iq4AohUjrNRUJvctTr_JBPq1ihfqIUEnPbRe88qDG0AqwX-QikDcxEWf24H-plMH6OrrnkFf8IwiEwPrDbJj5OKJrI0U6UI8Zcwxh4cXw"/>
+</div>
+</div>
+</div>
+<!-- Milestone 2018 -->
+<div class="relative flex flex-col md:flex-row items-center gap-gutter">
+<div class="w-full md:w-1/2 pl-0 md:pl-space-md md:text-left order-2 md:order-3">
+<span class="font-headline-sm text-headline-sm text-secondary font-semibold">Năm 2018</span>
+<h3 class="font-title-lg text-title-lg text-primary font-headline-sm my-1">Đổi Mới Dự Án Fine Robusta Buôn Ma Thuột</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+              Tiên phong thử nghiệm phương pháp lên men kỵ khí Anaerobic Honey với Robusta chín 100%. Lô cà phê đầu tiên đạt số điểm SCAA 84+, tạo tiếng vang lớn trong giới chuyên môn.
+            </p>
+</div>
+<!-- Center Node -->
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center z-10 shadow-md order-1 md:order-2">
+<span class="material-symbols-outlined text-[16px]">biotech</span>
+</div>
+<div class="w-full md:w-1/2 md:text-right pr-0 md:pr-space-md order-3 md:order-1 flex md:justify-end">
+<div class="h-44 w-full max-w-md rounded-xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Detailed shot of natural fermentation tanks and raised African drying beds in Buon Ma Thuot bathed in golden afternoon sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9Raj7Tdh35lrQiaCzcQJ6V1ep7Zcrl6DJBY1wgXb-hss49UAI0CZH6OW4qlACrn8CE0VxboZsyMhoO9OljON2juSmrbAN7JfeSTgBveWxgh4wYeBduCCOyUFSlI3AKZ1C6yjZxO3caJ25uOKmIkGWRJ2NdelP1nBASajx8steK0QjQDvmGP1_FIKKsXc_JXwWBOfMpdGZKc_0nFmbkQ8gMZ6hX4-yF8OR9lXyoQcho9_txT1miNhzFw"/>
+</div>
+</div>
+</div>
+<!-- Milestone 2021 -->
+<div class="relative flex flex-col md:flex-row items-center gap-gutter">
+<div class="w-full md:w-1/2 md:text-right pr-0 md:pr-space-md order-2 md:order-1">
+<span class="font-headline-sm text-headline-sm text-secondary font-semibold">Năm 2021</span>
+<h3 class="font-title-lg text-title-lg text-primary font-headline-sm my-1">Mô Hình Direct Trade Độc Quyền</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md ml-auto">
+              Chính thức ký kết hợp tác dài hạn cùng 45 nông hộ tại Lâm Đồng và Sơn La, cam kết mua giá cao hơn 35% để nông dân an tâm giữ gìn kỹ thuật hái lựa chín đỏ 98%.
+            </p>
+</div>
+<!-- Center Node -->
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center z-10 shadow-md order-1 md:order-2">
+<span class="material-symbols-outlined text-[16px]">handshake</span>
+</div>
+<div class="w-full md:w-1/2 pl-0 md:pl-space-md order-3">
+<div class="h-44 w-full max-w-md rounded-xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A smiling ethnic minority Vietnamese woman coffee farmer and a young roaster shaking hands warmly in the middle of a shaded green coffee farm in Son La." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmxGlqgXUceNBlg2yuveq24obCWkBWP96TjfkguatsXEZGZYGYCQ2G9J1uSO6TDjUQr2-WmAhstUOzHnCMiTU8v-O3ZI9tsESmiBdYNeKSjTCGIi74dBllM8rIRq91Vk_FxnBzx491lW0akHZZfEeQQfDtO4bkY5We5B70tu6cT6lAH2rCKwWqtCkF4YLwVsPagFeT_33uHYbPz4STRKmfYczgjU6D1czD2XfuNn8ytqdjTc4K6M3tDw"/>
+</div>
+</div>
+</div>
+<!-- Milestone 2023 -->
+<div class="relative flex flex-col md:flex-row items-center gap-gutter">
+<div class="w-full md:w-1/2 pl-0 md:pl-space-md md:text-left order-2 md:order-3">
+<span class="font-headline-sm text-headline-sm text-secondary font-semibold">Năm 2023</span>
+<h3 class="font-title-lg text-title-lg text-primary font-headline-sm my-1">Tasting Bar &amp; Barista Academy</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+              Khai trương không gian trải nghiệm Tasting Bar tại Thảo Điền (TP.HCM) và Phố Cổ (Hà Nội). Nơi người yêu cà phê có thể tận mắt xem rang mẻ nhỏ và nếm cupping trực tiếp.
+            </p>
+</div>
+<!-- Center Node -->
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center z-10 shadow-md order-1 md:order-2">
+<span class="material-symbols-outlined text-[16px]">local_cafe</span>
+</div>
+<div class="w-full md:w-1/2 md:text-right pr-0 md:pr-space-md order-3 md:order-1 flex md:justify-end">
+<div class="h-44 w-full max-w-md rounded-xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A minimalist architectural specialty coffee tasting bar with cream concrete, warm oak counter, V60 pour over apparatus and customers engaged in sensory coffee tasting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2sdIqf8Ory4euEQlZJNeEwbcgXvTynde8TVqbxRi9s1t-XboraaJBlQsofW4rKqQLzQUv830E0-FRlsrQka1P4J5eA_4858MUHUwPL19ulmx4Gb2A6JiwtITNiNwuAxf-KL9jPZnzkAlmpOQOxauScwZkStfEzYN7u-SaSV_-sicOGeoNHFxfHBl6qYICmVqXLTthSLHtfYQfVaJlEtljR6GcqAoCTgvZ67er6S6-lA8Xvk56xsCvhQ"/>
+</div>
+</div>
+</div>
+<!-- Milestone 2025 -->
+<div class="relative flex flex-col md:flex-row items-center gap-gutter">
+<div class="w-full md:w-1/2 md:text-right pr-0 md:pr-space-md order-2 md:order-1">
+<span class="font-headline-sm text-headline-sm text-secondary font-semibold">Năm 2025</span>
+<h3 class="font-title-lg text-title-lg text-primary font-headline-sm my-1">K-Coffee Heritage Guild</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md ml-auto">
+              Kỷ niệm tròn 10 năm hành trình. Ra mắt tiêu chuẩn "Giao tươi trong 48h sau mẻ rang", đưa dòng hạt vi khí hậu cao cấp Việt Nam vươn tầm ra bạn bè quốc tế.
+            </p>
+</div>
+<!-- Center Node -->
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center z-10 shadow-md order-1 md:order-2">
+<span class="material-symbols-outlined text-[16px]">award_star</span>
+</div>
+<div class="w-full md:w-1/2 pl-0 md:pl-space-md order-3">
+<div class="h-44 w-full max-w-md rounded-xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Premium crafted kraft paper coffee pouch with embossed brass emblem of K-Coffee Heritage Roastery beside whole roasted brown coffee beans and glass brewing kettle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChxOz0O3hmihg3xzmCtfg_vhHYSNE1M7dklluCYGbzdUnhs0HfYSPzaQofE59IM0Uqfayd88NFcYEXFYP6UKZ0TIsQtN5_NnMQQoaD2OnhpanDNaroLQnWL2dvuJkvrOUTp7FdqKEngpMARvWdogAvR2sxVcq3F3B99sLQwfDK97HtGvQ8NVCMyJTqc-THCnZEmiDledGywj_KjHvkdQIysap1vtbFcmp2nD20ya8Wpm3fpwXnkZ1nUA"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: The Artisans / Team Behind the Bean -->
+<section class="w-full bg-surface-container-low py-space-xl">
+<div class="w-full max-w-[1320px] mx-auto px-margin-mobile md:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg">
+<div>
+<div class="inline-flex items-center gap-space-xs text-secondary font-label-md text-label-md uppercase tracking-wider mb-space-xs font-semibold">
+<span class="material-symbols-outlined text-[16px]">person_celebrate</span>
+<span>Những Bàn Tay Kiến Tạo Hương Vị</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Đội Ngũ Nghệ Nhân K-Coffee</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-space-sm md:mt-0">
+          Mỗi cá nhân là một mảnh ghép tâm huyết, gắn bó trọn vẹn từ luống đất trồng đến từng giọt chiết xuất.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Artisan 1 -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative w-full h-72 rounded-xl overflow-hidden mb-space-md">
+<img class="w-full h-full object-cover" data-alt="Portrait of an experienced Vietnamese male coffee master roaster named Nguyen Trong Kha standing near a vintage cast iron coffee roaster, confident warm gaze, wearing a dark canvas apron." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHapahDXFmZYB6CFsUkFnbjXgPhEAWGkyzUKP05AVBN6xR3Upkzbam4ysEYHwXTbRzwRZDzgC3Og0ijxrB09HWPaaMBYsOglWwTRZrXi-XU6Y_7N4pLk8vEK5pUTOrog12wmJUaGJcV2gl_IfIHsB718k35HIACFccEMqZ_eZEWfWwT0qDOajhxPJwFWwEYjqFxbNhT3z-VX-3zDM3g0yXuP6D9OmsvPt_uP_0txkeaDc9ctWlDy-xbQ"/>
+<div class="absolute bottom-space-xs left-space-xs px-space-sm py-1 rounded-full bg-primary/75 backdrop-blur-md text-on-primary font-label-sm text-label-sm">
+              Q-Arabica Grader CQI
+            </div>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-primary font-semibold">Nguyễn Trọng Kha</h3>
+<p class="font-label-md text-label-md text-secondary mb-space-xs">Nhà Sáng Lập &amp; Head Roaster</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic mb-space-sm">
+              "Rang cà phê là một cuộc đối thoại thầm lặng với từng hạt giống. Chúng tôi không ép hạt theo ý mình, mà lắng nghe tiếng nổ (crack) để mở cánh cửa hương vị tự nhiên nhất."
+            </p>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span>12 năm kinh nghiệm thử nếm</span>
+</div>
+</div>
+</div>
+<!-- Artisan 2 -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative w-full h-72 rounded-xl overflow-hidden mb-space-md">
+<img class="w-full h-full object-cover" data-alt="Portrait of a Vietnamese female agricultural specialist named Tran Thi Mai Lan inspecting Arabica branch with healthy ripe coffee cherries on high altitude slope, serene warm expression." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEp6HGAQbnm0KYRVff8FKTQhv-9nIl3YWa1zCDring3WG-Jd7TUWfhy9vwraN9YIe0Z1HxFbTvVn_J41aPyM2rTid2mCqxkjApPDZIXDfZQWgFh8UmSziFOkMg5jZKHrqOoNCyNgZoFdvl1qei3EBWvF-93XB4ebaIc2NFRVvum7M3F_6X-L0VvDPEXsWoQePhpAAozROxbpvntFJsf8nREFIRd-kSGlJIUL6n1auXJbuJvThkwra5Qw"/>
+<div class="absolute bottom-space-xs left-space-xs px-space-sm py-1 rounded-full bg-primary/75 backdrop-blur-md text-on-primary font-label-sm text-label-sm">
+              Agronomy Director
+            </div>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-primary font-semibold">Trần Thị Mai Lan</h3>
+<p class="font-label-md text-label-md text-secondary mb-space-xs">Giám Đốc Nông Nghiệp Vùng Trồng</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic mb-space-sm">
+              "Một hạt cà phê ngon bắt đầu từ tình yêu và sự tử tế của người nông dân với mảnh đất của họ. Chúng tôi đảm bảo họ được trả công xứng đáng với giọt mồ hôi rơi trên nương rẫy."
+            </p>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span>Phụ trách 45 nông hộ đối tác</span>
+</div>
+</div>
+</div>
+<!-- Artisan 3 -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative w-full h-72 rounded-xl overflow-hidden mb-space-md">
+<img class="w-full h-full object-cover" data-alt="Portrait of an artisanal young Vietnamese head barista named Vu Dang Khoa precisely pouring hot water from a gooseneck kettle over a ceramic dripper, focused artistic lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4psob1X_kboD5xbeIU_GcwcVfvLOU7gsg8WQwI_YHOK9S6JndWeeXmzuZTODFxH0xra1EMEmILFgsotFkxhWNcsJUnoBsdWJ4xrILSPebdz8woUgWmefqcVZJpgnnFCGf7IKN-sU1XI3wWnvbSVsU-UPJpUmeE-JQXVfyrDl0fW3nMNo3p2qG_8uTthQoFbAmh34hPUVU21kLyTm7O2VoqTyk6QdKCt5mNKDLchdt8RHgtL27iQzwUg"/>
+<div class="absolute bottom-space-xs left-space-xs px-space-sm py-1 rounded-full bg-primary/75 backdrop-blur-md text-on-primary font-label-sm text-label-sm">
+              Lead Sensory Trainer
+            </div>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-primary font-semibold">Vũ Đăng Khoa</h3>
+<p class="font-label-md text-label-md text-secondary mb-space-xs">Trưởng Nhóm Nghiên Cứu Chiết Xuất</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic mb-space-sm">
+              "Một ly cà phê tuyệt hảo là sự chuẩn xác đến từng độ C của dòng nước và từng giây chiết xuất. Chúng tôi biến khoa học pha chế thành trải nghiệm cảm xúc cho bạn."
+            </p>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span>Vô địch Brewers Cup 2022</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Tasting Bar & Roastery Experience Box -->
+<section class="w-full max-w-[1320px] mx-auto px-margin-mobile md:px-margin py-space-xl" id="tasting-experience">
+<div class="relative rounded-3xl overflow-hidden shadow-xl bg-primary text-on-primary">
+<!-- Atmospheric Backdrop Image -->
+<div class="absolute inset-0 bg-cover bg-center opacity-25 mix-blend-luminosity" data-alt="Interior of an upscale quiet artisan coffee roastery tasting room with warm spotlight on pour over counters, minimalist wooden shelves displaying single origin jars, and customers sitting serenely." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCZPmY7_9Aw-bINjf1MrA7GkCQG8bnh0jpN_SHyHk_0X98mYdafs5xYc_H16xxjI6Wy4uWT4IyjRIFV8fnZ9S3wUwRdi2Ds8P9XsI9dowlknTy4tos4YylUUVGQCeNW_vx33t_lgNa2iYpsZEnFKJ1Riwt3q-inyUvFB1rkN8UWJkt67lKF64SOYOtbmCC1ERDrCOP9qMguvAuZv4Ek_PyCFNXHX04PAHync9CZaE2cayRvtM-wDSGWA')"></div>
+<div class="relative z-10 p-space-lg md:p-space-xl grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-7">
+<div class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-on-primary/10 text-secondary-fixed backdrop-blur-md font-label-sm text-label-sm mb-space-md">
+<span class="material-symbols-outlined text-[16px]">local_cafe</span>
+<span>Trải Nghiệm Cảm Quan Trực Tiếp</span>
+</div>
+<h2 class="font-display-hero text-headline-lg md:text-display-hero mb-space-md leading-tight">
+            Ghé Thăm Không Gian Tasting Bar &amp; Xưởng Rang
+          </h2>
+<p class="font-body-md text-body-md text-inverse-on-surface/90 max-w-xl leading-relaxed mb-space-lg">
+            Đến với không gian của K-Coffee, bạn sẽ được thưởng lãm trực tiếp tiếng nổ giòn tan của mẻ rang vừa hoàn thiện, cùng các barista thử nếm (cupping) các lô cà phê thử nghiệm giới hạn chưa từng xuất hiện trên thị trường.
+          </p>
+<!-- Tasting Locations -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md mb-space-lg">
+<div class="p-space-md rounded-xl bg-surface-container-lowest/10 backdrop-blur-md">
+<span class="font-label-sm text-label-sm text-secondary-fixed font-semibold uppercase">TP. Hồ Chí Minh</span>
+<p class="font-title-md text-title-md mt-1">Xưởng Rang &amp; Tasting Room Thảo Điền</p>
+<p class="font-body-sm text-body-sm text-inverse-on-surface/80 mt-1">68 Xuân Thủy, Phường Thảo Điền, TP. Thủ Đức</p>
+<p class="font-label-sm text-label-sm text-secondary-fixed mt-2">Mở cửa: 07:30 - 21:00 hàng ngày</p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest/10 backdrop-blur-md">
+<span class="font-label-sm text-label-sm text-secondary-fixed font-semibold uppercase">Hà Nội</span>
+<p class="font-title-md text-title-md mt-1">Tasting Bar Không Gian Phố Cổ</p>
+<p class="font-body-sm text-body-sm text-inverse-on-surface/80 mt-1">22 Chân Cầm, Quận Hoàn Kiếm, Hà Nội</p>
+<p class="font-label-sm text-label-sm text-secondary-fixed mt-2">Mở cửa: 08:00 - 22:00 hàng ngày</p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-md">
+<button class="inline-flex items-center gap-space-xs px-space-lg py-3 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-lg text-label-lg shadow-md hover:bg-on-primary transition-all" onclick="openBookingModal()">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+<span>Đặt Lịch Ghé Tasting Bar &amp; Cupping</span>
+</button>
+<a class="inline-flex items-center gap-space-xs px-space-lg py-3 rounded-full bg-surface-container-lowest/10 backdrop-blur-md text-on-primary font-label-lg text-label-lg hover:bg-surface-container-lowest/20 transition-all" data-path="san-pham" href="#">
+<span>Khám Phá Bộ Sưu Tập Hạt</span>
+<span class="material-symbols-outlined text-[18px]">east</span>
+</a>
+</div>
+</div>
+<!-- Right Roaster Machine Visual Spec -->
+<div class="lg:col-span-5 hidden lg:block">
+<div class="p-space-md rounded-2xl bg-surface-container-lowest/10 backdrop-blur-xl shadow-2xl">
+<div class="h-64 rounded-xl overflow-hidden mb-space-md">
+<img class="w-full h-full object-cover" data-alt="Precision digital monitoring screen and burner flame of an artisan coffee roaster during a light roast profile in a dimly lit roastery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpA7puWWsW7QndE5tHxdR7IhLTIDZnPKzr9HezIbphNvwn3d-RDr4HyNN-rmETx_sofMQvMn5BMHSZJlQPfYAjLNmIsAFAiO2LFGoIV1-ZMBZiPMzuwKnIbbf95KEBjUIfsWOtBR4f0ECBFepOzk1fcrCK1E1_MUqPSh-_b0lNI4nhxHsReWDHsOW61wQ7Ib32FgYEyg5-2kJ_qk-YXR31cpNFg0UHOxenxx9jdlNOUTEIP7WW985J1w"/>
+</div>
+<div class="space-y-space-xs text-body-sm">
+<div class="flex justify-between text-inverse-on-surface/80">
+<span>Thiết bị rang:</span>
+<span class="font-semibold text-on-primary">Giesen W6A Special Edition</span>
+</div>
+<div class="flex justify-between text-inverse-on-surface/80">
+<span>Dung lượng mẻ rang:</span>
+<span class="font-semibold text-on-primary">Tối đa 5.0 kg / Mẻ</span>
+</div>
+<div class="flex justify-between text-inverse-on-surface/80">
+<span>Hồ sơ nhiệt (Profile):</span>
+<span class="font-semibold text-on-primary">Kiểm soát Artisan RoR kỹ thuật số</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Booking Modal (Glassmorphic) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-space-md bg-primary-container/60 backdrop-blur-sm hidden transition-opacity duration-300" id="booking-modal">
+<div class="relative w-full max-w-lg p-space-lg rounded-2xl bg-surface-container-lowest shadow-2xl">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[24px]">coffee_maker</span>
+<h3 class="font-title-lg text-title-lg text-primary font-semibold">Đăng Ký Trải Nghiệm Tasting Bar</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" onclick="closeBookingModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+        Mỗi buổi Tasting &amp; Cupping giới hạn tối đa 6 khách để đảm bảo không gian trò chuyện và cảm quan sâu sắc nhất.
+      </p>
+<form class="space-y-space-sm" id="tasting-form" onsubmit="handleBookingSubmit(event)">
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Họ và tên của bạn</label>
+<input class="w-full px-space-md py-2.5 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none placeholder:text-on-surface-variant/60" placeholder="Nguyễn Văn A" required="" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Số điện thoại</label>
+<input class="w-full px-space-md py-2.5 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none placeholder:text-on-surface-variant/60" placeholder="0901 234 567" required="" type="tel"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Số lượng khách</label>
+<select class="w-full px-space-md py-2.5 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none">
+<option>1 người</option>
+<option>2 người</option>
+<option>3 - 4 người</option>
+<option>Nhóm riêng (5-6 người)</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1">Chọn địa điểm trải nghiệm</label>
+<select class="w-full px-space-md py-2.5 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none">
+<option>Tasting Room Thảo Điền (TP. Hồ Chí Minh)</option>
+<option>Tasting Bar Chân Cầm (Phố Cổ, Hà Nội)</option>
+</select>
+</div>
+<div class="pt-space-sm">
+<button class="w-full py-3 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg shadow-md hover:bg-secondary transition-all" type="submit">
+            Xác Nhận Đặt Chỗ (Miễn Phí)
+          </button>
+</div>
+</form>
+<!-- Confirmation Toast inside modal -->
+<div class="hidden text-center py-space-lg space-y-space-sm" id="booking-success">
+<span class="material-symbols-outlined text-[48px] text-secondary">check_circle</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Đăng Ký Thành Công!</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Barista của K-Coffee sẽ liên hệ xác nhận khung giờ trải nghiệm phù hợp nhất với bạn trong vòng 2 giờ làm việc.
+        </p>
+<button class="px-space-lg py-2 rounded-full bg-surface-container text-primary font-label-md text-label-md mt-space-sm" onclick="closeBookingModal()">
+          Đóng cửa sổ
+        </button>
+</div>
+</div>
+</div>
+<script>
+    function openBookingModal() {
+      const modal = document.getElementById('booking-modal');
+      modal.classList.remove('hidden');
+    }
+
+    function closeBookingModal() {
+      const modal = document.getElementById('booking-modal');
+      modal.classList.add('hidden');
+      setTimeout(() => {
+        document.getElementById('tasting-form').classList.remove('hidden');
+        document.getElementById('booking-success').classList.add('hidden');
+      }, 300);
+    }
+
+    function handleBookingSubmit(e) {
+      e.preventDefault();
+      document.getElementById('tasting-form').classList.add('hidden');
+      document.getElementById('booking-success').classList.remove('hidden');
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low mt-space-xl shadow-[0_-1px_12px_rgba(44,24,16,0.02)]"><div class="w-full px-margin-mobile md:px-margin max-w-[1320px] mx-auto py-space-xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-space-xl"><div class="md:col-span-4"><div class="flex items-center gap-space-sm mb-space-md"><img alt="K-Coffee Roastery Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XZdI4k9ML-k8daAMXztpQ53IihzgXYxGzPNWQVsDjtzyyZ6njrk5mVAQa32wGc8aUqQG3MsYUrJU6JqXO1jPFcCR39Mia3xMmkqtGx8s9pTxlMnEk9NmfTTw5ZPKZ2D5pi9bhHAk0-9x58VgprDduQKMtVuRVU9emicNMYQt2DmU0jmPMyIoYGFVYHNSGLUeEA9IJuevPM2sOjKEHsUaoPlEiUaVNkUsrIsqtjIf7w8Ij5pnDOHBFYCzHb"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-semibold">K-Coffee Roastery</span></div><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md max-w-sm">Từng mẻ rang thủ công tôn vinh hương vị cội nguồn của từng nông hộ cao nguyên Việt Nam. Chúng tôi chắt chiu tinh hoa của đất trời để mang đến tách cà phê nguyên bản, chậm rãi và trọn vẹn xúc cảm.</p><div class="flex items-center gap-space-xs font-label-md text-label-md text-secondary"><span class="material-symbols-outlined text-[18px]">verified</span><span>Rang mộc tự nhiên • Nông sản bền vững</span></div></div><div class="md:col-span-2"><h4 class="font-title-md text-title-md text-primary mb-space-md">Khám Phá</h4><ul class="space-y-space-sm font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-on-surface transition-colors block" data-path="san-pham" href="#">Cà Phê Single Origin</a></li><li><a class="hover:text-on-surface transition-colors block" data-path="san-pham" href="#">Hạt Rang Đặc Sản</a></li><li><a class="hover:text-on-surface transition-colors block" data-path="san-pham" href="#">Dụng Cụ Thủ Công</a></li><li><a class="hover:text-on-surface transition-colors block" data-path="huong-dan-pha-che" href="#">Cẩm Nang Pour-over</a></li><li><a class="hover:text-on-surface transition-colors block" data-path="san-pham" href="#">Gói Đăng Ký Định Kỳ</a></li></ul></div><div class="md:col-span-2"><h4 class="font-title-md text-title-md text-primary mb-space-md">Chăm Sóc &amp; Hỗ Trợ</h4><ul class="space-y-space-sm font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-on-surface transition-colors block" data-path="cau-chuyen-k-coffee" href="#">Hành Trình Hạt Cà Phê</a></li><li><a class="hover:text-on-surface transition-colors block" data-path="lien-he" href="#">Ghé Thăm Xưởng Rang</a></li><li><a class="hover:text-on-surface transition-colors block" data-path="lien-he" href="#">Chính Sách Vận Chuyển</a></li><li><a class="hover:text-on-surface transition-colors block" data-path="lien-he" href="#">Đổi Trả Hương Vị</a></li><li><a class="hover:text-on-surface transition-colors block" data-path="lien-he" href="#">Tư Vấn Thử Nếm (Cupping)</a></li></ul></div><div class="md:col-span-4"><h4 class="font-title-md text-title-md text-primary mb-space-sm">Bản Tin Hương Vị</h4><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Đăng ký để nhận thông báo về những mẻ rang đặc biệt giới hạn và những câu chuyện nông hộ sâu sắc.</p><div class="flex items-center gap-space-xs bg-surface p-space-xs rounded-full shadow-[0_2px_8px_-2px_rgba(44,24,16,0.04)]"><input class="bg-transparent px-space-md py-space-xs flex-1 text-on-surface font-body-sm text-body-sm focus:outline-none placeholder:text-on-surface-variant/70" placeholder="Địa chỉ email của bạn..." type="email"/><button class="bg-primary-container text-on-primary hover:bg-secondary transition-all font-label-md text-label-md px-space-md py-space-xs rounded-full flex items-center gap-space-xs shadow-[0_4px_12px_-2px_rgba(44,24,16,0.08)]"><span>Đăng ký</span><span class="material-symbols-outlined text-[16px]">east</span></button></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant/80 font-body-sm text-body-sm"><div>© 2025 K-Coffee Roastery. Tất cả quyền được bảo lưu. Tôn vinh nghệ thuật rang cà phê thủ công.</div><div class="flex items-center gap-space-md"><span>Đà Lạt • Buôn Ma Thuột • TP. Hồ Chí Minh</span></div></div></div></footer></body></html>
