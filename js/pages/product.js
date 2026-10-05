@@ -1,4 +1,4 @@
-﻿document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const productGrid = document.querySelector("#productGrid");
     const categoryList = document.querySelector("#categoryList");
     
@@ -163,6 +163,33 @@
         searchInput.addEventListener("input", (e) => {
             currentFilters.search = e.target.value.toLowerCase().trim();
             applyFilters();
+        });
+    }
+    
+    const searchBtn = document.querySelector("#productSearchBtn");
+    if (searchBtn && searchInput) {
+        searchBtn.addEventListener("click", () => {
+            currentFilters.search = searchInput.value.toLowerCase().trim();
+            applyFilters();
+        });
+    }
+
+    // Mobile Filter Drawer
+    const mobileFilterBtn = document.querySelector("#mobileFilterBtn");
+    const mobileFilterCloseBtn = document.querySelector("#mobileFilterCloseBtn");
+    const filterSidebar = document.querySelector("#filterSidebar");
+
+    if (mobileFilterBtn && filterSidebar) {
+        mobileFilterBtn.addEventListener("click", () => {
+            filterSidebar.classList.add("active");
+            document.body.style.overflow = "hidden"; // Prevent background scrolling
+        });
+    }
+
+    if (mobileFilterCloseBtn && filterSidebar) {
+        mobileFilterCloseBtn.addEventListener("click", () => {
+            filterSidebar.classList.remove("active");
+            document.body.style.overflow = "";
         });
     }
 
@@ -387,6 +414,19 @@
         if (countDisplay) {
             countDisplay.innerHTML = `Hiển thị <span class="text-primary" style="font-weight: bold;">${Math.min((currentPage-1)*itemsPerPage + 1, totalFiltered)}</span>–<span class="text-primary" style="font-weight: bold;">${Math.min(currentPage*itemsPerPage, totalFiltered)}</span> trên <span class="text-primary" style="font-weight: bold;">${totalFiltered}</span> sản phẩm`;
         }
+        
+        const mobileFilterSubmitBtn = document.querySelector("#mobileFilterSubmitBtn");
+        if (mobileFilterSubmitBtn) {
+            mobileFilterSubmitBtn.textContent = `Xem ${totalFiltered} Sản Phẩm`;
+        }
+    }
+
+    const mobileFilterSubmitBtn = document.querySelector("#mobileFilterSubmitBtn");
+    if (mobileFilterSubmitBtn) {
+        mobileFilterSubmitBtn.addEventListener("click", () => {
+            if (filterSidebar) filterSidebar.classList.remove("active");
+            document.body.style.overflow = "";
+        });
     }
 
     // Initialize

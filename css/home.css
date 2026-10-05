@@ -1,4 +1,4 @@
-﻿/* home.css */
+/* home.css */
 main {
   padding-top: 80px;
   /* Offset for fixed header */
@@ -15,11 +15,17 @@ main {
 .hero-wrapper {
   position: relative;
   width: 100%;
-  min-height: 640px;
+  min-height: 480px;
   display: flex;
   align-items: center;
   background-color: var(--primary);
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .hero-wrapper {
+    min-height: 640px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -50,9 +56,15 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 640px;
+  min-height: 480px;
   padding-top: var(--space-xl);
   padding-bottom: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+    min-height: 640px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -118,6 +130,18 @@ main {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-xl);
+}
+
+@media (max-width: 640px) {
+  .hero-specs {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .spec-item + .spec-item {
+    padding-left: 0;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
 }
 
 .spec-item {
@@ -346,7 +370,7 @@ main {
 /* SECTION 4: PRODUCTS */
 .products-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--gutter);
 }
 

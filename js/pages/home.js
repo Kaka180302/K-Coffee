@@ -1,29 +1,29 @@
-document.addEventListener("DOMContentLoaded", () => {
+﻿document.addEventListener("DOMContentLoaded", () => {
     // Chức năng 2: Slider hero tự động, có nút điều khiển thủ công.
     const slides = [
         {
             label: "Mẻ Rang Giới Hạn Tuần Này • Micro-Lot #42",
             title: "Hương Vị Cà Phê Mộc Tinh Tuyển Từ Cao Nguyên",
             description: "Hạt Arabica Cầu Đất & Robusta Buôn Ma Thuột rang mộc nguyên bản theo từng mẻ nhỏ, tôn vinh nốt hương tự nhiên của hoa quả dại, mật ong và sô-cô-la đen nồng nàn.",
-            image: "assets/img/slider/slide-hero-1.png"
+            image: "assets/img/slider/slide-hero-1.png", mobileImage: "assets/img/slider/slider-hero-mobile-1.png"
         },
         {
             label: "Cold brew · ủ lạnh 12 giờ",
-            title: "Một ngụm trong trẻo cho buổi chiều tỉnh táo.",
+            title: "Một ngụm cà phê cho buổi chiều tỉnh táo.",
             description: "Vị ngọt tự nhiên từ hạt cà phê, cân bằng cùng chút cam vàng tươi sáng.",
-            image: "assets/img/slider/slide-hero-2.png"
+            image: "assets/img/slider/slide-hero-2.png", mobileImage: "assets/img/slider/slider-hero-mobile-2.png"
         },
         {
             label: "Espresso · một chút đậm đà",
             title: "Kết ngày êm hơn, với một ly vừa vặn.",
             description: "Đậm hương chocolate, thoảng vị hạt dẻ và đủ ấm để bạn thư giãn.",
-            image: "assets/img/slider/slide-hero-3.png"
+            image: "assets/img/slider/slide-hero-3.png", mobileImage: "assets/img/slider/slider-hero-mobile-3.png"
         },
         {
             label: "Cà phê rang mộc · từ Đà Lạt",
             title: "Một khoảng chậm, bắt đầu từ hạt cà phê tử tế.",
             description: "K-Coffe chọn những mẻ hạt vừa độ, giữ trọn hương thơm và pha cho những ngày bạn muốn sống chậm hơn một chút.",
-            image: "assets/img/slider/slide-hero-4.png"
+            image: "assets/img/slider/slide-hero-4.png", mobileImage: "assets/img/slider/slider-hero-mobile-4.png"
         }
     ];
 
@@ -57,7 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             if (title) title.textContent = slide.title;
             if (description) description.textContent = slide.description;
-            if (heroBg) heroBg.style.backgroundImage = `url('${slide.image}')`;
+            const isMobile = window.innerWidth <= 768;
+            if (heroBg) heroBg.style.backgroundImage = `url('${isMobile && slide.mobileImage ? slide.mobileImage : slide.image}')`;
 
             // Fade in
             if (heroBg) heroBg.style.opacity = "1";
@@ -101,6 +102,16 @@ document.addEventListener("DOMContentLoaded", () => {
     startSlider();
     showSlide(0);
 
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            const slide = slides[currentSlide];
+            const isMobile = window.innerWidth <= 768;
+            if (heroBg) heroBg.style.backgroundImage = `url('')`;
+        }, 200);
+    });
+
     // Chức năng 3: Các khối nội dung xuất hiện dần khi người dùng cuộn tới.
     const revealItems = document.querySelectorAll(".reveal");
     const revealObserver = new IntersectionObserver((entries) => {
@@ -127,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
         toastTimer = setTimeout(() => toast.classList.remove("is-visible"), 3500);
     }
 
-    newsletterForm.addEventListener("submit", (event) => {
+    if (newsletterForm) newsletterForm.addEventListener("submit", (event) => {
         event.preventDefault();
         const email = emailInput.value.trim();
         const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);

@@ -1,4 +1,4 @@
-﻿/* layout.css */
+/* layout.css */
 /* Header */
 .site-header {
   position: fixed;
@@ -387,7 +387,8 @@
 
 @media (max-width: 900px) {
   .header-inner {
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 12px;
   }
   .header-nav {
     display: none;
@@ -400,12 +401,13 @@
   }
   .header-actions {
     gap: 8px;
+    margin-left: auto;
   }
-  /* Show header brand centered slightly */
   .header-brand {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    /* Logo stays in normal document flow */
+  }
+  .header-logo-text {
+    display: none;
   }
 }
 

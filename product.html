@@ -125,16 +125,23 @@
     
     <div class="container" style="padding-top: var(--space-sm); padding-bottom: var(--space-md);">
       <div class="product-toolbar">
-        <div class="search-input-wrapper">
-          <span class="material-symbols-outlined">search</span>
-          <input class="toolbar-search font-body-sm" id="productSearchInput" placeholder="Tìm theo tên, xuất xứ, hương vị..." type="text"/>
+        <div class="search-input-wrapper" style="gap: 8px;">
+          <div style="position: relative; flex: 1; display: flex; align-items: center;">
+            <span class="material-symbols-outlined" style="position: absolute; left: 1rem; color: var(--secondary); pointer-events: none;">search</span>
+            <input class="toolbar-search font-body-sm" id="productSearchInput" placeholder="Tìm theo tên, xuất xứ, hương vị..." type="text"/>
+          </div>
+          <button class="btn btn-primary" id="productSearchBtn" style="padding: 10px 16px; border-radius: 20px; white-space: nowrap;">Tìm kiếm</button>
         </div>
         <div class="toolbar-controls">
-          <span class="font-body-sm text-on-surface-variant" style="font-weight: 500;">
+          <span class="font-body-sm text-on-surface-variant hidden-mobile" style="font-weight: 500;">
             Hiển thị <span class="text-primary" style="font-weight: bold;">9</span> trên <span class="text-primary" style="font-weight: bold;">36</span> sản phẩm
           </span>
           <div style="display: flex; align-items: center; gap: 8px;">
-            <label class="font-label-md text-outline" for="sortSelector" style="display: none;">Sắp xếp:</label>
+            <button class="btn btn-outline mobile-filter-btn" id="mobileFilterBtn" style="display: none; padding: 8px 12px; border-radius: 20px;">
+              <span class="material-symbols-outlined" style="font-size: 20px;">tune</span>
+              <span class="font-label-md">Bộ Lọc</span>
+            </button>
+            <label class="font-label-md text-outline hidden-mobile" for="sortSelector">Sắp xếp:</label>
             <div class="sort-select-wrapper">
               <select class="sort-select font-body-sm" id="sortSelector">
                 <option value="featured">Bán chạy nhất</option>
@@ -154,13 +161,18 @@
       <div class="product-layout">
         
         <!-- SIDEBAR -->
-        <aside class="filter-sidebar">
+        <aside class="filter-sidebar" id="filterSidebar">
           <div class="filter-header">
             <div style="display: flex; align-items: center; gap: 8px;">
               <span class="material-symbols-outlined text-secondary" style="font-size: 22px;">tune</span>
               <h2 class="font-title-lg text-primary tracking-tight">Bộ Lọc Tinh Tế</h2>
             </div>
-            <button class="font-label-sm text-secondary" id="resetFiltersBtn" style="border: none; background: none; cursor: pointer; text-decoration: underline; text-underline-offset: 2px;">Xóa lọc</button>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <button class="font-label-sm text-secondary" id="resetFiltersBtn" style="border: none; background: none; cursor: pointer; text-decoration: underline; text-underline-offset: 2px;">Xóa lọc</button>
+              <button class="mobile-filter-close" id="mobileFilterCloseBtn">
+                <span class="material-symbols-outlined" style="font-size: 24px;">close</span>
+              </button>
+            </div>
           </div>
           
           <div class="filter-group">
@@ -206,6 +218,12 @@
                 <span>600.000đ</span>
               </div>
             </div>
+          </div>
+          
+          <div class="mobile-filter-footer hidden-desktop">
+            <button class="btn btn-primary" id="mobileFilterSubmitBtn" style="width: 100%; padding: 14px; border-radius: var(--radius-full); font-weight: bold;">
+              Xem 36 Sản Phẩm
+            </button>
           </div>
         </aside>
         
@@ -290,34 +308,6 @@
     </div>
   </footer>
 
-  <script>
-    const priceSlider = document.getElementById('priceRangeSlider');
-    const priceDisplay = document.getElementById('priceDisplay');
-    if (priceSlider && priceDisplay) {
-      priceSlider.addEventListener('input', function(e) {
-        const val = Number(e.target.value).toLocaleString('vi-VN');
-        priceDisplay.textContent = `80.000đ - ${val}đ`;
-      });
-    }
-
-    const roastButtons = document.querySelectorAll('.roast-pill');
-    roastButtons.forEach(btn => {
-      btn.addEventListener('click', function() {
-        roastButtons.forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-      });
-    });
-
-    const resetBtn = document.getElementById('resetFiltersBtn');
-    if (resetBtn) {
-      resetBtn.addEventListener('click', function() {
-        if (priceSlider && priceDisplay) {
-          priceSlider.value = 600000;
-          priceDisplay.textContent = '80.000đ - 600.000đ';
-        }
-      });
-    }
-  </script>
   <script src="js/data.js"></script>
   <script src="js/pages/product.js"></script>
 </body>

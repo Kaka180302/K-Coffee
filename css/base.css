@@ -1,4 +1,4 @@
-﻿/* base.css */
+/* base.css */
 :root {
   /* Colors */
   --error: #ba1a1a;
@@ -89,12 +89,15 @@ body {
 
 /* Typography Classes */
 .font-display-hero { font-family: var(--font-serif); font-size: 56px; font-weight: 600; line-height: 64px; letter-spacing: -0.02em; }
-.font-display-hero-mobile { font-family: var(--font-serif); font-size: 36px; font-weight: 600; line-height: 44px; letter-spacing: -0.01em; }
-
 .font-headline-lg { font-family: var(--font-serif); font-size: 40px; font-weight: 600; line-height: 48px; letter-spacing: -0.015em; }
-.font-headline-lg-mobile { font-family: var(--font-serif); font-size: 28px; font-weight: 600; line-height: 36px; }
 .font-headline-md { font-family: var(--font-serif); font-size: 28px; font-weight: 500; line-height: 36px; }
 .font-headline-sm { font-family: var(--font-serif); font-size: 22px; font-weight: 500; line-height: 28px; }
+
+@media (max-width: 768px) {
+  .font-display-hero { font-size: 36px; line-height: 44px; letter-spacing: -0.01em; }
+  .font-headline-lg { font-size: 28px; line-height: 36px; }
+  .font-headline-md { font-size: 24px; line-height: 32px; }
+}
 
 .font-title-lg { font-family: var(--font-sans); font-size: 18px; font-weight: 600; line-height: 26px; letter-spacing: -0.01em; }
 .font-title-md { font-family: var(--font-sans); font-size: 16px; font-weight: 600; line-height: 24px; }
