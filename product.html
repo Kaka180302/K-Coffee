@@ -26,7 +26,7 @@
       </button>
       
       <div class="header-brand">
-        <img alt="K-Coffee Brand Logo" class="header-logo-img" src="https://lh3.googleusercontent.com/aida/AEtjO1XQVRAXEYxrPGJlCVMAetaIVs0YK19DKoh7AfDmx-JjSIGUYYvlF1I_vaPcPc6gxmsWEdS3_AsWZmZq7PN0_sMJuplc1FecawLONf2b-yvTA1qeqrhH_2fTDnxQ69DeXBnWIEU6FYlY0oeNl1R7Ts7dYMc78QfVKr1bupR3KE3_E2RNHeGdkE1QbcU2pyuf0ELgIV1D-IAlZAicNOO4-VEZ9xUO11nr6WlxrtAO0Yf28DTDOuU0hC5jnsOO"/>
+        <img alt="K-Coffee Brand Logo" class="header-logo-img" src="assets/img/logo/logo.png"/>
         <a class="header-logo-text" href="index.html">
           <span class="font-headline-sm header-logo-title">K-Coffee</span>
           <span class="font-label-sm header-logo-subtitle">Artisanal Roastery</span>
@@ -45,6 +45,9 @@
           <input class="input-search font-body-sm" placeholder="Tìm hạt rang, vùng trồng..." type="text"/>
           <span class="material-symbols-outlined search-icon">search</span>
         </div>
+        <a class="action-btn mobile-search-btn" href="#">
+          <span class="material-symbols-outlined">search</span>
+        </a>
         <a class="action-btn" href="#">
           <span class="material-symbols-outlined">favorite</span>
           <span class="action-badge favorite font-label-sm">2</span>
@@ -56,6 +59,17 @@
         <a class="user-profile" href="signin.html">
           <img alt="Profile" class="user-profile-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaQZqlSpHODKZRqmLBp0g0IPt0Y3mp3iuk9fnFKxt0Ya7fkIgqSVd8vv1GHWofPgoh9qG92dQ4n-sFzycYtUiySlujJIjL93JcWTSyFEXqp8swLs9vWsDcBpovQy3QCTjwEbiOyd7SbBKvc0I9X6ZvnlB--RRIo9wvkzsj11nplYTwVqTxQpF49FP3GSWNjUlGD9-c-Oz8yqumRv1JQFca5S2fdzNRAcqNtbwvF5LlN-BO10edWiOgCg"/>
         </a>
+      </div>
+    </div>
+    
+    <!-- MOBILE SEARCH DROPDOWN -->
+    <div class="mobile-search-dropdown">
+      <div class="container" style="display: flex; gap: 8px; align-items: center;">
+        <div class="mobile-search-wrapper" style="flex: 1;">
+          <input type="text" class="font-body-md" placeholder="Tìm hạt rang, vùng trồng..." id="mobileSearchInput">
+          <button class="search-submit-btn"><span class="material-symbols-outlined">search</span></button>
+        </div>
+        <button class="close-search-btn" style="padding: 4px; display: flex; align-items: center; justify-content: center; background: none; border: none; color: var(--outline);"><span class="material-symbols-outlined">close</span></button>
       </div>
     </div>
   </header>
@@ -71,14 +85,23 @@
         <span class="material-symbols-outlined">close</span>
       </button>
     </div>
-    <div class="mobile-search">
-      <input class="input-search font-body-sm" placeholder="Tìm hạt rang, vùng trồng..." type="text" style="width: 100%; border: 1px solid var(--outline); padding: 12px; border-radius: 20px;"/>
-    </div>
     <nav class="mobile-nav">
-      <a class="font-title-md mobile-nav-link" href="index.html">Trang Chủ</a>
-      <a class="font-title-md mobile-nav-link active" href="product.html">Sản Phẩm</a>
-      <a class="font-title-md mobile-nav-link" href="#">Câu Chuyện K-Coffee</a>
-      <a class="font-title-md mobile-nav-link" href="#">Liên Hệ</a>
+      <a class="font-title-md mobile-nav-link" href="index.html">
+        <span>Trang Chủ</span>
+        <span class="material-symbols-outlined">chevron_right</span>
+      </a>
+      <a class="font-title-md mobile-nav-link active" href="product.html">
+        <span>Sản Phẩm</span>
+        <span class="material-symbols-outlined">chevron_right</span>
+      </a>
+      <a class="font-title-md mobile-nav-link" href="#">
+        <span>Câu Chuyện K-Coffee</span>
+        <span class="material-symbols-outlined">chevron_right</span>
+      </a>
+      <a class="font-title-md mobile-nav-link" href="#">
+        <span>Liên Hệ</span>
+        <span class="material-symbols-outlined">chevron_right</span>
+      </a>
     </nav>
   </div>
   <main class="product-page">
@@ -125,7 +148,7 @@
     
     <div class="container" style="padding-top: var(--space-sm); padding-bottom: var(--space-md);">
       <div class="product-toolbar">
-        <div class="search-input-wrapper" style="gap: 8px;">
+        <div class="mobile-search-wrapper" style="gap: 8px;">
           <div style="position: relative; flex: 1; display: flex; align-items: center;">
             <span class="material-symbols-outlined" style="position: absolute; left: 1rem; color: var(--secondary); pointer-events: none;">search</span>
             <input class="toolbar-search font-body-sm" id="productSearchInput" placeholder="Tìm theo tên, xuất xứ, hương vị..." type="text"/>
@@ -312,4 +335,7 @@
   <script src="js/pages/product.js"></script>
 </body>
 </html>
+
+
+
 

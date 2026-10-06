@@ -124,47 +124,55 @@ document.addEventListener("DOMContentLoaded", () => {
         const related = products.filter(p => p.categoryId === product.categoryId && p.id !== product.id).slice(0, 3);
         let relatedHtml = '';
         related.forEach(p => {
+            const tastingNotesHtml = p.tastingNotes ? p.tastingNotes.slice(0, 3).map(note => `<span class="prod-tasting-note">${note}</span>`).join('') : '';
+
             let badgeHtml = '';
             if (p.badge) {
-                let badgeClass = 'rgba(255, 255, 255, 0.8)';
-                let badgeTextClass = 'var(--primary)';
-                if (p.badge === 'Bán Chạy Nhất' || p.badge === 'Mới Rang Tuần Này') {
-                    badgeClass = 'var(--secondary-fixed)';
-                    badgeTextClass = 'var(--on-secondary-fixed-variant)';
+                let badgeClass = "bg-secondary-fixed text-on-secondary-fixed-variant";
+                if (p.badge.toLowerCase().includes("bestseller") || p.badge.toLowerCase().includes("bán chạy")) {
+                    badgeClass = "bg-primary-container text-on-primary-container"; 
                 }
-                badgeHtml = `<span class="prod-badge-top-left font-label-sm" style="background-color: ${badgeClass}; color: ${badgeTextClass};">${p.badge}</span>`;
+                badgeHtml = `<span class="prod-badge-top-left ${badgeClass} font-label-sm">${p.badge}</span>`;
             }
             
-            let roastColor = '#E5C39E';
-            let roastTextColor = '#52331E';
-            if (p.roastLevel === 'medium') { roastColor = '#8C5928'; roastTextColor = '#fff'; }
-            if (p.roastLevel === 'medium-dark') { roastColor = '#52331E'; roastTextColor = '#fff'; }
-            if (p.roastLevel === 'dark') { roastColor = '#2C1810'; roastTextColor = '#fff'; }
+            let roastColor = "var(--secondary-fixed)";
+            let roastTextColor = "var(--on-secondary-fixed-variant)";
+            if (p.roastLevel === "light") {
+                roastColor = "var(--primary)";
+                roastTextColor = "var(--on-primary)";
+            } else if (p.roastLevel === "dark") {
+                roastColor = "var(--surface-container-highest)";
+                roastTextColor = "var(--on-surface)";
+            }
 
             relatedHtml += `
-                <a href="product-detail.html?id=${p.id}" class="product-item group">
-                    <div>
-                        <div class="prod-image-container">
-                            ${badgeHtml}
-                            <button class="prod-fav-btn" onclick="event.preventDefault()"><span class="material-symbols-outlined text-[18px]">favorite</span></button>
-                            <img class="prod-image" src="${p.image}" alt="${p.name}"/>
-                        </div>
-                        <div class="prod-meta font-label-sm" style="margin-top: 12px; display: flex; justify-content: space-between; align-items: center;">
-                            <span class="prod-origin" style="display: flex; align-items: center; gap: 4px; color: var(--on-surface-variant);">
-                                <span class="material-symbols-outlined" style="font-size: 14px;">place</span> ${p.origin}
-                            </span>
-                            <span class="prod-roast" style="background-color: ${roastColor}; color: ${roastTextColor}; padding: 2px 8px; border-radius: 4px;">${p.roast}</span>
-                        </div>
-                        <h3 class="font-title-md prod-name" style="font-weight: bold; margin-bottom: 4px; margin-top: 8px;">${p.name}</h3>
-                        <p class="font-body-sm text-on-surface-variant" style="margin-bottom: 8px;">${p.subtitle}</p>
-                    </div>
-                    <div class="prod-footer" style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
-                        <span class="font-title-md prod-price">${formatCurrency(p.price)}</span>
-                        <button class="prod-add-btn font-label-md" style="padding: 8px; border-radius: 50%; background-color: var(--primary-container); color: var(--on-primary); border: none; display: flex; align-items: center; justify-content: center; transition: background-color 0.3s;" onclick="event.preventDefault(); triggerCartToast('${p.name}')">
-                            <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
-                        </button>
-                    </div>
-                </a>
+            <a href="product-detail.html?id=${p.id}" class="product-item group">
+              <div>
+                <div class="prod-image-container">
+                  ${badgeHtml}
+                  <button class="prod-fav-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined text-[18px]">favorite</span></button>
+                  <img class="prod-image" src="${p.image}" alt="${p.name}" onerror="this.src='https://placehold.co/800x1000/eae3d9/2c1810?text=Product+Image'"/>
+                </div>
+                <div class="prod-meta font-label-sm">
+                  <span class="prod-origin"><span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> ${p.origin}</span>
+                  <span class="prod-roast" style="background-color: ${roastColor}; color: ${roastTextColor}; padding: 2px 8px; border-radius: 4px;">${p.roast}</span>
+                </div>
+                <h3 class="font-title-lg prod-name">${p.name}</h3>
+                <div class="prod-tasting-notes font-label-sm">
+                  ${tastingNotesHtml}
+                </div>
+              </div>
+              <div class="prod-footer">
+                <div>
+                  <span class="font-label-sm prod-variant">${p.variant}</span>
+                  <span class="font-title-lg prod-price">${formatCurrency(p.price)}</span>
+                </div>
+                <button class="prod-add-btn font-label-md" onclick="event.preventDefault();">
+                  <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+                  <span>Chọn Mua</span>
+                </button>
+              </div>
+            </a>
             `;
         });
         relatedGrid.innerHTML = relatedHtml;

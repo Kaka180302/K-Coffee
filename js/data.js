@@ -260,6 +260,31 @@ const products = [
 
 // Mobile Menu and Footer Accordion Logic
 document.addEventListener('DOMContentLoaded', () => {
+
+  // Mobile Search Logic
+  const mobileSearchBtns = document.querySelectorAll('.mobile-search-btn');
+  const mobileSearchDropdown = document.querySelector('.mobile-search-dropdown');
+  const closeSearchBtns = document.querySelectorAll('.close-search-btn');
+  const mobileSearchInput = document.getElementById('mobileSearchInput');
+
+  if (mobileSearchDropdown) {
+    mobileSearchBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        mobileSearchDropdown.classList.toggle('active');
+        if (mobileSearchDropdown.classList.contains('active') && mobileSearchInput) {
+          setTimeout(() => mobileSearchInput.focus(), 100);
+        }
+      });
+    });
+
+    closeSearchBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        mobileSearchDropdown.classList.remove('active');
+      });
+    });
+  }
   // Mobile Menu
   const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
   const mobileMenuDrawer = document.querySelector('.mobile-menu-drawer');
@@ -294,3 +319,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+

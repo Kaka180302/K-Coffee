@@ -1,8 +1,8 @@
-﻿/* product-detail.css */
 .pd-page {
   padding-top: 80px;
   background-color: var(--background);
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Ambient Background */

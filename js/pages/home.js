@@ -1,4 +1,4 @@
-﻿document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     // Chức năng 2: Slider hero tự động, có nút điều khiển thủ công.
     const slides = [
         {
@@ -162,49 +162,55 @@
         const formatCurrency = (amount) => new Intl.NumberFormat('vi-VN').format(amount) + 'đ';
 
         bestSellers.forEach(p => {
-            let badgesHtml = '';
-            if (p.roast) {
-                let badgeClass = 'badge-light';
-                if (p.roastLevel === 'medium') badgeClass = 'badge-amber';
-                if (p.roastLevel === 'dark' || p.roastLevel === 'medium-dark') badgeClass = 'badge-dark';
-                badgesHtml += `<span class="badge ${badgeClass}">${p.roast}</span>`;
+            const tastingNotesHtml = p.tastingNotes ? p.tastingNotes.slice(0, 3).map(note => `<span class="prod-tasting-note">${note}</span>`).join('') : '';
+            
+            let badgeHtml = '';
+            if (p.badge) {
+                let badgeClass = "bg-secondary-fixed text-on-secondary-fixed-variant";
+                if (p.badge.toLowerCase().includes("bestseller") || p.badge.toLowerCase().includes("bán chạy")) {
+                    badgeClass = "bg-primary-container text-on-primary-container"; 
+                }
+                badgeHtml = `<span class="prod-badge-top-left ${badgeClass} font-label-sm">${p.badge}</span>`;
             }
-            if (p.cuppingScore) {
-                badgesHtml += `<span class="badge badge-green"><span class="material-symbols-outlined" style="font-size: 14px;">military_tech</span> SCAA ${p.cuppingScore}</span>`;
-            }
-
-            let tagsHtml = '';
-            if (p.tastingNotes) {
-                p.tastingNotes.slice(0, 3).forEach(note => {
-                    tagsHtml += `<span class="badge badge-light">${note}</span>`;
-                });
+            
+            let roastColor = "var(--secondary-fixed)";
+            let roastTextColor = "var(--on-secondary-fixed-variant)";
+            if (p.roastLevel === "light") {
+                roastColor = "var(--primary)";
+                roastTextColor = "var(--on-primary)";
+            } else if (p.roastLevel === "dark") {
+                roastColor = "var(--surface-container-highest)";
+                roastTextColor = "var(--on-surface)";
             }
 
             html += `
-                <a class="glass-card product-card" href="product-detail.html?id=${p.id}">
-                    <div class="prod-img-wrap">
-                        <img class="prod-img" src="${p.image}" alt="${p.name}" />
-                        <div class="prod-badges">
-                            ${badgesHtml}
-                        </div>
-                        <button class="prod-fav" onclick="event.preventDefault()"><span class="material-symbols-outlined">favorite</span></button>
-                    </div>
-                    <div class="prod-location font-label-sm text-on-surface-variant">
-                        <span class="material-symbols-outlined prod-location-icon">location_on</span>
-                        ${p.origin}
-                    </div>
-                    <h3 class="font-title-lg prod-title" style="margin-bottom: 8px;">${p.name}</h3>
-                    <div class="prod-tags">
-                        ${tagsHtml}
-                    </div>
-                    <div class="prod-bottom">
-                        <div class="prod-price-box">
-                            <span class="font-label-sm prod-price-old">${formatCurrency(p.originalPrice)}</span>
-                            <span class="font-title-lg prod-price-new">${formatCurrency(p.price)} <span class="font-body-sm text-on-surface-variant" style="font-weight: normal;"></span></span>
-                        </div>
-                        <button class="prod-add-cart" onclick="event.preventDefault(); triggerCartToast('${p.name}')"><span class="material-symbols-outlined">shopping_cart</span></button>
-                    </div>
-                </a>
+            <a href="product-detail.html?id=${p.id}" class="product-item group">
+              <div>
+                <div class="prod-image-container">
+                  ${badgeHtml}
+                  <button class="prod-fav-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined text-[18px]">favorite</span></button>
+                  <img class="prod-image" src="${p.image}" alt="${p.name}" onerror="this.src='https://placehold.co/800x1000/eae3d9/2c1810?text=Product+Image'"/>
+                </div>
+                <div class="prod-meta font-label-sm">
+                  <span class="prod-origin"><span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> ${p.origin}</span>
+                  <span class="prod-roast" style="background-color: ${roastColor}; color: ${roastTextColor}; padding: 2px 8px; border-radius: 4px;">${p.roast}</span>
+                </div>
+                <h3 class="font-title-lg prod-name">${p.name}</h3>
+                <div class="prod-tasting-notes font-label-sm">
+                  ${tastingNotesHtml}
+                </div>
+              </div>
+              <div class="prod-footer">
+                <div>
+                  <span class="font-label-sm prod-variant">${p.variant}</span>
+                  <span class="font-title-lg prod-price">${formatCurrency(p.price)}</span>
+                </div>
+                <button class="prod-add-btn font-label-md" onclick="event.preventDefault();">
+                  <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+                  <span>Chọn Mua</span>
+                </button>
+              </div>
+            </a>
             `;
         });
         grid.innerHTML = html;
