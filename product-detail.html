@@ -56,14 +56,40 @@
         <a class="action-btn mobile-search-btn" href="#">
           <span class="material-symbols-outlined">search</span>
         </a>
-        <a class="action-btn" href="#">
-          <span class="material-symbols-outlined">favorite</span>
-          <span class="action-badge favorite font-label-sm">2</span>
-        </a>
-        <a class="action-btn" href="#">
-          <span class="material-symbols-outlined">local_mall</span>
-          <span class="action-badge cart font-label-sm">3</span>
-        </a>
+                  <div class="fav-wrapper cart-wrapper">
+            <a class="action-btn fav-btn" href="trang-yeu-thich.html">
+              <span class="material-symbols-outlined">favorite</span>
+              <span class="action-badge fav-badge font-label-sm" style="display: none;">0</span>
+            </a>
+            <div class="mini-fav mini-cart">
+              <div class="mini-cart-header font-title-sm">Sản phẩm yêu thích (<span class="fav-total-items">0</span>)</div>
+              <div class="mini-fav-list mini-cart-list">
+                <!-- Fav items injected via JS -->
+              </div>
+            </div>
+          </div>
+                <div class="cart-wrapper">
+          <a class="action-btn cart-btn" href="trang-gio-hang.html">
+            <span class="material-symbols-outlined">local_mall</span>
+            <span class="action-badge cart cart-badge font-label-sm" style="display: none;">0</span>
+          </a>
+          <div class="mini-cart">
+            <div class="mini-cart-header font-title-sm">Giỏ hàng của bạn (<span class="cart-total-items">0</span>)</div>
+                          <div class="mini-cart-columns font-label-sm">
+                <div class="mc-col-img"></div>
+                <div class="mc-col-name">Sản phẩm</div>
+                <div class="mc-col-qty">Số lượng</div>
+                <div class="mc-col-action"></div>
+              </div>
+              <div class="mini-cart-list">
+              <!-- Cart items injected via JS -->
+            </div>
+            <div class="mini-cart-footer">
+              <div class="mini-cart-total font-title-md">Tổng: <span class="cart-total-price">0đ</span></div>
+              <a href="trang-gio-hang.html" class="btn btn-primary mini-cart-checkout">Xem Giỏ Hàng</a>
+            </div>
+          </div>
+        </div>
         <a class="user-profile" href="signin.html">
           <img alt="Profile" class="user-profile-img"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaQZqlSpHODKZRqmLBp0g0IPt0Y3mp3iuk9fnFKxt0Ya7fkIgqSVd8vv1GHWofPgoh9qG92dQ4n-sFzycYtUiySlujJIjL93JcWTSyFEXqp8swLs9vWsDcBpovQy3QCTjwEbiOyd7SbBKvc0I9X6ZvnlB--RRIo9wvkzsj11nplYTwVqTxQpF49FP3GSWNjUlGD9-c-Oz8yqumRv1JQFca5S2fdzNRAcqNtbwvF5LlN-BO10edWiOgCg" />
@@ -297,7 +323,7 @@
                   <button type="button" class="pd-qty-btn" onclick="incrementQty()"><span
                       class="material-symbols-outlined text-[18px]">add</span></button>
                 </div>
-                <button type="button" class="font-label-lg pd-btn-add" onclick="triggerCartToast()">
+                <button type="button" class="font-label-lg pd-btn-add" onclick="handleDetailAddToCart()">
                   <span class="material-symbols-outlined text-[20px]">shopping_cart</span> Thêm Vào Giỏ
                 </button>
                 <button type="button" class="font-label-lg pd-btn-buy">
@@ -723,7 +749,17 @@
       btn.classList.add('active');
     }
 
-    function triggerCartToast(customName) {
+          function handleDetailAddToCart() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id') || 'prod-01';
+        if (typeof addToCart === 'function') {
+          addToCart(productId, currentQty);
+        } else {
+          triggerCartToast();
+        }
+      }
+
+      function triggerCartToast(customName) {
       const toast = document.getElementById('cart-toast');
       const desc = document.getElementById('toast-desc');
 
@@ -744,6 +780,15 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
 
 
 

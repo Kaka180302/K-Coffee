@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="utf-8"/>
@@ -37,9 +37,11 @@
       </nav>
 
       <div class="header-actions">
-        <div class="search-bar">
-          <input class="input-search font-body-sm" placeholder="Tìm hạt rang, vùng trồng..." type="text"/>
-          <span class="material-symbols-outlined search-icon">search</span>
+                <div class="search-bar" style="position: relative;">
+          <input class="input-search font-body-sm" placeholder="Tìm hạt rang, vùng trồng..." type="text" style="padding-right: 40px; padding-left: 16px;"/>
+          <button class="header-search-btn" style="position: absolute; right: 4px; top: 50%; transform: translateY(-50%); background: var(--secondary); color: var(--on-secondary); border: none; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: opacity 0.2s;" onmouseover="this.style.opacity=0.8" onmouseout="this.style.opacity=1">
+            <span class="material-symbols-outlined" style="font-size: 16px;">search</span>
+          </button>
         </div>
         <a class="action-btn" href="#">
           <span class="material-symbols-outlined">favorite</span>
@@ -49,9 +51,26 @@
           <span class="material-symbols-outlined">local_mall</span>
           <span class="action-badge cart font-label-sm">3</span>
         </a>
-        <a class="user-profile" href="signin.html">
-          <img alt="Profile" class="user-profile-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaQZqlSpHODKZRqmLBp0g0IPt0Y3mp3iuk9fnFKxt0Ya7fkIgqSVd8vv1GHWofPgoh9qG92dQ4n-sFzycYtUiySlujJIjL93JcWTSyFEXqp8swLs9vWsDcBpovQy3QCTjwEbiOyd7SbBKvc0I9X6ZvnlB--RRIo9wvkzsj11nplYTwVqTxQpF49FP3GSWNjUlGD9-c-Oz8yqumRv1JQFca5S2fdzNRAcqNtbwvF5LlN-BO10edWiOgCg"/>
-        </a>
+                <div class="user-auth-section">
+          <div class="auth-buttons" id="header-auth-btns" style="display: flex; gap: 8px; align-items: center;">
+            <a href="signin.html" class="btn-login font-label-md">Đăng nhập</a>
+            <a href="signup.html" class="btn-register font-label-md">Đăng ký</a>
+          </div>
+          <div class="user-profile-dropdown" id="header-user-profile" style="display: none; position: relative;">
+            <a class="user-profile" href="#" onclick="event.preventDefault(); toggleUserMenu()">
+              <img alt="Profile" class="user-profile-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaQZqlSpHODKZRqmLBp0g0IPt0Y3mp3iuk9fnFKxt0Ya7fkIgqSVd8vv1GHWofPgoh9qG92dQ4n-sFzycYtUiySlujJIjL93JcWTSyFEXqp8swLs9vWsDcBpovQy3QCTjwEbiOyd7SbBKvc0I9X6ZvnlB--RRIo9wvkzsj11nplYTwVqTxQpF49FP3GSWNjUlGD9-c-Oz8yqumRv1JQFca5S2fdzNRAcqNtbwvF5LlN-BO10edWiOgCg"/>
+            </a>
+            <div class="user-menu mini-cart" id="user-dropdown-menu" style="width: 200px; right: 0; padding: 8px 0;">
+              <div style="padding: 8px 16px; border-bottom: 1px solid var(--outline-variant); margin-bottom: 8px;">
+                <div class="font-title-sm" id="user-display-name">User Name</div>
+                <div class="font-body-sm text-on-surface-variant" id="user-display-email">user@email.com</div>
+              </div>
+              <a href="#" class="font-label-md" style="display: block; padding: 8px 16px; color: var(--on-surface); text-decoration: none;" onmouseover="this.style.backgroundColor='var(--surface-container)'" onmouseout="this.style.backgroundColor='transparent'">Tài khoản của tôi</a>
+              <a href="#" class="font-label-md" style="display: block; padding: 8px 16px; color: var(--on-surface); text-decoration: none;" onmouseover="this.style.backgroundColor='var(--surface-container)'" onmouseout="this.style.backgroundColor='transparent'">Đơn hàng</a>
+              <a href="#" class="font-label-md" style="display: block; padding: 8px 16px; color: #ba1a1a; text-decoration: none;" onmouseover="this.style.backgroundColor='var(--surface-container)'" onmouseout="this.style.backgroundColor='transparent'" onclick="event.preventDefault(); handleLogout()">Đăng xuất</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -170,7 +189,7 @@
               <div class="auth-divider-text font-label-sm text-outline">Hoặc đăng ký tài khoản mới</div>
             </div>
             
-            <form id="signup-form" onsubmit="event.preventDefault(); return false;">
+            <form id="signup-form" novalidate>
               <div class="form-group-row">
                 <div>
                   <label class="form-label font-label-md" for="fullname">Họ và tên <span class="text-secondary">*</span></label>
@@ -207,6 +226,14 @@
                   <button class="form-input-right-btn" id="toggle-password-btn" type="button">
                     <span class="material-symbols-outlined" id="password-visibility-icon">visibility</span>
                   </button>
+                </div>
+                
+                                <div class="form-group" style="margin-top: 1rem;">
+                  <label class="form-label font-label-md" for="confirm-password">Nhập lại mật khẩu <span class="text-secondary">*</span></label>
+                  <div class="form-input-wrapper" style="margin-top: 0.5rem;">
+                    <span class="material-symbols-outlined form-input-icon">lock</span>
+                    <input class="form-input font-body-md" id="confirm-password" placeholder="••••••••" type="password" required/>
+                  </div>
                 </div>
                 
                 <div class="password-strength">
@@ -257,7 +284,7 @@
                 <span class="checkbox-text font-body-sm">Nhận thông báo khi có mẻ rang tươi mới ra lò &amp; đặc quyền Micro-lot định kỳ qua email/SMS.</span>
               </label>
               
-              <button class="btn-submit font-label-lg" id="submit-signup-btn" type="submit" onclick="submitRegister()">
+              <button class="btn-submit font-label-lg" id="submit-signup-btn" type="submit" >
                 <span>Tạo Tài Khoản &amp; Nhận Ưu Đãi 10%</span>
                 <span class="material-symbols-outlined">arrow_forward</span>
               </button>
@@ -284,79 +311,15 @@
     </div>
   </div>
 
-  <script>
-    document.getElementById('toggle-password-btn').addEventListener('click', function() {
-      const pwd = document.getElementById('password');
-      const icon = document.getElementById('password-visibility-icon');
-      if (pwd.type === 'password') {
-        pwd.type = 'text';
-        icon.textContent = 'visibility_off';
-      } else {
-        pwd.type = 'password';
-        icon.textContent = 'visibility';
-      }
-    });
-
-    function checkPasswordStrength(val) {
-      const bar1 = document.getElementById('bar-1');
-      const bar2 = document.getElementById('bar-2');
-      const bar3 = document.getElementById('bar-3');
-      const text = document.getElementById('strength-text');
-
-      if (!val || val.length === 0) {
-        text.textContent = 'Chưa nhập';
-        text.className = 'font-label-sm font-semibold text-outline';
-        bar1.style.backgroundColor = 'transparent';
-        bar2.style.backgroundColor = 'transparent';
-        bar3.style.backgroundColor = 'transparent';
-        return;
-      }
-
-      let score = 0;
-      if (val.length >= 6) score++;
-      if (val.length >= 8 && /[A-Z]/.test(val) && /[0-9]/.test(val)) score++;
-      if (val.length >= 10 && /[^A-Za-z0-9]/.test(val)) score++;
-
-      if (score === 1) {
-        text.textContent = 'Yếu';
-        text.className = 'font-label-sm font-semibold text-error';
-        bar1.style.backgroundColor = 'var(--error)';
-        bar2.style.backgroundColor = 'var(--surface-container-high)';
-        bar3.style.backgroundColor = 'var(--surface-container-high)';
-      } else if (score === 2) {
-        text.textContent = 'Trung bình';
-        text.className = 'font-label-sm font-semibold text-secondary';
-        bar1.style.backgroundColor = 'var(--secondary)';
-        bar2.style.backgroundColor = 'var(--secondary)';
-        bar3.style.backgroundColor = 'var(--surface-container-high)';
-      } else {
-        text.textContent = 'Rất mạnh';
-        text.style.color = 'var(--on-tertiary-fixed-variant)';
-        bar1.style.backgroundColor = 'var(--secondary)';
-        bar2.style.backgroundColor = 'var(--secondary)';
-        bar3.style.backgroundColor = 'var(--secondary)';
-      }
-    }
-
-    function selectTaste(btn) {
-      const buttons = document.querySelectorAll('.taste-btn');
-      buttons.forEach(b => {
-        b.classList.remove('active');
-      });
-      btn.classList.add('active');
-    }
-
-    function submitRegister() {
-      // Basic validation check (html5 form validation takes precedence, this is just for UI if valid)
-      const form = document.getElementById('signup-form');
-      if (form.checkValidity()) {
-        const toast = document.getElementById('toast-success');
-        toast.classList.add('show');
-        setTimeout(() => {
-          toast.classList.remove('show');
-        }, 4000);
-      }
-    }
-  </script>
+      <script src="js/data.js"></script>
+  <script src="js/pages/auth.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+

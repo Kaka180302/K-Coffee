@@ -188,7 +188,8 @@ document.addEventListener("DOMContentLoaded", () => {
               <div>
                 <div class="prod-image-container">
                   ${badgeHtml}
-                  <button class="prod-fav-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined text-[18px]">favorite</span></button>
+                  <button class="prod-fav-btn" onclick="event.preventDefault(); event.stopPropagation(); toggleFavorite('${p.id}')">
+                  <span class="material-symbols-outlined text-[18px]">favorite</span></button>
                   <img class="prod-image" src="${p.image}" alt="${p.name}" onerror="this.src='https://placehold.co/800x1000/eae3d9/2c1810?text=Product+Image'"/>
                 </div>
                 <div class="prod-meta font-label-sm">
@@ -205,7 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   <span class="font-label-sm prod-variant">${p.variant}</span>
                   <span class="font-title-lg prod-price">${formatCurrency(p.price)}</span>
                 </div>
-                <button class="prod-add-btn font-label-md" onclick="event.preventDefault();">
+                <button class="prod-add-btn font-label-md" onclick="event.preventDefault(); event.stopPropagation(); addToCart('${p.id}')">
                   <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
                   <span>Chọn Mua</span>
                 </button>
@@ -216,3 +217,8 @@ document.addEventListener("DOMContentLoaded", () => {
         grid.innerHTML = html;
     }
 });
+
+
+
+
+

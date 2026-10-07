@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const productGrid = document.querySelector("#productGrid");
     const categoryList = document.querySelector("#categoryList");
-    
+
     // Filter elements
     const searchInput = document.querySelector("#productSearchInput");
     const sortSelector = document.querySelector("#sortSelector");
@@ -11,11 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const methodContainer = document.querySelector("#methodFilterContainer");
     const regionContainer = document.querySelector("#regionFilterContainer");
     const resetBtn = document.querySelector("#resetFiltersBtn");
-    
+
     // Pagination elements
     const paginationInfo = document.querySelector("#paginationInfo");
     const paginationControls = document.querySelector("#paginationControls");
-    
+
     const filterMethods = [
         { id: "phin", name: "Pha Phin Truyền Thống" },
         { id: "pourover", name: "Pour-Over / V60" },
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
             html += `<span class="method-tag" data-id="${method.id}">${method.name}</span>`;
         });
         methodContainer.innerHTML = html;
-        
+
         const methodTags = methodContainer.querySelectorAll('.method-tag');
         methodTags.forEach(tag => {
             tag.addEventListener("click", () => {
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
         });
         regionContainer.innerHTML = html;
-        
+
         const regionBoxes = regionContainer.querySelectorAll('input[type="checkbox"]');
         regionBoxes.forEach(box => {
             box.addEventListener("change", () => {
@@ -131,11 +131,11 @@ document.addEventListener("DOMContentLoaded", () => {
     roastButtons.forEach(btn => {
         // Clear initial active states to show all by default
         btn.classList.remove("active");
-        
+
         btn.addEventListener("click", (e) => {
             e.preventDefault();
             btn.classList.toggle("active");
-            
+
             // Rebuild roast filter array
             currentFilters.roast = [];
             roastButtons.forEach((b, index) => {
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const val = parseInt(e.target.value);
             priceDisplay.textContent = `80.000đ - ${formatCurrency(val)}`;
             currentFilters.maxPrice = val;
-            applyFilters(); // apply instantly on slide
+            applyFilters();
         });
     }
 
@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
             applyFilters();
         });
     }
-    
+
     const searchBtn = document.querySelector("#productSearchBtn");
     if (searchBtn && searchInput) {
         searchBtn.addEventListener("click", () => {
@@ -213,50 +213,50 @@ document.addEventListener("DOMContentLoaded", () => {
                 search: "",
                 sort: "featured"
             };
-            
+
             // Reset UI
             categoryList.querySelector('input[value="all"]').checked = true;
             roastButtons.forEach(b => b.classList.remove("active"));
-            
+
             if (methodContainer) {
                 methodContainer.querySelectorAll('.method-tag').forEach(t => t.classList.remove('active'));
             }
             if (regionContainer) {
                 regionContainer.querySelectorAll('input[type="checkbox"]').forEach(b => b.checked = false);
             }
-            
+
             if (priceSlider) {
                 priceSlider.value = 600000;
                 priceDisplay.textContent = `80.000đ - 600.000đ`;
             }
             if (searchInput) searchInput.value = "";
             if (sortSelector) sortSelector.value = "featured";
-            
+
             applyFilters();
         });
     }
 
     function applyFilters() {
         currentPage = 1; // reset to first page when filter changes
-        
+
         filteredProducts = products.filter(p => {
             // Category
             if (currentFilters.category !== "all" && p.categoryId !== currentFilters.category) return false;
-            
+
             // Roast
             if (currentFilters.roast.length > 0 && !currentFilters.roast.includes(p.roastLevel)) return false;
-            
+
             // Methods - Product must have AT LEAST ONE of the selected methods
             if (currentFilters.methods.length > 0) {
                 if (!p.methods || !p.methods.some(m => currentFilters.methods.includes(m))) return false;
             }
-            
+
             // Regions
             if (currentFilters.regions.length > 0 && !currentFilters.regions.includes(p.region)) return false;
-            
+
             // Price
             if (p.price > currentFilters.maxPrice) return false;
-            
+
             // Search
             if (currentFilters.search) {
                 const searchStr = currentFilters.search;
@@ -265,13 +265,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 const matchNotes = p.tastingNotes.some(note => note.toLowerCase().includes(searchStr));
                 if (!matchName && !matchOrigin && !matchNotes) return false;
             }
-            
+
             return true;
         });
-        
+
         // Sorting
         filteredProducts.sort((a, b) => {
-            switch(currentFilters.sort) {
+            switch (currentFilters.sort) {
                 case "featured":
                     return b.salesCount - a.salesCount;
                 case "newest":
@@ -289,10 +289,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         renderPage();
     }
-    
+
     function renderPage() {
         if (!productGrid) return;
-        
+
         if (filteredProducts.length === 0) {
             productGrid.innerHTML = `<div class="font-body-md" style="grid-column: 1/-1; text-align: center; padding: 2rem;">Không tìm thấy sản phẩm nào phù hợp.</div>`;
             updateCount(0);
@@ -302,7 +302,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
         if (currentPage > totalPages) currentPage = totalPages;
-        
+
         const startIndex = (currentPage - 1) * itemsPerPage;
         const endIndex = startIndex + itemsPerPage;
         const pageProducts = filteredProducts.slice(startIndex, endIndex);
@@ -310,16 +310,16 @@ document.addEventListener("DOMContentLoaded", () => {
         let html = '';
         pageProducts.forEach(prod => {
             const tastingNotesHtml = prod.tastingNotes.map(note => `<span class="prod-tasting-note">${note}</span>`).join('');
-            
+
             let badgeHtml = '';
             if (prod.badge) {
                 let badgeClass = "bg-secondary-fixed text-on-secondary-fixed-variant";
                 if (prod.badge.toLowerCase().includes("bestseller") || prod.badge.toLowerCase().includes("bán chạy")) {
-                    badgeClass = "bg-primary-container text-on-primary-container"; 
+                    badgeClass = "bg-primary-container text-on-primary-container";
                 }
                 badgeHtml = `<span class="prod-badge-top-left ${badgeClass} font-label-sm">${prod.badge}</span>`;
             }
-            
+
             let roastColor = "var(--secondary-fixed)";
             let roastTextColor = "var(--on-secondary-fixed-variant)";
             if (prod.roastLevel === "light") {
@@ -335,7 +335,8 @@ document.addEventListener("DOMContentLoaded", () => {
               <div>
                 <div class="prod-image-container">
                   ${badgeHtml}
-                  <button class="prod-fav-btn" onclick="event.preventDefault();"><span class="material-symbols-outlined text-[18px]">favorite</span></button>
+                  <button class="prod-fav-btn" onclick="event.preventDefault(); event.stopPropagation(); toggleFavorite('${prod.id}')">
+                  <span class="material-symbols-outlined text-[18px]">favorite</span></button>
                   <img class="prod-image" src="${prod.image}" alt="${prod.name}" onerror="this.src='https://placehold.co/800x1000/eae3d9/2c1810?text=Product+Image'"/>
                 </div>
                 <div class="prod-meta font-label-sm">
@@ -352,7 +353,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   <span class="font-label-sm prod-variant">${prod.variant}</span>
                   <span class="font-title-lg prod-price">${formatCurrency(prod.price)}</span>
                 </div>
-                <button class="prod-add-btn font-label-md" onclick="event.preventDefault();">
+                <button class="prod-add-btn font-label-md" onclick="event.preventDefault(); event.stopPropagation(); addToCart('${prod.id}')">
                   <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
                   <span>Chọn Mua</span>
                 </button>
@@ -360,20 +361,20 @@ document.addEventListener("DOMContentLoaded", () => {
             </a>
             `;
         });
-        
+
         productGrid.innerHTML = html;
         updateCount(filteredProducts.length);
         renderPagination(totalPages, currentPage);
-        
+
         // Scroll to top of grid smoothly when page changes
-        if(window.scrollY > productGrid.offsetTop - 100) {
-           window.scrollTo({ top: productGrid.offsetTop - 100, behavior: 'smooth' });
+        if (window.scrollY > productGrid.offsetTop - 100) {
+            window.scrollTo({ top: productGrid.offsetTop - 100, behavior: 'smooth' });
         }
     }
-    
+
     function renderPagination(totalPages, current) {
         if (!paginationInfo || !paginationControls) return;
-        
+
         if (totalPages <= 1) {
             paginationInfo.innerHTML = `Trang <span class="font-bold text-primary">1</span> trong tổng số 1 trang`;
             paginationControls.innerHTML = '';
@@ -381,22 +382,22 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         paginationInfo.innerHTML = `Trang <span class="font-bold text-primary">${current}</span> trong tổng số ${totalPages} trang`;
-        
+
         let html = '';
-        
+
         // Prev button
         html += `<button class="page-btn ${current === 1 ? 'disabled' : 'normal'}" data-page="${current - 1}"><span class="material-symbols-outlined">chevron_left</span></button>`;
-        
+
         // Page numbers
         for (let i = 1; i <= totalPages; i++) {
             html += `<button class="page-btn ${i === current ? 'active' : 'normal'} font-label-md" data-page="${i}">${i}</button>`;
         }
-        
+
         // Next button
         html += `<button class="page-btn ${current === totalPages ? 'disabled' : 'normal'} next" data-page="${current + 1}"><span class="material-symbols-outlined">chevron_right</span></button>`;
-        
+
         paginationControls.innerHTML = html;
-        
+
         // Add events
         paginationControls.querySelectorAll('.page-btn:not(.disabled)').forEach(btn => {
             btn.addEventListener('click', (e) => {
@@ -412,9 +413,9 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateCount(totalFiltered) {
         const countDisplay = document.querySelector('.toolbar-controls .font-body-sm');
         if (countDisplay) {
-            countDisplay.innerHTML = `Hiển thị <span class="text-primary" style="font-weight: bold;">${Math.min((currentPage-1)*itemsPerPage + 1, totalFiltered)}</span>–<span class="text-primary" style="font-weight: bold;">${Math.min(currentPage*itemsPerPage, totalFiltered)}</span> trên <span class="text-primary" style="font-weight: bold;">${totalFiltered}</span> sản phẩm`;
+            countDisplay.innerHTML = `Hiển thị&nbsp;<span class="text-primary" style="font-weight: bold;">${Math.min((currentPage - 1) * itemsPerPage + 1, totalFiltered)}</span>&nbsp;–&nbsp;<span class="text-primary" style="font-weight: bold;">${Math.min(currentPage * itemsPerPage, totalFiltered)}</span>&nbsp;trên&nbsp;<span class="text-primary" style="font-weight: bold;">${totalFiltered}</span>&nbsp;sản phẩm`;
         }
-        
+
         const mobileFilterSubmitBtn = document.querySelector("#mobileFilterSubmitBtn");
         if (mobileFilterSubmitBtn) {
             mobileFilterSubmitBtn.textContent = `Xem ${totalFiltered} Sản Phẩm`;
@@ -437,3 +438,9 @@ document.addEventListener("DOMContentLoaded", () => {
         applyFilters(); // This will trigger initial render and pagination
     }
 });
+
+
+
+
+
+
