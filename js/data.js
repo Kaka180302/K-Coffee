@@ -410,7 +410,7 @@ window.showGlobalToast = function (title, desc) {
   }, 3000);
 }
 
-window.updateCartQuantity = function(productId, delta) {
+window.updateCartQuantity = function (productId, delta) {
   const item = cart.find(i => i.id === productId);
   if (item) {
     item.quantity += delta;
@@ -498,14 +498,14 @@ function saveFavorites() {
   localStorage.setItem('kcoffee_favorites', JSON.stringify(favorites));
 }
 
-window.toggleFavorite = function(productId) {
+window.toggleFavorite = function (productId) {
   const product = products.find(p => p.id === productId);
   if (!product) return;
 
   const index = favorites.findIndex(item => item.id === productId);
   if (index !== -1) {
     favorites.splice(index, 1);
-    // Optional: showGlobalToast('Đã bỏ thích sản phẩm!', product.name);
+    showGlobalToast('Đã bỏ thích sản phẩm!', product.name);
   } else {
     favorites.push({
       id: product.id,
@@ -515,12 +515,12 @@ window.toggleFavorite = function(productId) {
     });
     showGlobalToast('Đã thêm vào mục yêu thích!', product.name);
   }
-  
+
   saveFavorites();
   updateFavUI();
 }
 
-window.removeFromFav = function(productId) {
+window.removeFromFav = function (productId) {
   favorites = favorites.filter(item => item.id !== productId);
   saveFavorites();
   updateFavUI();
@@ -528,7 +528,7 @@ window.removeFromFav = function(productId) {
 
 function updateFavUI() {
   const totalItems = favorites.length;
-  
+
   // Update badges
   const favBadges = document.querySelectorAll('.fav-badge');
   favBadges.forEach(badge => {
@@ -548,7 +548,7 @@ function updateFavUI() {
   // Render mini fav lists
   const miniFavLists = document.querySelectorAll('.mini-fav-list');
   let html = '';
-  
+
   if (favorites.length === 0) {
     html = '<div class="empty-cart font-body-md">Chưa có sản phẩm yêu thích</div>';
   } else {
@@ -608,14 +608,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // --- AUTHENTICATION LOGIC ---
-window.toggleUserMenu = function() {
+window.toggleUserMenu = function () {
   const menu = document.getElementById('user-dropdown-menu');
   if (menu) {
     menu.classList.toggle('active');
   }
 };
 
-window.handleLogout = function() {
+window.handleLogout = function () {
   localStorage.removeItem('kcoffee_session');
   updateAuthUI();
   if (typeof showGlobalToast === 'function') {
@@ -628,7 +628,6 @@ window.handleLogout = function() {
 
 function updateAuthUI() {
   const sessionData = localStorage.getItem('kcoffee_session');
-  // Need to update these elements in all instances (in case there are multiple headers like mobile/desktop)
   const authBtnsAll = document.querySelectorAll('#header-auth-btns');
   const userProfilesAll = document.querySelectorAll('#header-user-profile');
   const nameEls = document.querySelectorAll('#user-display-name');
@@ -650,7 +649,6 @@ document.addEventListener('DOMContentLoaded', () => {
   updateAuthUI();
 });
 
-// Create fake user if none exists
 let allUsers = JSON.parse(localStorage.getItem('kcoffee_users')) || [];
 if (allUsers.length === 0) {
   allUsers.push({
