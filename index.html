@@ -88,10 +88,15 @@
           </div>
         </div>
                 <div class="user-auth-section">
-          <div class="auth-buttons" id="header-auth-btns" style="display: flex; gap: 8px; align-items: center;">
-            <a href="signin.html" class="btn-login font-label-md">Đăng nhập</a>
-            <a href="signup.html" class="btn-register font-label-md">Đăng ký</a>
-          </div>
+                      <div id="header-auth-btns" style="display: flex; align-items: center;">
+              <div class="auth-buttons-desktop" style="display: flex; gap: 8px; align-items: center;">
+                <a href="signin.html" class="btn-login font-label-md">Đăng nhập</a>
+                <a href="signup.html" class="btn-register font-label-md">Đăng ký</a>
+              </div>
+              <a href="signin.html" class="action-btn auth-button-mobile" style="display: none;">
+                <span class="material-symbols-outlined">person</span>
+              </a>
+            </div>
           <div class="user-profile-dropdown" id="header-user-profile" style="display: none; position: relative;">
             <a class="user-profile" href="#" onclick="event.preventDefault(); toggleUserMenu()">
               <img alt="Profile" class="user-profile-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaQZqlSpHODKZRqmLBp0g0IPt0Y3mp3iuk9fnFKxt0Ya7fkIgqSVd8vv1GHWofPgoh9qG92dQ4n-sFzycYtUiySlujJIjL93JcWTSyFEXqp8swLs9vWsDcBpovQy3QCTjwEbiOyd7SbBKvc0I9X6ZvnlB--RRIo9wvkzsj11nplYTwVqTxQpF49FP3GSWNjUlGD9-c-Oz8yqumRv1JQFca5S2fdzNRAcqNtbwvF5LlN-BO10edWiOgCg"/>
@@ -564,6 +569,8 @@
   <script src="js/data.js"></script>
   <script src="js/pages/home.js"></script></body>
 </html>
+
+
 
 
 

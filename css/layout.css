@@ -793,3 +793,14 @@
     visibility: visible;
     transform: translateY(0);
 }
+
+@media (max-width: 768px) {
+  .auth-buttons-desktop {
+    display: none !important;
+  }
+  .auth-button-mobile {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+}
