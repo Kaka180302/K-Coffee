@@ -504,8 +504,8 @@ window.toggleFavorite = function (productId) {
 
   const index = favorites.findIndex(item => item.id === productId);
   if (index !== -1) {
-    favorites.splice(index, 1);
     showGlobalToast('Đã bỏ thích sản phẩm!', product.name);
+    favorites.splice(index, 1);
   } else {
     favorites.push({
       id: product.id,
@@ -521,9 +521,13 @@ window.toggleFavorite = function (productId) {
 }
 
 window.removeFromFav = function (productId) {
+  const item = favorites.find(item => item.id === productId);
+  if (!item) return;
+
   favorites = favorites.filter(item => item.id !== productId);
   saveFavorites();
   updateFavUI();
+  showGlobalToast('Đã bỏ thích sản phẩm!', item.name);
 }
 
 function updateFavUI() {
