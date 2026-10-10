@@ -5,25 +5,25 @@ document.addEventListener("DOMContentLoaded", () => {
             label: "Mẻ Rang Giới Hạn Tuần Này • Micro-Lot #42",
             title: "Hương Vị Cà Phê Mộc Tinh Tuyển Từ Cao Nguyên",
             description: "Hạt Arabica Cầu Đất & Robusta Buôn Ma Thuột rang mộc nguyên bản theo từng mẻ nhỏ, tôn vinh nốt hương tự nhiên của hoa quả dại, mật ong và sô-cô-la đen nồng nàn.",
-            image: "assets/img/slider/slide-hero-1.png", mobileImage: "assets/img/slider/slider-hero-mobile-1.png"
+            image: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594951/slide-hero-1.png", mobileImage: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594978/slider-hero-mobile-1.png"
         },
         {
             label: "Cold brew · ủ lạnh 12 giờ",
             title: "Một ngụm cà phê cho buổi chiều tỉnh táo.",
             description: "Vị ngọt tự nhiên từ hạt cà phê, cân bằng cùng chút cam vàng tươi sáng.",
-            image: "assets/img/slider/slide-hero-2.png", mobileImage: "assets/img/slider/slider-hero-mobile-2.png"
+            image: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594960/slide-hero-2.png", mobileImage: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791595003/slider-hero-mobile-2.png"
         },
         {
             label: "Espresso · một chút đậm đà",
             title: "Kết ngày êm hơn, với một ly vừa vặn.",
             description: "Đậm hương chocolate, thoảng vị hạt dẻ và đủ ấm để bạn thư giãn.",
-            image: "assets/img/slider/slide-hero-3.png", mobileImage: "assets/img/slider/slider-hero-mobile-3.png"
+            image: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594955/slide-hero-3.png", mobileImage: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594980/slider-hero-mobile-3.png"
         },
         {
             label: "Cà phê rang mộc · từ Đà Lạt",
             title: "Một khoảng chậm, bắt đầu từ hạt cà phê tử tế.",
             description: "K-Coffe chọn những mẻ hạt vừa độ, giữ trọn hương thơm và pha cho những ngày bạn muốn sống chậm hơn một chút.",
-            image: "assets/img/slider/slide-hero-4.png", mobileImage: "assets/img/slider/slider-hero-mobile-4.png"
+            image: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594956/slide-hero-4.png", mobileImage: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594982/slider-hero-mobile-4.png"
         }
     ];
 

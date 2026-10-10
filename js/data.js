@@ -16,7 +16,7 @@ const products = [
   {
     id: "prod-01", categoryId: "arabica", name: "Arabica Cầu Đất Chế Biến Ướt", slug: "arabica-cau-dat-che-bien-uot",
     subtitle: "Washed Process (Catimor & Typica)",
-    image: "assets/img/products/arabica-cau-dat-che-bien-uot.png", badge: "Bán Chạy Nhất", origin: "Cầu Đất", roast: "Rang Nhạt",
+    image: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594850/arabica-cau-dat-che-bien-uot.png", badge: "Bán Chạy Nhất", origin: "Cầu Đất", roast: "Rang Nhạt",
     roastLevel: "light", salesCount: 1540, dateAdded: "2023-10-01", cuppingScore: 84.5,
     methods: ["pourover", "frenchpress"], region: "caudat",
     tastingNotes: ["Hoa Cà Phê", "Mật Ong", "Chanh Vàng"], variant: "Túi Zip van 1 chiều (250g)", price: 220000, originalPrice: 253000, discount: "-13%",
@@ -28,7 +28,7 @@ const products = [
   {
     id: "prod-02", categoryId: "robusta", name: "Fine Robusta Honey Lên Men Tự Nhiên", slug: "fine-robusta-honey",
     subtitle: "Honey Process (TR4 & Sinh Dữ)",
-    image: "assets/img/products/fine-robusta-honey.png", badge: "Mới Rang Tuần Này", origin: "Buôn Ma Thuột", roast: "Rang Đậm Vừa",
+    image: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594855/fine-robusta-honey.png", badge: "Mới Rang Tuần Này", origin: "Buôn Ma Thuột", roast: "Rang Đậm Vừa",
     roastLevel: "medium-dark", salesCount: 890, dateAdded: "2023-10-25", cuppingScore: 82.0,
     methods: ["phin", "espresso"], region: "bmt",
     tastingNotes: ["Chocolate Đen", "Hạt Phỉ", "Khói Ngọt"], variant: "Đóng gói hạt mộc (250g)", price: 185000, originalPrice: 210000, discount: "-12%",
@@ -40,7 +40,7 @@ const products = [
   {
     id: "prod-03", categoryId: "arabica", name: "Arabica Khe Sanh Natural", slug: "arabica-khe-sanh-natural",
     subtitle: "Natural Process",
-    image: "assets/img/products/arabica-khe-sanh-natural.png", badge: null, origin: "Khe Sanh", roast: "Rang Nhạt",
+    image: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594947/arabica-khe-sanh-natural.png", badge: null, origin: "Khe Sanh", roast: "Rang Nhạt",
     roastLevel: "light", salesCount: 420, dateAdded: "2023-09-15", cuppingScore: 83.5,
     methods: ["pourover", "coldbrew"], region: "khesanh",
     tastingNotes: ["Mít Sấy", "Rượu Vang", "Cacao"], variant: "Túi Zip van 1 chiều (250g)", price: 250000, originalPrice: 285000, discount: "-12%",
@@ -52,7 +52,7 @@ const products = [
   {
     id: "prod-04", categoryId: "blend", name: "Espresso Blend 7/3", slug: "espresso-blend-7-3",
     subtitle: "70% Arabica Cầu Đất - 30% Robusta Đắk Lắk",
-    image: "assets/img/products/espresso-blend-7-3.png", badge: "Lựa Chọn Barista", origin: "Cầu Đất & Đắk Lắk", roast: "Rang Đậm",
+    image: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594864/espresso-blend-7-3.png", badge: "Lựa Chọn Barista", origin: "Cầu Đất & Đắk Lắk", roast: "Rang Đậm",
     roastLevel: "dark", salesCount: 2150, dateAdded: "2023-05-20", cuppingScore: 80.0,
     methods: ["espresso", "phin"], region: "blend",
     tastingNotes: ["Caramel", "Cacao Đậm", "Đậm Thể"], variant: "Túi Zip van 1 chiều (250g)", price: 195000, originalPrice: 220000, discount: "-11%",
@@ -64,7 +64,7 @@ const products = [
   {
     id: "prod-05", categoryId: "coldbrew", name: "Cold Brew Blend Mùa Hè", slug: "cold-brew-blend-mua-he",
     subtitle: "100% Arabica Light Roast",
-    image: "assets/img/products/cold-brew-blend-mua-he.png", badge: "Phiên Bản Mùa Hè", origin: "Lâm Đồng", roast: "Rang Nhạt",
+    image: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594845/cold-brew-blend-mua-he.png", badge: "Phiên Bản Mùa Hè", origin: "Lâm Đồng", roast: "Rang Nhạt",
     roastLevel: "light", salesCount: 950, dateAdded: "2023-10-10", cuppingScore: 83.0,
     methods: ["coldbrew", "pourover"], region: "caudat",
     tastingNotes: ["Cam Chanh", "Trà Đen", "Đường Nâu"], variant: "Túi Zip van 1 chiều (250g)", price: 210000, originalPrice: 240000, discount: "-12%",
@@ -76,7 +76,7 @@ const products = [
   {
     id: "prod-06", categoryId: "robusta", name: "Robusta Đắk Nông Chế Biến Khô", slug: "robusta-dak-nong-che-bien-kho",
     subtitle: "Natural Process",
-    image: "assets/img/products/robusta-dak-nong-che-bien-kho.png", badge: null, origin: "Đắk Nông", roast: "Rang Đậm",
+    image: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594840/robusta-dak-nong-che-bien-kho.png", badge: null, origin: "Đắk Nông", roast: "Rang Đậm",
     roastLevel: "dark", salesCount: 530, dateAdded: "2023-08-11", cuppingScore: 78.5,
     methods: ["phin"], region: "daknong",
     tastingNotes: ["Gỗ Sồi", "Bơ Đậu Phộng", "Đậm Đà"], variant: "Túi Zip van 1 chiều (250g)", price: 160000, originalPrice: 185000, discount: "-13%",
@@ -88,7 +88,7 @@ const products = [
   {
     id: "prod-07", categoryId: "arabica", name: "Arabica Lạc Dương Washed", slug: "arabica-lac-duong-washed",
     subtitle: "Washed Process",
-    image: "assets/img/products/arabica-lac-duong-washed.png", badge: null, origin: "Lạc Dương", roast: "Rang Nhạt",
+    image: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594837/arabica-lac-duong-washed.png", badge: null, origin: "Lạc Dương", roast: "Rang Nhạt",
     roastLevel: "light", salesCount: 610, dateAdded: "2023-09-22", cuppingScore: 84.0,
     methods: ["pourover", "frenchpress"], region: "caudat",
     tastingNotes: ["Trà Oolong", "Vỏ Cam", "Mật Hoa"], variant: "Túi Zip van 1 chiều (250g)", price: 230000, originalPrice: 265000, discount: "-13%",
@@ -100,7 +100,7 @@ const products = [
   {
     id: "prod-08", categoryId: "blend", name: "Phối Trộn Truyền Thống Phin", slug: "phoi-tron-truyen-thong-phin",
     subtitle: "80% Robusta - 20% Arabica",
-    image: "assets/img/products/phoi-tron-truyen-thong-phin.png", badge: "Bán Chạy Nhất", origin: "Đắk Lắk & Lâm Đồng", roast: "Rang Đậm Vừa",
+    image: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594835/phoi-tron-truyen-thong-phin.png", badge: "Bán Chạy Nhất", origin: "Đắk Lắk & Lâm Đồng", roast: "Rang Đậm Vừa",
     roastLevel: "medium-dark", salesCount: 3200, dateAdded: "2022-12-01", cuppingScore: 79.5,
     methods: ["phin"], region: "blend",
     tastingNotes: ["Đậm Đà", "Hậu Ngọt", "Cacao"], variant: "Túi Zip van 1 chiều (250g)", price: 175000, originalPrice: 200000, discount: "-12%",
@@ -112,7 +112,7 @@ const products = [
   {
     id: "prod-09", categoryId: "specialty", name: "Special Reserve Peaberry", slug: "special-reserve-peaberry",
     subtitle: "Cà Phê Culi (Peaberry) Nguyên Bản",
-    image: "assets/img/products/special-reserve-peaberry.png", badge: "Giới Hạn", origin: "Cầu Đất", roast: "Rang Nhạt",
+    image: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594834/special-reserve-peaberry.png", badge: "Giới Hạn", origin: "Cầu Đất", roast: "Rang Nhạt",
     roastLevel: "light", salesCount: 150, dateAdded: "2023-11-01", cuppingScore: 86.5,
     methods: ["pourover"], region: "caudat",
     tastingNotes: ["Quả Mọng", "Dâu Tây", "Rượu Vang"], variant: "Túi Zip van 1 chiều (250g)", price: 350000, originalPrice: 395000, discount: "-11%",
@@ -124,7 +124,7 @@ const products = [
   {
     id: "prod-10", categoryId: "robusta", name: "Robusta Di Linh Chế Biến Mật Ong", slug: "robusta-di-linh-che-bien-mat-ong",
     subtitle: "Honey Process",
-    image: "assets/img/products/robusta-di-linh-che-bien-mat-ong.png", badge: null, origin: "Di Linh", roast: "Rang Vừa",
+    image: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594831/robusta-di-linh-che-bien-mat-ong.png", badge: null, origin: "Di Linh", roast: "Rang Vừa",
     roastLevel: "medium", salesCount: 670, dateAdded: "2023-04-14", cuppingScore: 81.0,
     methods: ["phin", "espresso"], region: "daknong",
     tastingNotes: ["Đường Nâu", "Mật Ong", "Táo Nướng"], variant: "Túi Zip van 1 chiều (250g)", price: 180000, originalPrice: 205000, discount: "-12%",
@@ -136,7 +136,7 @@ const products = [
   {
     id: "prod-11", categoryId: "specialty", name: "Arabica Sơn La Đặc Sản", slug: "arabica-son-la-dac-san",
     subtitle: "Washed Process - Tây Bắc",
-    image: "assets/img/products/arabica-son-la-dac-san.png", badge: "Mới Nhất", origin: "Sơn La", roast: "Rang Nhạt",
+    image: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594829/arabica-son-la-dac-san.png", badge: "Mới Nhất", origin: "Sơn La", roast: "Rang Nhạt",
     roastLevel: "light", salesCount: 210, dateAdded: "2023-11-05", cuppingScore: 85.0,
     methods: ["pourover", "coldbrew"], region: "sonla",
     tastingNotes: ["Táo Xanh", "Trà Đen", "Mật Ong"], variant: "Túi Zip van 1 chiều (250g)", price: 260000, originalPrice: 295000, discount: "-12%",
@@ -148,7 +148,7 @@ const products = [
   {
     id: "prod-12", categoryId: "blend", name: "Espresso Cổ Điển", slug: "espresso-co-dien",
     subtitle: "50% Arabica - 50% Robusta",
-    image: "assets/img/products/espresso-co-dien.png", badge: null, origin: "Buôn Ma Thuột & Cầu Đất", roast: "Rang Vừa",
+    image: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594822/espresso-co-dien.png", badge: null, origin: "Buôn Ma Thuột & Cầu Đất", roast: "Rang Vừa",
     roastLevel: "medium", salesCount: 1450, dateAdded: "2023-01-10", cuppingScore: 80.5,
     methods: ["espresso", "frenchpress"], region: "blend",
     tastingNotes: ["Sô Cô La", "Kẹo Toffee", "Dày Dặn"], variant: "Túi Zip van 1 chiều (250g)", price: 190000, originalPrice: 215000, discount: "-11%",
@@ -160,7 +160,7 @@ const products = [
   {
     id: "prod-13", categoryId: "specialty", name: "Moka Cầu Đất Nguyên Bản", slug: "moka-cau-dat-nguyen-ban",
     subtitle: "Bảo Tồn Giống Cổ",
-    image: "assets/img/products/moka-cau-dat-nguyen-ban.png", badge: "Huyền Thoại", origin: "Cầu Đất", roast: "Rang Nhạt",
+    image: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594817/moka-cau-dat-nguyen-ban.png", badge: "Huyền Thoại", origin: "Cầu Đất", roast: "Rang Nhạt",
     roastLevel: "light", salesCount: 90, dateAdded: "2023-11-10", cuppingScore: 87.0,
     methods: ["pourover"], region: "caudat",
     tastingNotes: ["Hoa Trắng", "Đào Cơm", "Thanh Tao"], variant: "Túi Zip van 1 chiều (250g)", price: 450000, originalPrice: 510000, discount: "-11%",
@@ -172,7 +172,7 @@ const products = [
   {
     id: "prod-14", categoryId: "coldbrew", name: "Túi Lọc Cold Brew Tiện Lợi", slug: "tui-loc-cold-brew-tien-loi",
     subtitle: "Dạng túi lọc túi 30g",
-    image: "assets/img/products/tui-loc-cold-brew-tien-loi.png", badge: "Bán Chạy Nhất", origin: "Cầu Đất & Buôn Ma Thuột", roast: "Rang Vừa",
+    image: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594837/tui-loc-cold-brew-tien-loi.png", badge: "Bán Chạy Nhất", origin: "Cầu Đất & Buôn Ma Thuột", roast: "Rang Vừa",
     roastLevel: "medium", salesCount: 2300, dateAdded: "2023-06-05", cuppingScore: 81.5,
     methods: ["coldbrew"], region: "blend",
     tastingNotes: ["Ngọt Thanh", "Trái Cây Đỏ", "Mượt"], variant: "Hộp 10 túi lọc", price: 150000, originalPrice: 175000, discount: "-14%",
@@ -187,7 +187,7 @@ const products = [
   {
     id: "prod-15", categoryId: "specialty", name: "Decaf Colombia Tách Caffeine", slug: "decaf-colombia-tach-caffeine",
     subtitle: "Sugar Cane Process",
-    image: "assets/img/products/decaf-colombia-tach-caffeine.png", badge: "Nhập Khẩu", origin: "Colombia", roast: "Rang Vừa",
+    image: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594881/decaf-colombia-tach-caffeine.png", badge: "Nhập Khẩu", origin: "Colombia", roast: "Rang Vừa",
     roastLevel: "medium", salesCount: 180, dateAdded: "2023-08-20", cuppingScore: 84.0,
     methods: ["pourover", "espresso", "phin"], region: "blend",
     tastingNotes: ["Hạnh Nhân", "Đường Nâu", "Tròn Trịa"], variant: "Túi Zip van 1 chiều (250g)", price: 380000, originalPrice: 430000, discount: "-11%",
@@ -199,7 +199,7 @@ const products = [
   {
     id: "prod-16", categoryId: "arabica", name: "Arabica Mường Ảng Điện Biên", slug: "arabica-muong-ang-dien-bien",
     subtitle: "Washed Process",
-    image: "assets/img/products/arabica-muong-ang-dien-bien.png", badge: null, origin: "Điện Biên", roast: "Rang Nhạt",
+    image: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594828/arabica-muong-ang-dien-bien.png", badge: null, origin: "Điện Biên", roast: "Rang Nhạt",
     roastLevel: "light", salesCount: 340, dateAdded: "2023-10-15", cuppingScore: 83.5,
     methods: ["pourover"], region: "sonla",
     tastingNotes: ["Thảo Mộc", "Trà Đen", "Cam Ngọt"], variant: "Túi Zip van 1 chiều (250g)", price: 240000, originalPrice: 275000, discount: "-12%",
@@ -211,7 +211,7 @@ const products = [
   {
     id: "prod-17", categoryId: "blend", name: "Blend Vị Choc Hạnh Nhân", slug: "blend-vi-choc-hanh-nhan",
     subtitle: "Special Nutty Blend",
-    image: "assets/img/products/blend-vi-choc-hanh-nhan.png", badge: null, origin: "Brazil & Việt Nam", roast: "Rang Vừa",
+    image: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594816/blend-vi-choc-hanh-nhan.png", badge: null, origin: "Brazil & Việt Nam", roast: "Rang Vừa",
     roastLevel: "medium", salesCount: 890, dateAdded: "2023-07-22", cuppingScore: 82.0,
     methods: ["espresso", "phin"], region: "blend",
     tastingNotes: ["Hạnh Nhân", "Sô Cô La Sữa", "Mượt Mà"], variant: "Túi Zip van 1 chiều (250g)", price: 210000, originalPrice: 240000, discount: "-12%",
@@ -223,7 +223,7 @@ const products = [
   {
     id: "prod-18", categoryId: "specialty", name: "Robusta Lên Men Trái Cây", slug: "robusta-len-men-trai-cay",
     subtitle: "Fruity Fermentation Process",
-    image: "assets/img/products/robusta-len-men-trai-cay.png", badge: "Mới Nhất", origin: "Đắk Lắk", roast: "Rang Vừa",
+    image: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594853/robusta-len-men-trai-cay.png", badge: "Mới Nhất", origin: "Đắk Lắk", roast: "Rang Vừa",
     roastLevel: "medium", salesCount: 410, dateAdded: "2023-11-20", cuppingScore: 83.5,
     methods: ["pourover", "frenchpress", "phin"], region: "bmt",
     tastingNotes: ["Chuối Sấy", "Trái Cây Nhiệt Đới", "Lên Men"], variant: "Túi Zip van 1 chiều (250g)", price: 220000, originalPrice: 250000, discount: "-12%",
@@ -235,7 +235,7 @@ const products = [
   {
     id: "prod-19", categoryId: "blend", name: "Blend Sáng Mới", slug: "blend-sang-moi",
     subtitle: "Morning Bright Blend",
-    image: "assets/img/products/blend-sang-moi.png", badge: null, origin: "Lâm Đồng", roast: "Rang Nhạt",
+    image: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594856/blend-sang-moi.png", badge: null, origin: "Lâm Đồng", roast: "Rang Nhạt",
     roastLevel: "light", salesCount: 650, dateAdded: "2023-09-01", cuppingScore: 82.5,
     methods: ["pourover", "coldbrew"], region: "caudat",
     tastingNotes: ["Tươi Sáng", "Cam Chanh", "Trà Đen"], variant: "Túi Zip van 1 chiều (250g)", price: 190000, originalPrice: 220000, discount: "-13%",
@@ -247,7 +247,7 @@ const products = [
   {
     id: "prod-20", categoryId: "arabica", name: "Arabica Catimor Trạm Hành", slug: "arabica-catimor-tram-hanh",
     subtitle: "Washed Process",
-    image: "assets/img/products/arabica-catimor-tram-hanh.png", badge: null, origin: "Trạm Hành", roast: "Rang Nhạt",
+    image: "https://res.cloudinary.com/lj16ppwn/image/upload/v1791594824/arabica-catimor-tram-hanh.png", badge: null, origin: "Trạm Hành", roast: "Rang Nhạt",
     roastLevel: "light", salesCount: 580, dateAdded: "2023-10-20", cuppingScore: 84.0,
     methods: ["pourover", "frenchpress"], region: "caudat",
     tastingNotes: ["Chanh Dây", "Hoa Trắng", "Cacao Nhạt"], variant: "Túi Zip van 1 chiều (250g)", price: 235000, originalPrice: 270000, discount: "-12%",
